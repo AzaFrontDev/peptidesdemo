@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO основное -->
+  <title>Качество и контроль производства | Peptide Labs</title>
+  <meta name="description" content="Собственная лаборатория, полный цикл производства и паспорт качества (COA) к каждому заказу. Узнайте, как мы обеспечиваем чистоту и подлинность каждого пептида.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://peptidelabs.ru/quality.html">
+
+  <!-- Open Graph (соцсети, мессенджеры) -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://peptidelabs.ru/quality.html">
+  <meta property="og:title"       content="Качество и контроль производства | Peptide Labs">
+  <meta property="og:description" content="Полный цикл производства, независимые тесты и COA к каждому заказу. Производитель исследовательских пептидов с подтверждённым качеством.">
+  <meta property="og:image"       content="https://peptidelabs.ru/src/about/coa-image.webp">
+  <meta property="og:locale"      content="ru_RU">
+  <meta property="og:site_name"   content="Peptide Labs">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Качество и контроль производства | Peptide Labs">
+  <meta name="twitter:description" content="Полный цикл производства, независимые тесты и COA к каждому заказу.">
+  <meta name="twitter:image"       content="https://peptidelabs.ru/src/about/coa-image.webp">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD: Организация -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Peptide Labs",
+    "legalName": "ООО «АМС-Сервис»",
+    "taxID": "3444169438",
+    "url": "https://peptidelabs.ru",
+    "logo": "https://peptidelabs.ru/src/hero/logo-image.webp",
+    "telephone": "+7-905-392-18-51",
+    "email": "radionov@mail.ru",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Волгоград",
+      "streetAddress": "ул. Краснознаменская, 9",
+      "addressCountry": "RU"
+    },
+    "sameAs": [
+      "https://t.me/peptidelabs",
+      "https://wa.me/79053921851"
+    ]
+  }
+  </script>
+</head>
+<body>
+    <header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" alt="Peptide Labs — на главную">
+      <img src="src/hero/logo-image.webp" alt="Peptide Labs Logo" class="logo__img" />
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="nav__link" href="about.html">О компании</a></li>
+        <li><a class="nav__link" href="quality.html">Качество</a></li>
+        <li><a class="nav__link" href="#delivery">Доставка</a></li>
+        <li><a class="nav__link" href="business.html">Оптовикам</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="header__icon-btn" type="button" aria-label="Поиск по сайту">
+        <img class="header__icon" src="src/hero/search-image.webp" alt="" width="56" height="56" />
+      </button>
+
+      <button class="header__icon-btn header__cart-btn" type="button" aria-label="Корзина">
+        <img class="header__icon" src="src/hero/store-image.webp" alt="" width="56" height="56" />
+        <span class="header__cart-badge" id="cart-count">0</span>
+      </button>
+
+      <div class="header__buttons">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Открыть меню" 
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="burger__box" aria-hidden="true">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="container" aria-label="Мобильная навигация">
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="catalog.html">Каталог</a></li>
+        <li><a class="mobile-menu__link" href="about.html">О компании</a></li>
+        <li><a class="mobile-menu__link" href="quality.html">Качество</a></li>
+        <li><a class="mobile-menu__link" href="#delivery">Доставка</a></li>
+        <li><a class="mobile-menu__link" href="business.html">Оптовикам</a></li>
+      </ul>
+      <div class="mobile-menu__actions">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero quality-hero" id="quality-hero">
+  <div class="container quality-hero__inner">
+    <div class="hero__content">
+      <img src="src/hero/quality-mobile-hero.webp" alt="Hero" class="hero-mobile-img">
+      <h1 class="quality-hero__title">МЫ ЗНАЕМ<br><span>ЧТО ВНУТРИ</span><br>КАЖДОГО ФЛАКОНА</h1>
+      <p class="quality-hero__subtitles">Потому что производим сами — от сырья до готового продукта.<br>Каждая партия проходит лабораторный контроль, и результаты <br>мы готовы показать.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quality__features">
+  <div class="container quality-features__inner">
+    <h1 class="quality-hero__title">Как мы обеспечиваем <span>качество</span></h1>
+    <div class="quality-features__grid">
+
+       <article class="quality__card">
+        <h3 class="quality-features__title">Производим сами</h3>
+        <p class="quality-feature__desc">Полный цикл в собственной лаборатории. Синтезируем, очищаем и фасуем сами. 
+Это значит, что мы контролируем всё, что попадает во флакон, и гарантируем соответствующее качество.</p>
+      </article>
+
+      <article class="quality__card">
+        <h3 class="quality-features__title">Проверяем каждую партию</h3>
+        <p class="quality-feature__desc">Прежде чем партия попадёт в продажу, она проходит несколько независимых тестов. 
+Мы проверяем чистоту, подлинность молекулы и безопасность. Если что-то не проходит — партия не выпускается.</p>
+      </article>
+
+      <article class="quality__card">
+        <h3 class="quality-features__title">Документируем результаты</h3>
+        <p class="quality-feature__desc">К каждому заказу прикладываем паспорт качества (COA) — документ с реальными результатами тестов для вашей партии. 
+          Можно запросить заранее, до покупки.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="start__pack coa--pack" id="quality">
+  <div class="container quality__inner">
+
+    <div class="quality-content">
+      <div class="quality__media">
+        <img src="src/about/coa-image.webp" alt="COA" class="quality__img" loading="lazy" />
+      </div>
+      
+      <div class="quality__info">
+        <h2 class="quality__title">Паспорт качества — к каждому заказу</h2>
+         <p class="quality__desc">
+           Для нас это не просто формальность. COA содержит результаты всех тестов для конкретной партии:
+           хроматограмму, данные масс-спектрометрии, результаты проверки на стерильность. 
+           Всё, что нужно, чтобы убедиться в продукте самостоятельно.
+         </p>
+
+        <div class="quality-cta">
+        <a href="#" class="btn quality__btn">Запросить COA до покупки</a>
+        <a href="#" class="btn quality__btn">Перейти в каталог</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container reviews__inner">
+    
+    <div class="reviews__header">
+      <h2 class="reviews__title">Что говорят клиенты</h2>
+    </div>
+
+    <div class="reviews__grid">
+      
+      <!-- Отзыв 1 -->
+      <article class="quality-review__card">
+        <div class="quality-card__header">
+          <img src="src/rewiews/reviews-imageA.webp" alt="Александр" class="quality-card__avatar" loading="lazy">
+          <div class="quality-card__user">
+            <h4 class="quality-card__name">Александр</h4>
+          </div>
+        </div>
+        <p class="quality-card__text">Мениск мучил полгода. После 3 недель боль ушла. Вернулся к тренировкам</p>
+      </article>
+
+      <!-- Отзыв 2 -->
+      <article class="quality-review__card">
+        <div class="quality-card__header">
+          <img src="src/rewiews/reviews-imageI.webp" alt="Ирина" class="quality-card__avatar" loading="lazy">
+          <div class="quality-card__user">
+            <h4 class="quality-card__name">Ирина</h4>
+          </div>
+        </div>
+        <p class="quality-card__text">Проблемы с желудком были 2 года. Через месяц заметил разницу, через 6 недель — отлично</p>
+      </article>
+
+      <article class="quality-review__card">
+        <div class="quality-card__header">
+          <img src="src/rewiews/reviews-imageD.webp" alt="Дмитрий" class="quality-card__avatar" loading="lazy">
+          <div class="quality-card__user">
+            <h4 class="quality-card__name">Дмитрий</h4>
+          </div>
+        </div>
+        <p class="quality-card__text">Локоть болел после тенниса. 
+Спрей — удобнее шприца. Через 3 недели почти не чувствую</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta__inner">
+    <div class="cta__content">
+      <h2 class="cta__title">Готовы попробовать?</h2>
+      <p class="cta__desc">40+ пептидов с полной документацией. <br>Консультация бесплатно.
+</p>
+    </div>
+      <div class="cta__btns">
+      <a class="btn btn--white" href="catalog.html">Каталог</a>
+      <a class="btn btn--primary" href="#quality">Консультация</a>
+      </div>
+  </div>
+  </section>
+
+<footer class="footer" id="footer">
+  <div class="container footer__inner">
+    
+    <div class="footer__disclaimer">
+      <p>For Research Use Only - Not for Human Use · Только для научных исследований. Вся продукция предназначена исключительно для лабораторных и научно-исследовательских целей. Не является лекарственным средством, БАДом или пищевой продукцией. Приобретая продукцию, вы подтверждаете, что используете её в соответствии с законодательством.</p>
+    </div>
+
+    <div class="footer__grid">
+      
+      <div class="footer__col">
+        <h4 class="footer__title">PEPTIDE LABS</h4>
+        <p class="footer__text">Производитель исследовательских пептидов. Собственная лаборатория, COA на каждую партию. Доставка по РФ.</p>
+        <p class="footer__requisites">
+          ООО «АМС-Сервис»<br>
+          ИНН: 3444169438 · ОГРН: 1093444003179
+        </p>
+      </div>
+      
+      <div class="footer__col">
+        <h4 class="footer__title">Каталог</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Все товары</a></li>
+          <li><a href="catalog.html" class="footer__link">Снижение веса</a></li>
+          <li><a href="catalog.html" class="footer__link">Восстановление</a></li>
+          <li><a href="catalog.html" class="footer__link">Нейро и сон</a></li>
+          <li><a href="catalog.html" class="footer__link">Антиэйдж</a></li>
+          <li><a href="catalog.html" class="footer__link">Красота</a></li>
+          <li><a href="catalog.html" class="footer__link">Спреи</a></li>
+          <li><a href="catalog.html" class="footer__link">Бленды</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Информация</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Качество и COA</a></li>
+          <li><a href="#" class="footer__link">Доставка и оплата</a></li>
+          <li><a href="#" class="footer__link">Калькулятор</a></li>
+          <li><a href="business.html" class="footer__link">Оптовикам</a></li>
+          <li><a href="#" class="footer__link">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__list">
+          <li><a href="https://t.me/peptidelabs" target="_blank" rel="noopener noreferrer" class="footer__link">Telegram: @peptidelabs</a></li>
+          <li><a href="https://wa.me/79053921851" target="_blank" rel="noopener noreferrer" class="footer__link">WhatsApp</a></li>
+          <li><a href="tel:+79053921851" class="footer__link">+7 (905) 392-18-51</a></li>
+          <li><a href="mailto:radionov@mail.ru" class="footer__link">radionov@mail.ru</a></li>
+          <li class="footer__item-text">Волгоград, <br>ул. Краснознаменская, <br>9 (ТРЦ «Пирамида»)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Peptide Labs - For Research Use Only</p>
+      
+      <div class="footer__legal">
+        <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
+        <a href="#" class="footer__legal-link">Пользовательское соглашение</a>
+        <a href="#" class="footer__legal-link">Отказ от ответственности</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+
+  const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+  };
+
+  requestAnimationFrame(onScroll);
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+<script src="js.js" defer></script>
+
+<!-- Шторка корзины -->
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<!-- Панель корзины -->
+<aside class="cart-panel" id="cart-panel">
+  <div class="cart-panel__header">
+    <h2 class="cart-panel__title">Корзина</h2>
+    <button class="cart-panel__close" id="cart-close" type="button">×</button>
+  </div>
+  <div class="cart-panel__body" id="cart-body"></div>
+  <div class="cart-panel__footer">
+    <div class="cart-panel__total-row">
+      <span>Итого</span>
+      <span><span id="cart-total">0</span> ₽</span>
+    </div>
+    <a href="business.html" id="cart-checkout" class="btn btn--primary cart-panel__checkout">ОФОРМИТЬ</a>
+  </div>
+</aside>
+
+<!-- Поиск -->
+<div class="search-modal" id="search-modal">
+  <div class="search-modal__inner">
+    <div class="search-modal__bar">
+      <input type="text" class="search-modal__input" id="search-input" placeholder="Поиск по каталогу..." autocomplete="off">
+      <button class="search-modal__close" id="search-close" type="button">×</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+  </div>
+</div>
+
+<!-- Скрипты -->
+<script src="cart.js" defer></script>
+<script src="search.js" defer></script>
+
+</body>
+</html>
+

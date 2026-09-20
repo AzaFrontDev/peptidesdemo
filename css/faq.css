@@ -1,0 +1,128 @@
+﻿.faq {
+  width: 100%;
+  background-color: #f8f9fc;
+  padding: 80px 0;
+}
+
+.faq__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1712px;
+  margin: 0 auto;
+}
+
+.faq__title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--bg--black, #111);
+  margin-bottom: 48px;
+}
+
+.faq__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  width: 100%;
+}
+
+.faq__card {
+  position: relative;
+  background-color: var(--bg--white, #ffffff);
+  border-radius: 20px;
+  padding: 32px 80px 32px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.25s ease;
+}
+
+.faq__card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+}
+
+.faq__question {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--bg--black, #111);
+  margin: 0;
+}
+
+/* Ответ по умолчанию свернут и невидим */
+.faq__answer {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  font-size: 28px;
+  line-height: 1.36;
+  color: #444;
+  white-space: pre-line;
+  transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.35s ease;
+}
+
+/* При клике плавно раскрываем */
+.faq__card.is-open .faq__answer {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+/* Кнопка плюса прижата к верхнему правому углу */
+.faq__btn {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-primary, #6b46c1);
+  color: var(--bg-white, #ffffff);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Плюс поворачивается в крестик */
+.faq__card.is-open .faq__btn {
+  transform: rotate(45deg);
+}
+
+.faq__btn:hover {
+  background-color: var(--bg-white, #ffffff);
+  color: var(--color-primary, #6b46c1);
+}
+
+/* Мобилка */
+@media (max-width: 768px) {
+  .faq__grid {
+    grid-template-columns: 1fr;
+  }
+  .faq__title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  .faq__question {
+    font-size: 20px;
+  }
+  .faq__answer {
+    font-size: 16px;
+  }
+}
+
+
+/* /////// Social Promo ///////// */
+
+

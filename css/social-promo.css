@@ -1,0 +1,134 @@
+﻿.social-promo {
+  width: 100%;
+  background: linear-gradient(90deg, #212123 0%, #6C53B3 100%);
+  padding: 64px 0;
+}
+
+.social-promo__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1712px;
+  margin: 0 auto;
+}
+
+.social-promo__title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.social-promo__actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-promo__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 366px;
+  height: 69px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 16px;
+  transition: opacity 0.25s ease, transform 0.2s ease;
+}
+
+.social-promo__btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.social-promo__btn--white {
+  background-color: #ffffff;
+  color: var(--bg-black, #111111);
+}
+
+.social-promo__btn--white:hover {
+  background-color: var(--color-primary);
+  color: var(--bg-white);
+}
+
+.social-promo__btn--purple {
+  background-color: #7b5dc6;
+  color: #ffffff;
+}
+
+.social-promo__btn--purple:hover {
+  background-color: var(--bg-white);
+  color: var(--color-primary);
+}
+
+
+.frequently-bought__title,
+.research-areas-list,
+.key-study-card {
+  margin: 35px 0 0 250px;
+}
+
+.comparison-card {
+  margin: 0 0 0 250px;
+}
+
+.frequently-bought__grid {
+  display: flex;
+  max-width: 1440px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.frequently-bought__grid {
+  margin: 35px 0 0 200px;
+}
+
+.key-study-card__title {
+  font-size: 49px;
+}
+
+.key-study-card__text,
+.comparison-card__text {
+  font-size: 18px;
+  max-width: 1190px;
+}
+
+.peptides__catalog-grid {
+  justify-content: center;
+  gap: 24px;
+}
+
+.protocol-section {
+  margin: 0 0 0 250px;
+}
+
+.protocol-section__title {
+  font-size: 24px;
+}
+
+.synergy-item__name, .synergy-item__note {
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--color-primary);
+}
+
+.storage-list {
+  margin: 0 0 0 250px;
+  display: flex;
+  gap: 24px;
+  font-size: 24px;
+}
+
+.storage-row {
+  border: 1px solid var(--color-primary);
+  padding: 12px 20px;
+  border-radius: 12px;
+}

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Peptide Labs — российский производитель иссследовательских пептидов с собственной лабораторией полного цикла</title>
+  <meta name="description" content="Каталог пептидов высокой степени очистки и комплексных растворов для лабораторных исследований. Сертификаты качества COA, быстрая доставка.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Peptide Labs — пептиды высокой очистки">
+  <meta property="og:description" content="Каталог исследовательских пептидов и комплексов. Сертификаты анализа COA.">
+  <meta property="og:image" content="src/catalog/lipo-c-image.webp">
+
+  <!-- Стили и фавикон -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" alt="Peptide Labs — на главную">
+      <img src="src/hero/logo-image.webp" fetchpriority="high" alt="Peptide Labs Logo" class="logo__img" />
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="nav__link" href="about.html">О компании</a></li>
+        <li><a class="nav__link" href="quality.html">Качество</a></li>
+        <li><a class="nav__link" href="#delivery">Доставка</a></li>
+        <li><a class="nav__link" href="business.html">Оптовикам</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="header__icon-btn" type="button" aria-label="Поиск по сайту">
+        <img class="header__icon" src="src/hero/search-image.webp" alt="" width="56" height="56" />
+      </button>
+
+      <button class="header__icon-btn header__cart-btn" type="button" aria-label="Корзина">
+        <img class="header__icon" src="src/hero/store-image.webp" alt="" width="56" height="56" />
+        <span class="header__cart-badge" id="cart-count">0</span>
+      </button>
+
+      <div class="header__buttons">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Открыть меню" 
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="burger__box" aria-hidden="true">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="container" aria-label="Мобильная навигация">
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="catalog.html">Каталог</a></li>
+        <li><a class="mobile-menu__link" href="about.html">О компании</a></li>
+        <li><a class="mobile-menu__link" href="quality.html">Качество</a></li>
+        <li><a class="mobile-menu__link" href="#delivery">Доставка</a></li>
+        <li><a class="mobile-menu__link" href="business.html">Оптовикам</a></li>
+      </ul>
+      <div class="mobile-menu__actions">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="disclaimer">
+  <p>ТОЛЬКО ДЛЯ ИССЛЕДОВАТЕЛЬСКИХ ЦЕЛЕЙ • NOT FOR HUMAN USE • НЕ ЯВЛЯЕТСЯ ЛЕКАРСТВЕННЫМ СРЕДСТВОМ</p>
+</div>
+
+<section class="hero" id="hero">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <img src="src/hero/mobile-hero-image (2).webp" fetchpriority="high" alt="Hero" class="hero-mobile-img">
+      <h1 class="hero__title">Пептиды <br>с <span>доказанной</span> <br>чистотой <br>под ваши задачи</h1>
+      <p class="hero__subtitle">Собственное производство, лабораторный контроль каждой партии, паспорт качества в каждом заказе. Лиофилизаты, спреи, картриджи и ручки</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#catalog">Перейти в каталог</a>
+        <a class="btn btn--outline" href="#contact">Связаться с нами</a>
+      </div>
+      <div class="hero__features">
+        <div class="feature-item"><img src="src/hero/flask-image.webp" alt="" class="feature-item__icon" loading="lazy" /><div class="feature-item__text"><strong>40+</strong><span>пептидов в каталоге</span></div></div>
+        <div class="feature-item"><img src="src/hero/delivery-image.webp" alt="" class="feature-item__icon" loading="lazy" /><div class="feature-item__text"><strong>1–3 дня</strong><span>доставка по России</span></div></div>
+        <div class="feature-item"><img src="src/hero/quaranty-image.webp" alt="" class="feature-item__icon" loading="lazy" /><div class="feature-item__text"><strong>COA</strong><span>к каждому заказу</span></div></div>
+        <div class="feature-item"><img src="src/hero/box-image.webp" alt="" class="feature-item__icon" loading="lazy" /><div class="feature-item__text"><strong>от 5 ед.</strong><span>оптовые условия</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="catalog__tasks" id="catalog__tasks">
+  <div class="container catalog__tasks-inner">
+    <div class="catalog__tasks-header"><h2 class="catalog__tasks-title">КАТАЛОГ <span>ПО ЗАДАЧАМ</span></h2><h3 class="catalog__tasks-desc">НАПРАВЛЕНИЯ</h3></div>
+    <p class="catalog__tasks-subtitles">Пептиды сгруппированы по направлениям. <br>Внутри каждого — описание молекул и калькулятор дозировок.</p>
+    <div class="catalog__tasks-grid" id="catalog__tasks-grid">
+      <article class="task-card"><img src="src/hero/weight-image.webp" alt="Снижение веса" class="task-card__bg" loading="lazy" /><div class="task-card__content"><div class="task-card__info"><h3 class="task-card__title">Снижение веса</h3><p class="task-card__desc">Контроль аппетита, метаболизм</p></div><a href="catalog.html" class="task-card__btn">Смотреть позиции</a></div></article>
+      <article class="task-card"><img src="src/hero/recovery-image.webp" alt="Восстановление" class="task-card__bg" loading="lazy" /><div class="task-card__content"><div class="task-card__info"><h3 class="task-card__title">Восстановление</h3><p class="task-card__desc">Суставы, связки, мышцы</p></div><a href="catalog.html" class="task-card__btn">Смотреть позиции</a></div></article>
+      <article class="task-card"><img src="src/hero/brain-image.webp" alt="Мозг, нейро и сон" class="task-card__bg" loading="lazy" /><div class="task-card__content"><div class="task-card__info"><h3 class="task-card__title">Мозг, нейро и сон</h3><p class="task-card__desc">Когнитивка, фокус, глубокий сон</p></div><a href="catalog.html" class="task-card__btn">Смотреть позиции</a></div></article>
+      <article class="task-card"><img src="src/hero/energy-image.webp" alt="Энергия и антиэйдж" class="task-card__bg" loading="lazy" /><div class="task-card__content"><div class="task-card__info"><h3 class="task-card__title">Энергия <br>и антиэйдж</h3><p class="task-card__desc">Митохондрии, клетки, долголетие</p></div><a href="catalog.html" class="task-card__btn">Смотреть позиции</a></div></article>
+      <article class="task-card"><img src="src/hero/beauty-inage.webp" alt="Красота" class="task-card__bg" loading="lazy" />
+        <div class="task-card__content">
+          <div class="task-card__info">
+            <h3 class="task-card__title">Красота</h3>
+            <p class="task-card__desc">Кожа, волосы, качество и восстановление тканей</p>
+          </div>
+          <a href="catalog.html" class="task-card__btn">Смотреть позиции</a>
+        </div>
+      </article>
+
+      <article class="task-card">
+        <img src="src/hero/libido-image.webp" alt="Либидо" class="task-card__bg" loading="lazy" />
+        <div class="task-card__content">
+          <div class="task-card__info">
+            <h3 class="task-card__title">Либидо</h3>
+            <p class="task-card__desc">Сексуальное здоровье, влечение, гормональный баланс</p>
+          </div>
+          <a href="catalog.html" class="task-card__btn">Смотреть позиции</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="peptides__catalog" id="peptides__catalog">
+  <div class="container peptides__catalog-inner">
+    
+    <div class="peptides__catalog-header">
+      <h2 class="peptides__catalog-title">ПОПУЛЯРНЫЕ <span>ПЕПТИДЫ</span></h2>
+      <h3 class="peptides__catalog-desc">ПОПУЛЯРНЫЕ ПЕПТИДЫ</h3>
+    </div>
+    
+    <p class="peptides__catalog-subtitles">Отобранные молекулы с подтверждённой чистотой и стабильностью.</p>
+
+    <div class="peptides__catalog-switch">
+      <ul class="peptides__catalog-tabs">
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn peptides__tab-btn--active">Все</button>
+        </li>
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn">Похудение</button>
+        </li>
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn">Восстановление</button>
+        </li>
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn">Нейро и сон</button>
+        </li>
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn">Антиэйдж</button>
+        </li>
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn">Красота</button>
+        </li>
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn">Спреи</button>
+        </li>
+        <li class="peptides__catalog-item">
+          <button type="button" class="peptides__tab-btn">Бленды</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="peptides__catalog-grid">
+      
+    </div>
+    <div class="peptides__catalog-footer">
+      <a href="#" class="peptides__btn-more">ВСЕ ТОВАРЫ (40+)</a>
+    </div>
+  </div>
+</section>
+
+<section class="start__pack" id="start__pack">
+  <div class="container start__pack-inner">
+    <h2 class="start__pack-title"><span>СТАРТОВЫЙ</span> НАБОР</h2>
+
+    <div class="start__pack-content">
+      <div class="start__pack-media">
+        <img src="src/catalog/start-pack-image.webp" alt="Стартовый набор" class="start__pack-img" loading="lazy" />
+      </div>
+
+      <div class="start__pack-info">
+        <h3 class="start-pack__list-title">Всё необходимое в одном наборе:</h3>
+         <ul class="start-pack__list">
+          <li class="start-pack__item">Тирзепатид 5 мг</li>
+          <li class="start-pack__item">ВРС-157 5 мг</li>
+          <li class="start-pack__item">Бактериостатическая вода</li>
+          <li class="start-pack__item">Инструкция по разведению</li>
+        </ul>
+
+        <p class="start__pack-desc">
+          Оптимальный формат, чтобы познакомиться с продукцией Peptide Labs без покупки полноразмерных позиций по отдельности.
+        </p>
+
+        <div class="start__pack-pricing">
+          <span class="start__pack-price">990 ₽</span>
+          <span class="start__pack-old-price">2 400 ₽</span>
+          <span class="start__pack-discount">-57%</span>
+        </div>
+
+        <a href="#" class="start__pack-btn">ЗАКАЗАТЬ ПРОБНИК</a>
+
+        <p class="start__pack-note">
+          Ограничение: 1 набор на клиента · Полноценные дозировки · COA в комплекте
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blends" id="blends">
+  <div class="container blends__inner">
+    
+    <div class="blends__header">
+      <h2 class="blends__title">ГОТОВЫЕ СВЯЗКИ <span>(БЛЕНДЫ)</span></h2>
+      <a href="#" class="blends__link">БЛЕНДЫ — ГОТОВЫЕ КОМБИНАЦИИ</a>
+    </div>
+    
+    <p class="blends__desc">Два пептида в одном флаконе — удобнее и выгоднее, чем по отдельности. Можно заказать свою связку.</p>
+
+    <div class="blends__grid">
+      
+      <article class="product-card product-card--blend">
+        <div class="product-card__thumb product-card__thumb--blend">
+          <span class="product-card__badge product-card__badge--blend">ВЫГОДА -680 ₽</span>
+          <img src="src/catalog/double/bpc-157+tb-500-image.webp" alt="BPC-157 + TB-500" class="product-card__img product-card__img--blend" loading="lazy" />
+        </div>
+        <div class="product-card__info">
+          <h4 class="product-card__title">BPC-157 + TB-500</h4>
+          <p class="product-card__desc">Восстановление суставов<br>и связок</p>
+          <span class="product-card__price">2 990 ₽</span>
+        </div>
+      </article>
+
+      <article class="product-card product-card--blend">
+        <div class="product-card__thumb product-card__thumb--blend">
+          <span class="product-card__badge product-card__badge--blend">ВЫГОДА -390 ₽</span>
+          <img src="src/catalog/double/ghk-cu+epithanol-image.webp" alt="GHK-Cu + Epithalon" class="product-card__img product-card__img--blend" loading="lazy" />
+        </div>
+        <div class="product-card__info">
+          <h4 class="product-card__title">GHK-Cu + Epithalon</h4>
+          <p class="product-card__desc">Омоложение кожи +<br>клеточный anti-age</p>
+          <span class="product-card__price">2 190 ₽</span>
+        </div>
+      </article>
+
+      <article class="product-card product-card--blend">
+        <div class="product-card__thumb product-card__thumb--blend">
+          <span class="product-card__badge product-card__badge--blend">ВЫГОДА -490 ₽</span>
+          <img src="src/catalog/double/cjc-1295+ipamorelin-image.webp" alt="CJC-1295 + Ipamorelin" class="product-card__img product-card__img--blend" loading="lazy" />
+        </div>
+        <div class="product-card__info">
+          <h4 class="product-card__title">CJC-1295 + Ipamorelin</h4>
+          <p class="product-card__desc">Восстановление суставов<br>и связок</p>
+          <span class="product-card__price">2 990 ₽</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="spray__peptides">
+  <div class="container spray__inner">
+    <div class="spray__header">
+      <h2 class="spray__title"><span>НАЗАЛЬНЫЙ</span> ФОРМАТ</h2>
+      <a href="#" class="spray__link">ПЕПТИДЫ БЕЗ ШПРИЦА</a>
+    </div>
+    <p>Спреи готовы к применению — без разведения и дополнительных принадлежностей</p>
+
+    <div class="spray__grid">
+
+  <article class="product-card product-card--spray">
+        <img src="src/catalog/spray/bpc-157-spray-image.webp" alt="BPC-157 Спрей" class="product-card__img" loading="lazy" />
+        <h4 class="product-card__title">BPC-157 Спрей</h4>
+        <p class="product-card__desc">Омоложение кожи</p>
+        <p class="product-card__spec">Лиофилизат · 50 мг</p>
+        <span class="product-card__price">1 990 ₽</span>
+        <a href="catalog.html" class="product-card__btn">ПОДРОБНЕЕ</a>
+      </article>
+
+      <article class="product-card product-card--spray">
+        <img src="src/catalog/spray/epithanol-spray-image.webp" alt="BPC-157 Спрей" class="product-card__img" loading="lazy" />
+        <h4 class="product-card__title">Epithanol Спрей</h4>
+        <p class="product-card__desc">Митохондриальная энергия</p>
+        <p class="product-card__spec">Лиофилизат · 10 мг</p>
+        <span class="product-card__price">1 790 ₽</span>
+        <a href="catalog.html" class="product-card__btn">ПОДРОБНЕЕ</a>
+      </article>
+
+      <article class="product-card product-card--spray">
+        <img src="src/catalog/spray/selank-spray-image.webp" alt="BPC-157 Спрей" class="product-card__img" loading="lazy" />
+        <h4 class="product-card__title">Selank Спрей</h4>
+        <p class="product-card__desc">Клеточная энергия</p>
+        <p class="product-card__spec">Лиофилизат · 500 мг</p>
+        <span class="product-card__price">1 490 ₽</span>
+        <a href="catalog.html" class="product-card__btn">ПОДРОБНЕЕ</a>
+      </article>
+
+      <article class="product-card product-card--spray">
+        <img src="src/catalog/spray/semax-spray-image.webp" alt="BPC-157 Спрей" class="product-card__img" loading="lazy" />
+        <h4 class="product-card__title">Semax Спрей</h4>
+        <p class="product-card__desc">Рост и восстановление</p>
+        <p class="product-card__spec">Лиофилизат · 10+10 мг</p>
+        <span class="product-card__price">1 190 ₽</span>
+        <a href="catalog.html" class="product-card__btn">ПОДРОБНЕЕ</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about__inner">
+    <h2 class="about__title">
+      СОБСТВЕННОЕ ПРОИЗВОДСТВО <br>
+      <span>ЛАБОРАТОРНЫЙ</span> КОНТРОЛЬ
+    </h2>
+    
+    <p class="about__desc">
+      Peptide Labs — собственное производство пептидов с полным циклом лабораторного контроля. 
+      Твёрдофазный синтез, многоступенчатая очистка, аналитическое оборудование для проверки чистоты и подлинности. 
+       Полная трассируемость партий: от сырья до готовой формы — каждая единица имеет номер партии и соответствующий COA.
+    </p>
+
+    <div class="about__grid">
+      <figure class="about__card">
+        <img src="src/about/production-image.webp" alt="Собственное производство Peptide Labs" class="about__img" loading="lazy" />
+        <figcaption class="about__caption">Собственное производство</figcaption>
+      </figure>
+
+      <figure class="about__card">
+        <img src="src/about/control-image.webp" alt="Оборудование ВЭЖХ и масс-спектрометрии" class="about__img" loading="lazy" />
+        <figcaption class="about__caption">Контроль ВЭЖХ <br>+ масс-спектрометрия</figcaption>
+      </figure>
+
+      <figure class="about__card">
+        <img src="src/about/traceability-image.webp" alt="Документация трассируемости партий и сертификаты COA" class="about__img" loading="lazy" />
+        <figcaption class="about__caption">Трассируемость партий от сырья до флакона</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container reviews__inner">
+    
+    <div class="reviews__header">
+      <h2 class="reviews__title">ЧТО ПИШУТ КЛИЕНТЫ</h2>
+      <a href="#" class="reviews__link-all">ВСЕ ОТЗЫВЫ →</a>
+    </div>
+
+    <div class="reviews__grid">
+      
+      <!-- Отзыв 1 -->
+      <article class="review-card">
+        <div class="review-card__header">
+          <img src="src/rewiews/rewiew-logo-image1.webp" alt="Алина" class="review-card__avatar" loading="lazy">
+          <div class="review-card__user">
+            <h4 class="review-card__name">Алина</h4>
+            <p class="review-card__meta">Тирзепатид<br>3 месяца</p>
+          </div>
+          <span class="review-card__badge">-14 кг</span>
+        </div>
+        <p class="review-card__text">За 3 месяца ушло 14 кг. Аппетит контролируемый, энергии больше. Консультант помог с дозировкой</p>
+        <div class="review-card__footer">
+          <div class="review-card__stars">★★★★★</div>
+          <time class="review-card__date" datetime="2026-06-12">12.06.2026</time>
+        </div>
+      </article>
+
+      <!-- Отзыв 2 -->
+      <article class="review-card">
+        <div class="review-card__header">
+          <img src="src/rewiews/rewiew-logo-image2.webp" alt="Дмитрий" class="review-card__avatar" loading="lazy">
+          <div class="review-card__user">
+            <h4 class="review-card__name">Дмитрий</h4>
+            <p class="review-card__meta">BPC-157 + TB-500<br>4 недели</p>
+          </div>
+          <span class="review-card__badge">боль 0/10</span>
+        </div>
+        <p class="review-card__text">Травма мениска мучила полгода. После 3 недель курса боль ушла полностью. Вернулся к тренировкам.</p>
+        <div class="review-card__footer">
+          <div class="review-card__stars">★★★★★</div>
+          <time class="review-card__date" datetime="2026-05-28">28.05.2026</time>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-card__header">
+          <img src="src/rewiews/rewiew-logo-image3.webp" alt="Марина" class="review-card__avatar" loading="lazy">
+          <div class="review-card__user">
+            <h4 class="review-card__name">Марина</h4>
+            <p class="review-card__meta">GHK-Cu<br>6 недель</p>
+          </div>
+          <span class="review-card__badge">кожа +++</span>
+        </div>
+        <p class="review-card__text">Кожа реально подтянулась, подруги спрашивают что делаю. Заказала ещё раз, теперь постоянный клиент</p>
+        <div class="review-card__footer">
+          <div class="review-card__stars">★★★★★</div>
+          <time class="review-card__date" datetime="2026-07-05">05.07.2026</time>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="reviews__action">
+      <p class="reviews__action-text">Заказывали у нас? Поделитесь впечатлением — это поможет другим покупателям</p>
+      <a href="#" class="reviews__btn">ОСТАВИТЬ ОТЗЫВ</a>
+    </div>
+  </div>
+</section>
+
+<section class="quiz" id="quiz">
+  <div class="container quiz__inner">
+    <div class="quiz__content">
+      <div class="quiz__info">
+        <h2 class="quiz__title">Не знаете, <span>какой 
+пептид выбрать?</span></h2>
+        <p class="quiz__desc">
+          Ответьте на 4 вопроса — получите персональную рекомендацию. Или напишите напрямую — подберём курс бесплатно.
+        </p>
+        <div class="quiz__actions">
+          <a href="#" class="quiz__btn">ПРОЙТИ ПОДБОР(2 МИН)</a>
+          <a href="#" class="quiz__btn">НАПИСАТЬ В TELEGRAM</a>
+        </div>
+      </div>
+      <div class="quiz__media">
+        <img src="src/rewiews/quiz-image.webp" alt="Квиз" class="quiz__img" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc">
+  <div class="container calc__inner">
+    <div class="calc__content">
+      <div class="calc__info">
+        <h2 class="calc__title">Калькулятор дозировок</h2>
+        <p class="calc__desc">
+          Выберите пептид → укажите вес → получите точную дозировку, объём разведения, количество на курс и стоимость.
+        </p>
+        <div class="calc__actions">
+          <a href="#" class="calc__btn">ОТКРЫТЬ КАЛЬКУЛЯТОР</a>
+        </div>
+      </div>
+      <div class="calc__media">
+        <img src="src/rewiews/calculator-image.webp" alt="Калькулятор" class="calc__image" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container faq__inner">
+    <h2 class="faq__title">ЧАСТЫЕ ВОПРОСЫ</h2>
+    
+    <div class="faq__grid">
+
+      <article class="faq__card">
+        <h3 class="faq__question">Что такое исследовательские пептиды?</h3>
+        <p class="faq__answer">Короткие цепочки аминокислот для лабораторных и научно-исследовательских целей.<br>Не являются лекарственными средствами.</p>
+        <button type="button" class="faq__btn">+</button>
+      </article>
+
+      <article class="faq__card">
+        <h3 class="faq__question">Как подтверждается качество?</h3>
+        <p class="faq__answer">Каждая партия проходит ВЭЖХ и масс-спектрометрию. Результаты — в паспорте качества (COA), который<br> прилагается к заказу</p>
+        <button type="button" class="faq__btn">+</button>
+      </article>
+
+      <article class="faq__card">
+        <h3 class="faq__question">В каких формах выпускается продукция?</h3>
+        <p class="faq__answer">Лиофилизаты во флаконах, назальные спреи, картриджи для ручки и одноразовые<br>ручки-инжекторы</p>
+        <button type="button" class="faq__btn">+</button>
+      </article>
+
+      <article class="faq__card">
+        <h3 class="faq__question">Можно заказать свою связку молекул?</h3>
+        <p class="faq__answer">Да, изготовление на заказ — срок до 7 дней,<br>уточняется менеджером</p>
+        <button type="button" class="faq__btn">+</button>
+      </article>
+
+      <article class="faq__card">
+        <h3 class="faq__question">Как происходит доставка?</h3>
+        <p class="faq__answer">СДЭК, Почта России, транспортные компании.<br>Отправка 1–2 рабочих дня после оплаты,<br>доставка 1–3 дня. Нейтральная упаковка</p>
+        <button type="button" class="faq__btn">+</button>
+      </article>
+
+      <article class="faq__card">
+        <h3 class="faq__question">Работаете с оптом?</h3>
+        <p class="faq__answer">Да — оптовые цены от 5 единиц, white label, индивидуальная маркировка. Запросите прайс<br>через Telegram</p>
+        <button type="button" class="faq__btn">+</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="social-promo" id="social-promo">
+  <div class="container social-promo__inner">
+    <h2 class="social-promo__title">TELEGRAM-КАНАЛ PEPTIDE LABS</h2>
+    
+    <div class="social-promo__actions">
+      <a href="#" class="social-promo__btn social-promo__btn--white">ПЕРЕЙТИ TELEGRAM</a>
+      <a href="#" class="social-promo__btn social-promo__btn--purple">WHATSAPP</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="container footer__inner">
+    
+    <div class="footer__disclaimer">
+      <p>For Research Use Only - Not for Human Use · Только для научных исследований. Вся продукция предназначена исключительно для лабораторных и научно-исследовательских целей. Не является лекарственным средством, БАДом или пищевой продукцией. Приобретая продукцию, вы подтверждаете, что используете её в соответствии с законодательством.</p>
+    </div>
+
+    <div class="footer__grid">
+      
+      <div class="footer__col">
+        <h4 class="footer__title">PEPTIDE LABS</h4>
+        <p class="footer__text">Производитель исследовательских пептидов. Собственная лаборатория, COA на каждую партию. Доставка по РФ.</p>
+        <p class="footer__requisites">
+          ООО «АМС-Сервис»<br>
+          ИНН: 3444169438 · ОГРН: 1093444003179
+        </p>
+      </div>
+      
+      <div class="footer__col">
+        <h4 class="footer__title">Каталог</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Все товары</a></li>
+          <li><a href="catalog.html" class="footer__link">Снижение веса</a></li>
+          <li><a href="catalog.html" class="footer__link">Восстановление</a></li>
+          <li><a href="catalog.html" class="footer__link">Нейро и сон</a></li>
+          <li><a href="catalog.html" class="footer__link">Антиэйдж</a></li>
+          <li><a href="catalog.html" class="footer__link">Красота</a></li>
+          <li><a href="catalog.html" class="footer__link">Спреи</a></li>
+          <li><a href="catalog.html" class="footer__link">Бленды</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Информация</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Качество и COA</a></li>
+          <li><a href="#" class="footer__link">Доставка и оплата</a></li>
+          <li><a href="#" class="footer__link">Калькулятор</a></li>
+          <li><a href="business.html" class="footer__link">Оптовикам</a></li>
+          <li><a href="#" class="footer__link">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__list">
+          <li><a href="https://t.me/peptidelabs" target="_blank" rel="noopener noreferrer" class="footer__link">Telegram: @peptidelabs</a></li>
+          <li><a href="https://wa.me/79053921851" target="_blank" rel="noopener noreferrer" class="footer__link">WhatsApp</a></li>
+          <li><a href="tel:+79053921851" class="footer__link">+7 (905) 392-18-51</a></li>
+          <li><a href="mailto:radionov@mail.ru" class="footer__link">radionov@mail.ru</a></li>
+          <li class="footer__item-text">Волгоград, <br>ул. Краснознаменская, <br>9 (ТРЦ «Пирамида»)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Peptide Labs - For Research Use Only</p>
+      
+      <div class="footer__legal">
+        <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
+        <a href="#" class="footer__legal-link">Пользовательское соглашение</a>
+        <a href="#" class="footer__legal-link">Отказ от ответственности</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  </div>
+</footer>
+<script>
+  const header = document.getElementById('header');
+
+  const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+  };
+
+  requestAnimationFrame(onScroll);
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+<script src="js.js" defer></script>
+<script src="catalog-render.js" defer></script>
+
+<!-- Шторка корзины -->
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<!-- Панель корзины -->
+<aside class="cart-panel" id="cart-panel">
+  <div class="cart-panel__header">
+    <h2 class="cart-panel__title">Корзина</h2>
+    <button class="cart-panel__close" id="cart-close" type="button">×</button>
+  </div>
+  <div class="cart-panel__body" id="cart-body"></div>
+  <div class="cart-panel__footer">
+    <div class="cart-panel__total-row">
+      <span>Итого</span>
+      <span><span id="cart-total">0</span> ₽</span>
+    </div>
+    <a href="business.html" id="cart-checkout" class="btn btn--primary cart-panel__checkout">ОФОРМИТЬ</a>
+  </div>
+</aside>
+
+<!-- Поиск -->
+<div class="search-modal" id="search-modal">
+  <div class="search-modal__inner">
+    <div class="search-modal__bar">
+      <input type="text" class="search-modal__input" id="search-input" placeholder="Поиск по каталогу..." autocomplete="off">
+      <button class="search-modal__close" id="search-close" type="button">×</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+  </div>
+</div>
+
+<!-- Скрипты -->
+<script src="cart.js" defer></script>
+<script src="search.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,1656 @@
+[
+  {
+  "id": "bpc-157",
+  "name": "BPC-157",
+  "nameRu": "БПЦ-157",
+  "category": "recovery",
+  "categoryLabel": "Восстановление",
+  "subtitle": "Стабильный гастропентадекапептид для регенерации тканей. Body Protection Compound-157, состоящий из 15 аминокислот.",
+  "badges": ["хит", "восстановление"],
+  "rating": 4.9,
+  "reviewsCount": 83,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" },
+    { "type": "spray", "label": "Спрей", "description": "Готовый раствор", "img": "src/catalog/spray/bpc-157-spray-image.webp" }
+  ],
+  "dosages": [
+    { "value": "2мг", "price": 1850 },
+    { "value": "5мг", "price": 2950 },
+    { "value": "10мг", "price": 3850 }
+  ],
+  "frequentlyBoughtTogether": [
+    "tb-500",
+    "bpc-tb-blend",
+    "bac-water",
+    "bpc-157-spray"
+  ],
+  "synergy": [
+    { "id": "tb-500", "name": "TB-500", "note": "комбо BPC+TB" },
+    { "id": "ghk-cu", "name": "GHK-Cu", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val",
+    "formula": "C₆₂H₉₈N₁₆O₂₂",
+    "molecularWeight": "1419.53 г/моль",
+    "cas": "137525-51-0",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Стабильный фрагмент защитного белка желудочного сока (Body Protection Compound). Стимулирует ангиогенез (через VEGF), синтез коллагена, модулирует NO-систему. Устойчив в кислой среде желудка.",
+    "comparison": {
+      "target": "TB-500",
+      "text": "BPC-157 действует локально (в месте повреждения), TB-500 — системно. Комбинация обеспечивает полный спектр: точечный ремонт + общая поддержка."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования заживления сухожилий и связок",
+      "Модели гастропротекции и восстановления слизистой ЖКТ",
+      "Изучение ангиогенеза и регенерации тканей",
+      "Исследования противовоспалительной активности"
+    ],
+    "keyStudies": "Доклинические серии (Zagreb, 1990–2025): заживление ран, сухожилий, связок, ЖКТ-повреждений, нейропротекция. Клинические испытания проводились при ЯБК и ВЗК (фаза 2)."
+  },
+  "storage": {
+    "lyophilizate": "−20°C (длительно) / 2–8°C (до 6 мес)",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/BPC-157-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/BPC-157-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/bpc-157-coa.webp", "label": "COA" }
+    ] 
+  }
+},
+{
+  "id": "tirzepatide",
+  "name": "Tirzepatide",
+  "nameRu": "Тирзепатид",
+  "category": "weight-loss",
+  "categoryLabel": "Контроль веса",
+  "subtitle": "Двойной агонист GLP-1/GIP для выраженного контроля веса.",
+  "badges": ["топ", "похудение"],
+  "rating": 5.0,
+  "reviewsCount": 94,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2750 },
+    { "value": "10мг", "price": 5250 },
+    { "value": "15мг", "price": 6650 },
+    { "value": "20мг", "price": 8350 },
+    { "value": "30мг", "price": 10750 },
+    { "value": "40мг", "price": 13050 }
+  ],
+  "frequentlyBoughtTogether": [
+    "semaglutide",
+    "retatrutide",
+    "bac-water",
+    "cagrilintide"
+  ],
+  "synergy": [
+    { "id": "cagrilintide", "name": "Кагрилинтид", "note": null },
+    { "id": "lipo-c", "name": "Lipo-C", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Tyr-Aib-Glu-Gly-Thr-Phe-Thr-Ser-Asp-Tyr-Ser-Ile-Aib-Leu-Asp-Lys(ε-γGlu-C₂₀ fatty diacid)-Ile-Ala-Gln-Glu-Phe-Val-Asn-Trp-Leu-Leu-Ala-Gly-Gly-Pro-Ser-Ser-Gly-Ala-Pro-Pro-Pro-Ser-NH₂",
+    "formula": "C₂₂₅H₃₄₈N₄₈O₆₈",
+    "molecularWeight": "4813.45 г/моль",
+    "cas": "2023788-19-2",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат (порошок) во флаконе, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Одновременно активирует рецепторы GLP-1 и GIP, обеспечивая двойной механизм подавления аппетита и улучшения чувствительности к инсулину. Превосходит селективные GLP-1-агонисты по эффективности.",
+    "comparison": {
+      "target": "Семаглутид / Ретатрутид",
+      "text": "vs Семаглутид: превосходит по снижению веса за счёт двойного механизма. vs Ретатрутид: ретатрутид добавляет третий рецептор (глюкагон)."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования двойной инкретиновой активации",
+      "Модели снижения массы тела",
+      "Изучение инсулинорезистентности",
+      "Сравнительные протоколы с GLP-1-агонистами"
+    ],
+    "keyStudies": "SURMOUNT-1 (фаза 3, NEJM 2022): −16,0% (5 мг), −21,4% (10 мг), −22,5% (15 мг) за 72 недели"
+  },
+  "storage": {
+    "lyophilizate": "−20°C (длительно) / 2–8°C (до 6 мес)",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/tirzepatide-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/tirzepatide-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/tirzepatide-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "retatrutide",
+  "name": "Retatrutide",
+  "nameRu": "Ретатрутид",
+  "category": "weight-loss",
+  "categoryLabel": "Контроль веса",
+  "subtitle": "Тройной агонист нового поколения (GLP-1 / GIP / Glucagon).",
+  "badges": ["новинка", "прорыв"],
+  "rating": 5.0,
+  "reviewsCount": 47,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2650 },
+    { "value": "10мг", "price": 4850 },
+    { "value": "15мг", "price": 6350 },
+    { "value": "20мг", "price": 7850 },
+    { "value": "30мг", "price": 10850 }
+  ],
+  "frequentlyBoughtTogether": [
+    "tirzepatide",
+    "semaglutide",
+    "bac-water",
+    "cagrilintide"
+  ],
+  "synergy": [
+    { "id": "cagrilintide", "name": "Кагрилинтид", "note": null },
+    { "id": "lipo-c", "name": "Lipo-C", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "His-Gly-Glu-Gly-Thr-Phe-Thr-Ser-Asp-Leu-Ser-Lys(ε-γGlu-C₁₈)-Gln-Leu-Glu-Glu-Glu-Ala-Val-Arg-Leu-Phe-Ile-Glu-Trp-Leu-Lys-Asn-Gly-Gly-Pro-Ser-Ser-Gly-Ala-Pro-Pro-Pro-Ser-NH₂",
+    "formula": "C₂₀₂H₃₁₄N₄₆O₆₄S",
+    "molecularWeight": "~4483 г/моль",
+    "cas": "2381089-83-2",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат (порошок) во флаконе, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Тройной агонист: одновременно воздействует на GLP-1, GIP и глюкагоновые рецепторы. Глюкагоновый компонент повышает расход энергии и стимулирует липолиз в печени, что усиливает общий эффект снижения массы.",
+    "comparison": {
+      "target": "Тирзепатид",
+      "text": "vs Тирзепатид: добавляет третий рецептор (глюкагон) → усиленный расход энергии. Показал наибольшее снижение массы тела среди GLP-1 класса. Статус: проходит регистрацию, не одобрен ни в одной юрисдикции."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования тройной инкретиновой активации",
+      "Модели максимального снижения массы тела",
+      "Изучение печёночного метаболизма жиров",
+      "Энергетический расход и термогенез"
+    ],
+    "keyStudies": "TRIUMPH-1 (фаза 3, Eli Lilly 2026): −28,3% массы тела за 80 недель (12 мг); до −30,3% при ИМТ ≥35 за 104 недели"
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/retatrutide-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/retatrutide-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/retatrutide-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "cagrilintide",
+  "name": "Cagrilintide",
+  "nameRu": "Кагрилинтид",
+  "category": "weight-loss",
+  "categoryLabel": "Контроль веса",
+  "subtitle": "Длительно действующий аналог амилина.",
+  "badges": ["синергия", "похудение"],
+  "rating": 4.9,
+  "reviewsCount": 38,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "10мг", "price": 10850 }
+  ],
+  "frequentlyBoughtTogether": [
+    "semaglutide",
+    "tirzepatide",
+    "bac-water",
+    "retatrutide"
+  ],
+  "synergy": [
+    { "id": "semaglutide", "name": "Семаглутид", "note": "комбо CagriSema" },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Leu-Ser-Gln-Glu-Leu-His-Lys-Leu-Gln-Thr-Tyr-Pro-Arg-Thr-Asp-Val-Gly-Ala-Asn-Thr-Tyr (модифицированный амилин, C₁₈ fatty diacid через γGlu)",
+    "formula": "Пептид-жирнокислотный конъюгат",
+    "molecularWeight": "~3887 г/моль",
+    "cas": "2375949-93-2",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Длительно действующий аналог амилина. Замедляет опорожнение желудка и продлевает чувство насыщения. В комбинации с GLP-1-агонистами (CagriSema) показывает синергический эффект.",
+    "comparison": {
+      "target": "GLP-1 монотерапия",
+      "text": "vs GLP-1 как монотерапия: уступает по снижению веса, но в комбинации (CagriSema) превосходит оба компонента. Механизм через амилин, не GLP-1."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования синергии с GLP-1-агонистами",
+      "Модели амилин-опосредованного контроля аппетита",
+      "Изучение замедления гастральной эвакуации"
+    ],
+    "keyStudies": "REDEFINE 1 (фаза 3, NEJM 2025): CagriSema дала −22,7% массы тела за 68 недель (vs −16,1% семаглутид, −11,8% кагрилинтид)"
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/cagrilintide-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/cagrilintide-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/cagrilintide-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "aod-9604",
+  "name": "AOD-9604",
+  "nameRu": "АОД-9604",
+  "category": "fat-loss",
+  "categoryLabel": "Жиросжигание",
+  "subtitle": "Фрагмент гормона роста для липолиза.",
+  "badges": ["липолиз", "жиросжигание"],
+  "rating": 4.8,
+  "reviewsCount": 51,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "2мг", "price": 2800 },
+    { "value": "5мг", "price": 4200 },
+    { "value": "10мг", "price": 6500 }
+  ],
+  "frequentlyBoughtTogether": [
+    "semaglutide",
+    "mots-c",
+    "bac-water",
+    "lipo-c"
+  ],
+  "synergy": [
+    { "id": "lipo-c", "name": "Lipo-C", "note": null },
+    { "id": "mots-c", "name": "MOTS-c", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Tyr-Leu-Arg-Ile-Val-Gln-Cys-Arg-Ser-Val-Glu-Gly-Ser-Cys-Gly-Phe (фрагмент 177-191 hGH + тирозин)",
+    "formula": "C₇₈H₁₂₅N₂₃O₂₃S₂",
+    "molecularWeight": "1815.08 г/моль",
+    "cas": "221231-10-3",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Модифицированный фрагмент 176-191 гормона роста. Стимулирует липолиз и ингибирует липогенез без влияния на уровни IGF-1 и глюкозы в крови.",
+    "comparison": {
+      "target": "HGH Fragment 176-191",
+      "text": "vs HGH Fragment 176-191: AOD-9604 — модифицированная версия с дополнительным тирозином на N-конце для стабильности."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования жирового метаболизма",
+      "Модели селективного липолиза",
+      "Изучение фрагментов ГР без ростовых эффектов"
+    ],
+    "keyStudies": "Доклинические данные: снижение жировой массы без влияния на IGF-1 и толерантность к глюкозе"
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/aod-9604-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/aod-9604-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/aod-9604-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "5-amino-1mq",
+  "name": "5-Amino-1MQ",
+  "nameRu": "5-Амино-1MQ",
+  "category": "metabolism",
+  "categoryLabel": "Метаболизм",
+  "subtitle": "Ингибитор NNMT для метаболической активации жировой ткани.",
+  "badges": ["инновация", "метаболизм"],
+  "rating": 4.9,
+  "reviewsCount": 42,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2250 },
+    { "value": "10мг", "price": 3850 }
+  ],
+  "frequentlyBoughtTogether": [
+    "nad-plus",
+    "mots-c",
+    "bac-water",
+    "lipo-c"
+  ],
+  "synergy": [
+    { "id": "nad-plus", "name": "NAD+", "note": null },
+    { "id": "lipo-c", "name": "Lipo-C", "note": null },
+    { "id": "mots-c", "name": "MOTS-c", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Не пептид. Малая молекула — производное изохинолина.",
+    "formula": "C₁₁H₁₂N₂O",
+    "molecularWeight": "188.23 г/моль",
+    "cas": "42889-76-7",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Селективный обратимый ингибитор NNMT (никотинамид-N-метилтрансферазы). Блокирует фермент, который избыточно экспрессируется в адипоцитах, переводя их в режим повышенного расхода энергии. Связан с метаболизмом NAD+.",
+    "comparison": {
+      "target": "Пептиды каталога",
+      "text": "Единственный в каталоге ингибитор NNMT. Не является пептидом — малая молекула."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования NNMT-пути",
+      "Модели метаболической активации адипоцитов",
+      "Изучение связи NAD+/NNMT"
+    ],
+    "keyStudies": "Доклинические данные: снижение жировой массы и улучшение чувствительности к инсулину на моделях ожирения"
+  },
+  "storage": {
+    "lyophilizate": "−20°C (длительно) / 2–8°C",
+    "solution": "2–8°C"
+  },
+  "images": {
+    "main": "src/catalog/5-amino-1mq-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/5-amino-1mq-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/5-amino-1mq-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "tb-500",
+  "name": "TB-500",
+  "nameRu": "ТБ-500 (Тимозин бета-4)",
+  "category": "recovery",
+  "categoryLabel": "Восстановление",
+  "subtitle": "Системный регенеративный пептид на основе тимозина бета-4.",
+  "badges": ["хит", "восстановление"],
+  "rating": 4.9,
+  "reviewsCount": 76,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "2мг", "price": 1850 },
+    { "value": "5мг", "price": 2950 },
+    { "value": "10мг", "price": 3850 }
+  ],
+  "frequentlyBoughtTogether": [
+    "bpc-157",
+    "bpc-tb-blend",
+    "bac-water",
+    "ghk-cu"
+  ],
+  "synergy": [
+    { "id": "bpc-157", "name": "BPC-157", "note": "комбо BPC+TB" },
+    { "id": "ghk-cu", "name": "GHK-Cu", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Ac-Ser-Asp-Lys-Pro-Asp-Met-Ala-Glu-Ile-Glu-Lys-Phe-Asp-Lys-Ser-Lys-Leu-Lys-Lys-Thr-Glu-Thr-Gln-Glu-Lys-Asn-Pro-Leu-Pro-Ser-Lys-Glu-Thr-Ile-Glu-Gln-Glu-Lys-Gln-Ala-Gly-Glu-Ser",
+    "formula": "C₂₁₂H₃₅₀N₅₆O₇₈S",
+    "molecularWeight": "4963.44 г/моль",
+    "cas": "77591-33-4",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Синтетический аналог тимозина бета-4. Секвестрирует G-актин, регулирует подвижность клеток и их ответ на повреждение. Действует системно: улучшает кровоток, снижает воспаление, способствует ремоделированию тканей.",
+    "comparison": {
+      "target": "BPC-157",
+      "text": "vs BPC-157: TB-500 — системный (по всему телу), BPC-157 — локальный (в месте травмы). Классическая комбинация для комплексного восстановления."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования системной регенерации",
+      "Модели заживления ран и сердечной ткани",
+      "Изучение клеточной миграции и ангиогенеза",
+      "Противовоспалительные протоколы"
+    ],
+    "keyStudies": "Доклинические данные: ускорение заживления кожи, сердца и роговицы. В ветеринарии: применяется для лечения травм у лошадей."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/tb-500-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/tb-500-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/tb-500-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "ghk-cu",
+  "name": "GHK-Cu",
+  "nameRu": "ГХК-Медь (Трипептид меди)",
+  "category": "recovery",
+  "categoryLabel": "Восстановление",
+  "subtitle": "Медный трипептид для регенерации кожи и тканей.",
+  "badges": ["anti-age", "кожа"],
+  "rating": 4.9,
+  "reviewsCount": 61,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "50мг", "price": 2950 },
+    { "value": "100мг", "price": 4950 }
+  ],
+  "frequentlyBoughtTogether": [
+    "bpc-157",
+    "nad-plus",
+    "bac-water",
+    "tb-500"
+  ],
+  "synergy": [
+    { "id": "bpc-157", "name": "BPC-157", "note": null },
+    { "id": "nad-plus", "name": "NAD+", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Gly-His-Lys·Cu²⁺",
+    "formula": "C₁₄H₂₃CuN₆O₄",
+    "molecularWeight": "403.92 г/моль",
+    "cas": "49557-75-7",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Природный трипептид, образующий комплекс с ионом меди (Cu²⁺). Стимулирует фибробласты, синтез коллагена и эластина, обладает антиоксидантным и противовоспалительным действием. Уровень в организме снижается с возрастом.",
+    "comparison": {
+      "target": "Металлопептиды каталога / AHK-Cu",
+      "text": "Единственный металлопептид в каталоге. Отличается от AHK-Cu (тетрапептид, другая структура, но схожий механизм)."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования регенерации кожи",
+      "Модели синтеза коллагена и эластина",
+      "Антиоксидантные протоколы",
+      "Заживление ран и тканей"
+    ],
+    "keyStudies": "Pickart et al. (серия работ): стимуляция фибробластов, ангиогенез, ремоделирование кожи. Применяется в косметологических формулах."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, использовать быстрее из-за окисления меди"
+  },
+  "images": {
+    "main": "src/catalog/ghk-cu-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/ghk-cu-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/ghk-cu-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "semax",
+  "name": "Semax",
+  "nameRu": "Семакс",
+  "category": "nootropics",
+  "categoryLabel": "Ноотропы",
+  "subtitle": "Российский ноотропный пептид для когнитивных функций.",
+  "badges": ["Нейропептид", "фокус"],
+  "rating": 4.9,
+  "reviewsCount": 57,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2850 },
+    { "value": "10мг", "price": 4650 }
+  ],
+  "frequentlyBoughtTogether": [
+    "selank",
+    "bac-water",
+    "nad-plus",
+    "bpc-157"
+  ],
+  "synergy": [
+    { "id": "selank", "name": "Селанк", "note": "комбо Semax + Selank" },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Met-Glu-His-Phe-Pro-Gly-Pro",
+    "formula": "C₃₉H₅₁N₉O₁₀S",
+    "molecularWeight": "813.93 г/моль",
+    "cas": "80714-61-0",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Синтетический аналог АКТГ(4-7). Повышает уровень BDNF (нейротрофический фактор мозга), модулирует дофаминовую и серотониновую системы. Улучшает внимание и память без стимуляторного перевозбуждения.",
+    "comparison": {
+      "target": "Селанк",
+      "text": "vs Селанк: Семакс — фокус и концентрация (дофамин/BDNF). Селанк — спокойствие и анксиолитика (ГАМК/серотонин). Классическая связка: фокус + спокойный фон."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования когнитивных функций",
+      "Модели нейропротекции",
+      "Изучение BDNF-сигналинга",
+      "Протоколы умственной выносливости"
+    ],
+    "keyStudies": "Зарегистрирован в РФ как лекарственный препарат (капли назальные 0,1%). Исследования: улучшение внимания и памяти, нейропротекция при ишемии."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/semax-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/semax/semax-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/semax-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "selank",
+  "name": "Selank",
+  "nameRu": "Селанк",
+  "category": "nootropics",
+  "categoryLabel": "Ноотропы",
+  "subtitle": "Пептидный анксиолитик без седации.",
+  "badges": ["Анксиолитик", "антистресс"],
+  "rating": 4.9,
+  "reviewsCount": 49,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2850 },
+    { "value": "10мг", "price": 4650 }
+  ],
+  "frequentlyBoughtTogether": [
+    "semax",
+    "dsip",
+    "bac-water",
+    "bpc-157"
+  ],
+  "synergy": [
+    { "id": "semax", "name": "Семакс", "note": "комбо Semax + Selank" },
+    { "id": "dsip", "name": "DSIP", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Thr-Lys-Pro-Arg-Pro-Gly-Pro",
+    "formula": "C₃₃H₅₇N₁₁O₉",
+    "molecularWeight": "751.87 г/моль",
+    "cas": "129954-34-3",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Синтетический аналог тафтсина с добавлением Pro-Gly-Pro. Модулирует ГАМК- и серотониновую системы, снижая тревогу без седативного эффекта. Поддерживает память и когнитивные функции.",
+    "comparison": {
+      "target": "Семакс",
+      "text": "vs Семакс: Селанк — анксиолитик (снижение тревоги). Семакс — стимулятор когнитивных функций. Оптимальная пара."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования анксиолитической активности",
+      "Модели стрессоустойчивости",
+      "Изучение ГАМК-модуляции",
+      "Комбинированные ноотропные протоколы"
+    ],
+    "keyStudies": "Зарегистрирован в РФ как лекарственный препарат (капли назальные 0,15%). Анксиолитик без привыкания и седации."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/selank-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/selank-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/selank-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "dsip",
+  "name": "DSIP",
+  "nameRu": "ДСИП (Дельта-сон индуцирующий пептид)",
+  "category": "nootropics",
+  "categoryLabel": "Ноотропы",
+  "subtitle": "Нейропептид для нормализации сна.",
+  "badges": ["глубокий сон", "антистресс"],
+  "rating": 4.9,
+  "reviewsCount": 44,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2150 },
+    { "value": "10мг", "price": 3450 }
+  ],
+  "frequentlyBoughtTogether": [
+    "selank",
+    "epithalon",
+    "bac-water",
+    "semax"
+  ],
+  "synergy": [
+    { "id": "selank", "name": "Селанк", "note": null },
+    { "id": "epithalon", "name": "Эпиталон", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Trp-Ala-Gly-Gly-Asp-Ala-Ser-Gly-Glu",
+    "formula": "C₃₅H₄₈N₁₀O₁₅",
+    "molecularWeight": "848.81 г/моль",
+    "cas": "62568-57-4",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Нонапептид, связанный с индукцией дельта-волновой активности мозга (глубокая фаза сна). Модулирует стрессовую ось (HPA), снижает уровень кортизола. Не вызывает принудительного засыпания.",
+    "comparison": {
+      "target": "Пептиды каталога",
+      "text": "Единственный пептид в каталоге, направленный на нормализацию сна. Не седатик, а регулятор."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования архитектуры сна",
+      "Модели стрессовой регуляции",
+      "Изучение кортизолового ответа",
+      "Протоколы восстановления циркадных ритмов"
+    ],
+    "keyStudies": "Schoenenberger et al. (1977): впервые выделен из крови кроликов во время медленноволнового сна. Исследования: нормализация дельта-активности, снижение стрессового ответа."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/dsip.webp",
+    "thumbs": [
+      { "src": "src/catalog/dsip/dsip-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/dsip-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "epithalon",
+  "name": "Epithalon",
+  "nameRu": "Эпиталон",
+  "category": "longevity",
+  "categoryLabel": "Anti-age",
+  "subtitle": "Тетрапептид пинеальной железы для протоколов долголетия.",
+  "badges": ["longevity", "anti-age"],
+  "rating": 4.8,
+  "reviewsCount": 35,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "10мг", "price": 2950 },
+    { "value": "50мг", "price": 6750 }
+  ],
+  "frequentlyBoughtTogether": [
+    "nad-plus",
+    "mots-c",
+    "bac-water",
+    "dsip"
+  ],
+  "synergy": [
+    { "id": "nad-plus", "name": "NAD+", "note": null },
+    { "id": "mots-c", "name": "MOTS-c", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Ala-Glu-Asp-Gly",
+    "formula": "C₁₄H₂₂N₄O₉",
+    "molecularWeight": "390.35 г/моль",
+    "cas": "307297-39-8",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Синтетический аналог пептида пинеальной железы (эпиталамин). Активирует теломеразу в клеточных культурах (in vitro), нормализует выработку мелатонина, обладает антиоксидантным действием.",
+    "comparison": {
+      "target": "Longevity-пептиды",
+      "text": "Тетрапептид — самый короткий пептид в longevity-сегменте каталога. Доказательная база ранняя, с ограниченной независимой репликацией."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования теломеразной активации",
+      "Модели циркадной регуляции",
+      "Протоколы longevity",
+      "Изучение мелатониновой секреции"
+    ],
+    "keyStudies": "Хавинсон В.Х. (серия работ, 2003–2020): активация теломеразы in vitro, нормализация мелатонина. Доказательная база сосредоточена преимущественно в одной научной школе."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/epithalon-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/epithalon-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/epithanol-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "nad-plus",
+  "name": "NAD+",
+  "nameRu": "НАД+ (Никотинамидадениндинуклеотид)",
+  "category": "longevity",
+  "categoryLabel": "Энергия",
+  "subtitle": "Ключевой кофермент клеточной энергетики.",
+  "badges": ["клеточная энергия", "longevity"],
+  "rating": 5.0,
+  "reviewsCount": 58,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "100мг", "price": 1250 },
+    { "value": "500мг", "price": 3650 },
+    { "value": "1000мг", "price": 6150 }
+  ],
+  "frequentlyBoughtTogether": [
+    "mots-c",
+    "epithalon",
+    "ghk-cu",
+    "bac-water"
+  ],
+  "synergy": [
+    { "id": "mots-c", "name": "MOTS-c", "note": null },
+    { "id": "epithalon", "name": "Эпиталон", "note": null },
+    { "id": "ghk-cu", "name": "GHK-Cu", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Не пептид. Динуклеотид (никотинамид + аденин).",
+    "formula": "C₂₁H₂₇N₇O₁₄P₂",
+    "molecularWeight": "663.43 г/моль",
+    "cas": "53-84-9",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Ключевой кофермент окислительно-восстановительных реакций в митохондриях. Активирует сиртуины (SIRT1–7) — «белки долголетия». Участвует в репарации ДНК (через PARP). Уровень снижается с возрастом.",
+    "comparison": {
+      "target": "NMN / Пептиды каталога",
+      "text": "Не пептид — динуклеотид. vs NMN: NAD+ — готовая форма, NMN — предшественник. Инъекционная форма обходит пищеварительный тракт."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования митохондриальной функции",
+      "Модели клеточного старения",
+      "Изучение сиртуин-зависимых путей",
+      "Протоколы восстановления энергии"
+    ],
+    "keyStudies": "Imai & Guarente (2014): NAD+ и сиртуины как центральные регуляторы старения. Множество доклинических работ по возрастному снижению NAD+."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C. Защищать от света.",
+    "solution": "2–8°C, использовать в день приготовления."
+  },
+  "images": {
+    "main": "src/catalog/nad-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/nad-plus/nad-plus-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/nad-plus-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "mots-c",
+  "name": "MOTS-c",
+  "nameRu": "МОТС-с",
+  "category": "longevity",
+  "categoryLabel": "Anti-age",
+  "subtitle": "Митохондриальный пептид — «имитатор физической нагрузки».",
+  "badges": ["митохондрии", "выносливость"],
+  "rating": 4.9,
+  "reviewsCount": 41,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "10мг", "price": 2350 },
+    { "value": "20мг", "price": 3950 }
+  ],
+  "frequentlyBoughtTogether": [
+    "nad-plus",
+    "epithalon",
+    "5-amino-1mq",
+    "bac-water"
+  ],
+  "synergy": [
+    { "id": "nad-plus", "name": "NAD+", "note": null },
+    { "id": "epithalon", "name": "Эпиталон", "note": null },
+    { "id": "5-amino-1mq", "name": "5-Amino-1MQ", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Met-Arg-Trp-Gln-Glu-Met-Gly-Tyr-Ile-Phe-Tyr-Pro-Arg-Lys-Leu-Arg",
+    "formula": "C₁₀₁H₁₅₂N₂₈O₂₂S₂",
+    "molecularWeight": "2174.56 г/моль",
+    "cas": "1627580-64-6",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Пептид, кодируемый митохондриальной ДНК (12S rRNA). Активирует AMPK — главный метаболический переключатель. Имитирует метаболические эффекты физической нагрузки: улучшает чувствительность к инсулину, повышает расход энергии.",
+    "comparison": {
+      "target": "NAD+ / Пептиды каталога",
+      "text": "Единственный митохондриально-кодируемый пептид в каталоге. vs NAD+: MOTS-c работает через AMPK, NAD+ — через сиртуины. Комбинация покрывает оба пути."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования AMPK-сигналинга",
+      "Модели метаболического старения",
+      "Изучение митохондриальной функции",
+      "Протоколы exercise mimetics"
+    ],
+    "keyStudies": "Lee et al. (Cell Metabolism, 2015): MOTS-c как первый описанный митохондриально-кодируемый пептид с метаболической функцией. Повышение выносливости в моделях разных возрастов."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/mots-c-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/mots-c-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/mots-c-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "thymosin-alpha-1",
+  "name": "Thymosin Alpha-1",
+  "nameRu": "Тимозин альфа-1",
+  "category": "immunity",
+  "categoryLabel": "Иммунитет",
+  "subtitle": "Иммуномодулирующий пептид тимуса.",
+  "badges": ["иммунитет", "longevity"],
+  "rating": 4.9,
+  "reviewsCount": 33,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 10550 },
+    { "value": "10мг", "price": 23150}
+  ],
+  "frequentlyBoughtTogether": [
+    "nad-plus",
+    "ghk-cu",
+    "bac-water",
+    "bpc-157"
+  ],
+  "synergy": [
+    { "id": "nad-plus", "name": "NAD+", "note": null },
+    { "id": "ghk-cu", "name": "GHK-Cu", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Ac-Ser-Asp-Ala-Ala-Val-Asp-Thr-Ser-Ser-Glu-Ile-Thr-Thr-Lys-Asp-Leu-Lys-Glu-Lys-Lys-Glu-Val-Val-Glu-Glu-Ala-Glu-Asn",
+    "formula": "C₁₂₉H₂₁₅N₃₃O₅₅",
+    "molecularWeight": "3108.25 г/моль",
+    "cas": "62304-98-7",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Пептид, производный от протимозина альфа тимуса. Стимулирует дифференцировку Т-клеток и NK-клеток, балансирует иммунный ответ (Th1/Th2), поддерживает выработку интерферонов.",
+    "comparison": {
+      "target": "Тимоген / Иммуномодуляторы каталога",
+      "text": "Единственный иммуномодулирующий пептид с регистрацией в десятках стран. vs Тимоген: тимозин альфа-1 — более длинная молекула (28 а/к), более широкая доказательная база."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования иммуномодуляции",
+      "Модели Т-клеточного иммунитета",
+      "Изучение хронических инфекций",
+      "Протоколы возрастного снижения иммунитета"
+    ],
+    "keyStudies": "Одобрен в 35+ странах (включая Китай) как Zadaxin® (тималфазин). Применение: хронический гепатит B/C, иммунодефициты, адъювант вакцинации."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/thymosin-alpha-1-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/thymosin-alpha-1-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/thymosin-alpha-1-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "melanotan-2",
+  "name": "Melanotan II",
+  "nameRu": "Меланотан-2",
+  "category": "cosmetology",
+  "categoryLabel": "Пигментация",
+  "subtitle": "Аналог α-МСГ для стимуляции меланогенеза.",
+  "badges": ["пигментация", "загар"],
+  "rating": 4.8,
+  "reviewsCount": 67,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "10мг", "price": 2350 }
+  ],
+  "frequentlyBoughtTogether": [
+    "pt-141",
+    "glutathione",
+    "bac-water",
+    "ghk-cu"
+  ],
+  "synergy": [
+    { "id": "pt-141", "name": "PT-141", "note": null },
+    { "id": "glutathione", "name": "Глутатион", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Ac-Nle-cyclo(Asp-His-D-Phe-Arg-Trp-Lys)-NH₂",
+    "formula": "C₅₀H₆₉N₁₅O₉",
+    "molecularWeight": "1024.18 г/моль",
+    "cas": "121062-08-6",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Циклический аналог α-меланоцитстимулирующего гормона (α-МСГ). Активирует MC1R-рецепторы меланоцитов, стимулируя выработку меланина. Также воздействует на MC3R/MC4R (аппетит, либидо).",
+    "comparison": {
+      "target": "Melanotan I (Afamelanotide)",
+      "text": "vs Melanotan I (Afamelanotide): MT-I более селективен к MC1R и одобрен в ЕС (Scenesse®). MT-II — менее селективен, активирует также MC3R/MC4R (аппетит, либидо)."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования меланогенеза",
+      "Модели фотопротекции кожи",
+      "Изучение меланокортиновой системы"
+    ],
+    "keyStudies": "Университет Аризоны (1990-е): разработка и описание MC-рецепторной активности. Не одобрен ни одним регулятором как лекарство."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней. Защищать от света."
+  },
+  "images": {
+    "main": "src/catalog/melanotan-2-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/melanotan-2-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/melatonan-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "pt-141",
+  "name": "PT-141",
+  "nameRu": "ПТ-141 (Бремеланотид)",
+  "category": "libido",
+  "categoryLabel": "Либидо",
+  "subtitle": "Меланокортиновый агонист для центральной активации либидо.",
+  "badges": ["либидо", "нейро"],
+  "rating": 4.9,
+  "reviewsCount": 54,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "10мг", "price": 2950 }
+  ],
+  "frequentlyBoughtTogether": [
+    "oxytocin",
+    "melanotan-2",
+    "bac-water",
+    "selank"
+  ],
+  "synergy": [
+    { "id": "oxytocin", "name": "Окситоцин", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Ac-Nle-cyclo(Asp-His-D-Phe-Arg-Trp-Lys)-OH",
+    "formula": "C₅₀H₆₈N₁₄O₁₀",
+    "molecularWeight": "1025.16 г/моль",
+    "cas": "189691-06-3",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Активатор MC3R и MC4R рецепторов в ЦНС. Запускает дофаминовый и окситоциновый каскад в гипоталамусе, вызывая центральное (не периферическое) сексуальное возбуждение. Действие через 30–45 мин, продолжительность 6–12 часов.",
+    "comparison": {
+      "target": "Melanotan-2 / Ингибиторы PDE5",
+      "text": "vs Melanotan-2: PT-141 — дезацетилированная форма MT-II, работающая через ЦНС (либидо), а не через пигментацию. vs ингибиторы PDE5 (виагра): PT-141 — центральный механизм (мозг), PDE5i — периферический (сосуды)."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования центральных механизмов либидо",
+      "Модели MC4R-зависимого возбуждения",
+      "Изучение дофаминовых каскадов в гипоталамусе"
+    ],
+    "keyStudies": "Одобрен FDA 21.06.2019 как Vyleesi® (бремеланотид) для лечения HSDD у женщин в пременопаузе. Это одобрение относится к готовому фармпрепарату."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/pt-141-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/pt-141/pt-141-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/pt-141-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "glutathione",
+  "name": "Glutathione",
+  "nameRu": "Глутатион",
+  "category": "cosmetology",
+  "categoryLabel": "Косметология",
+  "subtitle": "Главный клеточный антиоксидант и детоксикант.",
+  "badges": ["антиоксидант", "детокс"],
+  "rating": 4.9,
+  "reviewsCount": 46,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "400мг", "price": null },
+    { "value": "600мг", "price": null },
+    { "value": "1500мг", "price": 2550 }
+  ],
+  "frequentlyBoughtTogether": [
+    "melanotan-2",
+    "nad-plus",
+    "lipo-c",
+    "bac-water"
+  ],
+  "synergy": [
+    { "id": "melanotan-2", "name": "Меланотан-2", "note": "MT-2" },
+    { "id": "nad-plus", "name": "NAD+", "note": null },
+    { "id": "lipo-c", "name": "Lipo-C", "note": null }
+  ],
+  "specifications": {
+    "sequence": "γ-Glu-Cys-Gly (трипептид, γ-связь)",
+    "formula": "C₁₀H₁₇N₃O₆S",
+    "molecularWeight": "307.32 г/моль",
+    "cas": "70-18-8",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Эндогенный трипептид-антиоксидант. Нейтрализует свободные радикалы (через GSH-пероксидазу), участвует в конъюгации токсинов (через GSH-трансферазу). Ингибирует тирозиназу, снижая синтез меланина (осветляющий эффект).",
+    "comparison": {
+      "target": "Пероральный глутатион / Пептиды каталога",
+      "text": "Трипептид с γ-связью (необычная для пептидов). Инъекционная форма обходит низкую биодоступность при пероральном приёме."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования окислительного стресса",
+      "Модели детоксикации",
+      "Изучение пигментации кожи",
+      "Антиоксидантные протоколы"
+    ],
+    "keyStudies": "Широко изученная молекула. В косметологии: ингибирование тирозиназы и осветление кожи (множество клинических исследований). В медицине: дефицит GSH ассоциирован с нейродегенерацией, раком, ВИЧ."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, использовать в день приготовления (быстро окисляется)"
+  },
+  "images": {
+    "main": "src/catalog/glutathione-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/glutathione-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/glutathione-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "ipamorelin",
+  "name": "Ipamorelin",
+  "nameRu": "Ипаморелин",
+  "category": "growth-hormone",
+  "categoryLabel": "Гормон роста",
+  "subtitle": "Селективный секретагог ГР без побочного профиля.",
+  "badges": ["хит", "гормон роста"],
+  "rating": 4.9,
+  "reviewsCount": 63,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2590 },
+    { "value": "10мг", "price": 3340 }
+  ],
+  "frequentlyBoughtTogether": [
+    "cjc-1295-no-dac",
+    "bac-water",
+    "bpc-157",
+    "ghrp-6"
+  ],
+  "synergy": [
+    { "id": "cjc-1295-no-dac", "name": "CJC-1295 без DAC (Mod GRF 1-29)", "note": null },
+    { "id": "ghrp-6", "name": "GHRP-6", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Aib-His-D-2-Nal-D-Phe-Lys-NH₂",
+    "formula": "C₃₈H₄₉N₉O₅",
+    "molecularWeight": "711.85 г/моль",
+    "cas": "170851-70-4",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Селективный агонист GHS-R (грелинового рецептора). Стимулирует секрецию ГР гипофизом без значимого повышения кортизола, пролактина и без стимуляции аппетита. Один из самых «чистых» секретагогов.",
+    "comparison": {
+      "target": "GHRP-6 / GHRP-2",
+      "text": "vs GHRP-6: ипаморелин не повышает кортизол и аппетит. vs GHRP-2: ипаморелин более селективен. Классическая связка: ипаморелин + CJC-1295 (Mod GRF 1-29)."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования секреции ГР",
+      "Модели восстановления и сна",
+      "Изучение состава тела",
+      "Комбинированные протоколы с GHRH-аналогами"
+    ],
+    "keyStudies": "Raun et al. (1998): описание высокой селективности к ГР без влияния на кортизол и пролактин. Широко используется в доклинических и клинических исследованиях."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/ipamorelin-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/ipamorelin/ipamorelin-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/ipamorelin-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "cjc-1295-no-dac",
+  "name": "CJC-1295 Without DAC",
+  "nameRu": "CJC-1295 без DAC (Mod GRF 1-29)",
+  "category": "growth-hormone",
+  "categoryLabel": "Гормон роста",
+  "subtitle": "Аналог GHRH для импульсной стимуляции ГР.",
+  "badges": ["хит", "гормон роста"],
+  "rating": 4.9,
+  "reviewsCount": 55,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 3350 },
+    { "value": "10мг", "price": 5550 }
+  ],
+  "frequentlyBoughtTogether": [
+    "ipamorelin",
+    "bac-water",
+    "ghrp-6",
+    "bpc-157"
+  ],
+  "synergy": [
+    { "id": "ipamorelin", "name": "Ипаморелин", "note": null },
+    { "id": "ghrp-6", "name": "GHRP-6", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Tyr-D-Ala-Asp-Ala-Ile-Phe-Thr-Gln-Ser-Tyr-Arg-Lys-Val-Leu-Ala-Gln-Leu-Ser-Ala-Arg-Lys-Leu-Leu-Gln-Asp-Ile-Leu-Ser-Arg-NH₂",
+    "formula": "C₁₅₂H₂₅₂N₄₄O₄₂",
+    "molecularWeight": "3367.97 г/моль",
+    "cas": "863288-34-0",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Модифицированный аналог GHRH(1-29) (также Mod GRF 1-29). Усиливает амплитуду физиологических импульсов ГР, не нарушая собственный ритм секреции. Короткий период полувыведения (30 мин) обеспечивает импульсную кинетику.",
+    "comparison": {
+      "target": "CJC-1295 с DAC",
+      "text": "vs CJC-1295 с DAC: версия с DAC имеет пролонгированное действие (~8 дней), но создаёт постоянно повышенный уровень ГР (неестественно). Без DAC — импульсная стимуляция, ближе к физиологии."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования импульсной секреции ГР",
+      "Комбинированные протоколы с GHRP",
+      "Изучение оси GH-IGF-1",
+      "Модели состава тела"
+    ],
+    "keyStudies": "Широко используется в клинических исследованиях секреции ГР. Комбинация с GHRP-пептидами — стандартный синергический протокол."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/cjc-1295-nd-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/cjc-1295-nd-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/cjc-1295-nd-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "ghrp-6",
+  "name": "GHRP-6",
+  "nameRu": "ГХРП-6",
+  "category": "growth-hormone",
+  "categoryLabel": "Гормон роста",
+  "subtitle": "Мощный секретагог ГР со стимуляцией аппетита.",
+  "badges": ["гормон роста", "аппетит"],
+  "rating": 4.8,
+  "reviewsCount": 43,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 3250 }
+  ],
+  "frequentlyBoughtTogether": [
+    "cjc-1295-no-dac",
+    "ipamorelin",
+    "bac-water",
+    "bpc-157"
+  ],
+  "synergy": [
+    { "id": "cjc-1295-no-dac", "name": "CJC-1295 без DAC", "note": null },
+    { "id": "ipamorelin", "name": "Ипаморелин", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "His-D-Trp-Ala-Trp-D-Phe-Lys-NH₂",
+    "formula": "C₄₆H₅₆N₁₂O₆",
+    "molecularWeight": "873.01 г/моль",
+    "cas": "87616-84-0",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Агонист GHS-R (грелинового рецептора). Стимулирует мощный выброс ГР, но менее селективен, чем ипаморелин: повышает кортизол, пролактин и значительно стимулирует аппетит (через грелиновый путь).",
+    "comparison": {
+      "target": "Ипаморелин / GHRP-2",
+      "text": "vs Ипаморелин: GHRP-6 — более мощный, но менее селективный (повышает кортизол, пролактин, аппетит). vs GHRP-2: GHRP-2 промежуточный по силе и побочкам."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования грелинового рецептора",
+      "Модели стимуляции аппетита",
+      "Комбинированные протоколы с GHRH",
+      "Изучение оси GH-IGF-1"
+    ],
+    "keyStudies": "Один из первых описанных GHRP (1980-е). Широко используется как стандарт в исследованиях грелиновой системы."
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/ghrp-6-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/ghrp-6-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/ghrp-6-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "semaglutide",
+  "name": "Semaglutide",
+  "nameRu": "Семаглутид",
+  "category": "weight-loss",
+  "categoryLabel": "Контроль веса",
+  "subtitle": "Агонист рецепторов GLP-1 для управления аппетитом.",
+  "badges": ["хит", "похудение"],
+  "rating": 4.9,
+  "reviewsCount": 112,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "2мг", "price": 1350 },
+    { "value": "5мг", "price": 2150 },
+    { "value": "10мг", "price": 4250 },
+    { "value": "15мг", "price": 5650 },
+    { "value": "20мг", "price": 6850 }
+  ],
+  "frequentlyBoughtTogether": [
+    "cagrilintide",
+    "tirzepatide",
+    "bac-water",
+    "lipo-c"
+  ],
+  "synergy": [
+    { "id": "cagrilintide", "name": "Кагрилинтид", "note": "CagriSema" },
+    { "id": "lipo-c", "name": "Lipo-C", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "His-Aib-Glu-Gly-Thr-Phe-Thr-Ser-Asp-Val-Ser-Ser-Tyr-Leu-Glu-Gly-Gln-Ala-Ala-Lys(ε-Aib-Aib-γGlu-C₁₈ fatty diacid)-Glu-Phe-Ile-Ala-Trp-Leu-Val-Arg-Gly-Arg-Gly",
+    "formula": "C₁₈₇H₂₉₁N₄₅O₅₉",
+    "molecularWeight": "4113.58 г/моль",
+    "cas": "910463-68-2",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат (порошок) во флаконе, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Активирует рецепторы GLP-1 в гипоталамусе и ЖКТ, снижая аппетит и замедляя опорожнение желудка. Длительный период полувыведения (~7 дней) обеспечен связью с альбумином через жирнокислотный линкер.",
+    "comparison": {
+      "target": "Тирзепатид",
+      "text": "Тирзепатид — двойной агонист (GLP-1 + GIP), показал более выраженное снижение веса в прямых сравнениях. <br>Семаглутид — наиболее изученная молекула с самой широкой доказательной базой."
+    }
+  },
+  "research": {
+    "areas": [
+      "Изучение контроля аппетита и пищевого поведения",
+      "Исследования метаболического синдрома",
+      "Модели снижения массы тела",
+      "Изучение гликемического контроля"
+    ],
+    "keyStudies": "STEP 1 (фаза 3, NEJM 2021): −14,9% массы тела за 68 недель на дозе 2,4 мг/нед"
+  },
+  "storage": {
+    "lyophilizate": "−20°C (длительно) / 2–8°C (до 6 мес)",
+    "solution": "2–8°C, использовать в течение 30 дней. Не замораживать раствор."
+  },
+  "images": {
+    "main": "src/catalog/semaglutide-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/semaglutide-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/semaglutide-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "liraglutide",
+  "name": "Liraglutide",
+  "nameRu": "Лираглутид",
+  "category": "weight-loss",
+  "categoryLabel": "Контроль веса",
+  "subtitle": "Классический агонист GLP-1 ежедневного применения.",
+  "badges": ["классика", "похудение"],
+  "rating": 4.8,
+  "reviewsCount": 65,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 2650 }
+  ],
+  "frequentlyBoughtTogether": [
+    "semaglutide",
+    "tirzepatide",
+    "bac-water",
+    "lipo-c"
+  ],
+  "synergy": [
+    { "id": "cagrilintide", "name": "Кагрилинтид", "note": null },
+    { "id": "lipo-c", "name": "Lipo-C", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "His-Ala-Glu-Gly-Thr-Phe-Thr-Ser-Asp-Val-Ser-Ser-Tyr-Leu-Glu-Gly-Gln-Ala-Ala-Lys(ε-γGlu-C₁₆)-Glu-Phe-Ile-Ala-Trp-Leu-Val-Arg-Gly-Arg-Gly",
+    "formula": "C₁₇₂H₂₆₅N₄₃O₅₁",
+    "molecularWeight": "3751.20 г/моль",
+    "cas": "204656-20-2",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Селективный агонист GLP-1-рецепторов с ацилированным С₁₆ жирнокислотным линкером. Период полувыведения ~13 часов, подходит для ежедневного введения.",
+    "comparison": {
+      "target": "Семаглутид",
+      "text": "vs Семаглутид: менее выражен эффект снижения веса, но мягче профиль побочных эффектов. Ежедневное введение vs еженедельное."
+    }
+  },
+  "research": {
+    "areas": [
+      "Модели ежедневного контроля аппетита",
+      "Изучение гликемической регуляции",
+      "Сравнительные исследования с другими GLP-1"
+    ],
+    "keyStudies": "SCALE Obesity (фаза 3, NEJM 2015): −8,0% массы тела за 56 недель на дозе 3,0 мг/день"
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/liraglutide-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/liraglutide-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/liraglutide-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "mazdutide",
+  "name": "Mazdutide",
+  "nameRu": "Маздутид",
+  "category": "weight-loss",
+  "categoryLabel": "Контроль веса",
+  "subtitle": "Двойной агонист GLP-1/глюкагон с акцентом на энергорасход.",
+  "badges": ["новинка", "энергорасход"],
+  "rating": 4.9,
+  "reviewsCount": 29,
+  "forms": [
+    { "type": "powder", "label": "Лиофилизат", "description": "10 флаконов в наборе", "img": "src/hero/powder-image.webp" }
+  ],
+  "dosages": [
+    { "value": "5мг", "price": 6500 },
+    { "value": "10мг", "price": 9900 }
+  ],
+  "frequentlyBoughtTogether": [
+    "tirzepatide",
+    "retatrutide",
+    "bac-water",
+    "lipo-c"
+  ],
+  "synergy": [
+    { "id": "cagrilintide", "name": "Кагрилинтид", "note": null },
+    { "id": "lipo-c", "name": "Lipo-C", "note": null },
+    { "id": "bac-water", "name": "Бактериостатическая вода", "note": null }
+  ],
+  "specifications": {
+    "sequence": "His-Ser-Gln-Gly-Thr-Phe-Thr-Ser-Asp-Tyr-Ser-Lys-Tyr-Leu-Asp-Glu-Arg-Arg-Ala-Gln-Asp-Phe-Val-Gln-Trp-Leu-Met-Asn-Thr(γGlu-C₁₈ fatty diacid)",
+    "formula": "Пептид-жирнокислотный конъюгат",
+    "molecularWeight": "~4230 г/моль",
+    "cas": "2597384-48-2",
+    "purity": "≥ 99% (ВЭЖХ)",
+    "package": "Лиофилизат, 10 флаконов в наборе"
+  },
+  "pharmacology": {
+    "mechanism": "Двойной агонист GLP-1 и глюкагоновых рецепторов. GLP-1-компонент подавляет аппетит, глюкагоновый — увеличивает расход энергии и стимулирует липолиз. Первый одобренный в этом классе (Китай, 2024).",
+    "comparison": {
+      "target": "Тирзепатид",
+      "text": "vs Тирзепатид: другая комбинация рецепторов (глюкагон вместо GIP). Акцент на расходе энергии, а не только на подавлении аппетита."
+    }
+  },
+  "research": {
+    "areas": [
+      "Исследования двойной активации GLP-1/глюкагон",
+      "Модели энергорасхода и термогенеза",
+      "Изучение печёночного метаболизма"
+    ],
+    "keyStudies": "GLORY-2 (фаза 3, 2025): −20,08% массы тела за 60 недель на дозе 9 мг"
+  },
+  "storage": {
+    "lyophilizate": "−20°C / 2–8°C",
+    "solution": "2–8°C, до 30 дней"
+  },
+  "images": {
+    "main": "src/catalog/mazdutide-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/mazdutide-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/mazdutide-coa.webp", "label": "COA" }
+    ]
+  }
+},
+{
+  "id": "lipo-c",
+  "name": "Lipo-C",
+  "nameRu": "Липо-С (Липотропный комплекс)",
+  "category": "fat-loss",
+  "categoryLabel": "Жиросжигание",
+  "subtitle": "MIC-комплекс с L-карнитином и витаминами группы B.",
+  "badges": ["липотропик", "энергия"],
+  "rating": 4.8,
+  "reviewsCount": 39,
+  "forms": [
+    { "type": "liquid", "label": "Раствор", "description": "10 мл × 10 флаконов", "img": "src/hero/liquid-image.webp" }
+  ],
+  "dosages": [
+    { "value": "LC216", "price": 3600 },
+    { "value": "LC526", "price": 5800 },
+    { "value": "LC553", "price": 8200 }
+  ],
+  "frequentlyBoughtTogether": [
+    "semaglutide",
+    "aod-9604",
+    "mots-c",
+    "bac-water"
+  ],
+  "synergy": [
+    { "id": "semaglutide", "name": "Семаглутид", "note": null },
+    { "id": "aod-9604", "name": "AOD-9604", "note": null },
+    { "id": "mots-c", "name": "MOTS-c", "note": null }
+  ],
+  "specifications": {
+    "sequence": "Не пептид. Комплекс: метионин + инозитол + холин + L-карнитин + B₁₂.",
+    "formula": "Многокомпонентный раствор",
+    "molecularWeight": "N/A (комплекс)",
+    "cas": "N/A (комплекс)",
+    "purity": "Фармацевтический класс ингредиентов",
+    "package": "Готовый раствор, 10 мл × 10 флаконов"
+  },
+  "pharmacology": {
+    "mechanism": "MIC (метионин, инозитол, холин): поддерживают функцию печени по переработке жиров. L-карнитин: транспортирует жирные кислоты в митохондрии для β-окисления. Витамин B₁₂: энергетический метаболизм.",
+    "comparison": {
+      "target": "Пептиды каталога",
+      "text": "Не пептид — витаминно-аминокислотный комплекс. Несколько формул (LC216, LC526, LC553 и др.) отличаются концентрацией компонентов."
+    }
+  },
+  "research": {
+    "areas": [
+      "Поддержка жирового обмена",
+      "Протоколы липотропной терапии",
+      "Дополнение к программам снижения веса"
+    ],
+    "keyStudies": "Компоненты хорошо изучены по отдельности. MIC-инъекции — стандартный инструмент в клиниках снижения веса (США)."
+  },
+  "storage": {
+    "lyophilizate": "N/A (готовый раствор)",
+    "solution": "2–8°C. Защищать от света. Не замораживать."
+  },
+  "images": {
+    "main": "src/catalog/lipo-c-image.webp",
+    "thumbs": [
+      { "src": "src/catalog/lipo-c-image.webp", "label": "Основное" },
+      { "src": "", "label": "Фото 2" },
+      { "src": "", "label": "Этикетка" },
+      { "src": "src/doc/lipo-c-coa.webp", "label": "COA" }
+    ]
+  }
+}
+]
+
+
+  

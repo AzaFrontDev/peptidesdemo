@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO основное -->
+  <title>О компании — Peptide Labs | Производитель исследовательских пептидов</title>
+  <meta name="description" content="Peptide Labs — российский производитель исследовательских пептидов с собственной лабораторией полного цикла. 40+ молекул, COA к каждому заказу, кастомный синтез и white label.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://peptidelabs.ru/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://peptidelabs.ru/about.html">
+  <meta property="og:title"       content="О компании — Peptide Labs | Производитель исследовательских пептидов">
+  <meta property="og:description" content="Производим сами — от сырья до готового продукта. Собственная лаборатория, 40+ молекул, COA к каждому заказу.">
+  <meta property="og:image"       content="https://peptidelabs.ru/src/about/about-image.webp">
+  <meta property="og:locale"      content="ru_RU">
+  <meta property="og:site_name"   content="Peptide Labs">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="О компании — Peptide Labs">
+  <meta name="twitter:description" content="Российский производитель исследовательских пептидов с собственной лабораторией. 40+ молекул, COA к каждому заказу.">
+  <meta name="twitter:image"       content="https://peptidelabs.ru/src/about/about-image.webp">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD: Organization + AboutPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Peptide Labs",
+        "legalName": "ООО «АМС-Сервис»",
+        "taxID": "3444169438",
+        "url": "https://peptidelabs.ru",
+        "logo": "https://peptidelabs.ru/src/hero/logo-image.webp",
+        "telephone": "+7-905-392-18-51",
+        "email": "radionov@mail.ru",
+        "description": "Российский производитель исследовательских пептидов с собственной лабораторией полного цикла. 40+ молекул, COA к каждому заказу.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Волгоград",
+          "streetAddress": "ул. Краснознаменская, 9",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/peptidelabs",
+          "https://wa.me/79053921851"
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "url": "https://peptidelabs.ru/about.html",
+        "name": "О компании — Peptide Labs",
+        "description": "Производим сами — от сырья до готового продукта. Синтез, очистка, анализ, фасовка в одной лаборатории.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Peptide Labs"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+    <header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Peptide Labs — на главную">
+      <img src="src/hero/logo-image.webp" fetchpriority="high" alt="Peptide Labs Logo" class="logo__img" />
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="nav__link" href="about.html">О компании</a></li>
+        <li><a class="nav__link" href="quality.html">Качество</a></li>
+        <li><a class="nav__link" href="#delivery">Доставка</a></li>
+        <li><a class="nav__link" href="business.html">Оптовикам</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="header__icon-btn" type="button" aria-label="Поиск по сайту">
+        <img class="header__icon" src="src/hero/search-image.webp" alt="" width="56" height="56" />
+      </button>
+
+      <button class="header__icon-btn header__cart-btn" type="button" aria-label="Корзина">
+        <img class="header__icon" src="src/hero/store-image.webp" alt="" width="56" height="56" />
+        <span class="header__cart-badge" id="cart-count">0</span>
+      </button>
+
+      <div class="header__buttons">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="business.html">Связаться</a>
+      </div>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Открыть меню" 
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="burger__box" aria-hidden="true">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="container" aria-label="Мобильная навигация">
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="catalog.html">Каталог</a></li>
+        <li><a class="mobile-menu__link" href="about.html">О компании</a></li>
+        <li><a class="mobile-menu__link" href="quality.html">Качество</a></li>
+        <li><a class="mobile-menu__link" href="#delivery">Доставка</a></li>
+        <li><a class="mobile-menu__link" href="business.html">Оптовикам</a></li>
+      </ul>
+      <div class="mobile-menu__actions">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="business.html">Связаться</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="about__hero" id="about__hero">
+  <div class="container about-hero__inner">
+    <img src="src/about/about-image.webp" fetchpriority="high" alt="Лаборатория" class="about-mobile__image" />
+    <div class="about-hero__content">
+      <h1 class="about-hero__title">О нас</h1>
+      <p class="about-hero__lead"><span>Мы <br>производим</span>&nbsp;то, <br>что продаём</p>
+      <p class="about-hero__desc">Peptide Labs — российский производитель исследовательских пептидов <br>с собственной лабораторией полного цикла</p>
+    </div>
+  </div>
+</section>
+
+<section class="about__about" id="about__about">
+  <div class="container about-about__inner">
+    <div class="about-about__content">
+      
+      <p class="about-about__text">
+        <strong>Мы строили компанию вокруг одной идеи: если продаёшь пептиды — производи их сам.</strong>
+        Не перепродавай, не надейся на чужие документы, не догадывайся о составе. Знай точно.
+      </p>
+
+      <p class="about-about__text">
+        <strong>Поэтому у нас своя лаборатория — синтез, очистка, анализ, фасовка.</strong>
+        Каждая партия проходит контроль, и результаты мы фиксируем в паспорте качества.
+        Он прикладывается к каждому заказу — и его можно запросить ещё до покупки.
+      </p>
+
+      <p class="about-about__text">
+        <strong>В каталоге больше 40 молекул в четырёх формах.</strong>
+          Делаем кастомные бленды, работаем с клиниками и магазинами, выпускаем продукцию под чужим брендом. 
+        Подробнее — на страницах «Качество» и «Оптовикам».
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="about__features">
+  <div class="container about-features__inner">
+    <div class="about-features__grid">
+      
+      <article class="about-feature__card">
+        <img src="src/about/about-flask-image.webp" alt="Полный цикл производства пептидов" class="about-feature__img" loading="lazy">
+        <h3 class="about-feature__title">Полный цикл</h3>
+        <p class="about-feature__desc">Синтезируем, очищаем, анализируем и<br>фасуем в одном месте</p>
+      </article>
+
+      <article class="about-feature__card">
+        <img src="src/about/about-formula-image.webp" alt="40+ молекул пептидов" class="about-feature__img" loading="lazy">
+        <h3 class="about-feature__title">40+ молекул</h3>
+        <p class="about-feature__desc">Лиофилизаты, спреи, картриджи,<br>ручки-инжекторы</p>
+      </article>
+
+      <article class="about-feature__card">
+        <img src="src/about/about-coa-image.webp" alt="Паспорт качества COA" class="about-feature__img" loading="lazy">
+        <h3 class="about-feature__title">COA к каждому заказу</h3>
+        <p class="about-feature__desc">Паспорт с результатами тестов конкретной партии</p>
+      </article>
+
+      <article class="about-feature__card">
+        <img src="src/about/about-boxes-image.webp" alt="Кастомный синтез пептидов" class="about-feature__img" loading="lazy">
+        <h3 class="about-feature__title">Кастомный синтез</h3>
+        <p class="about-feature__desc">Бленды, нестандартные дозировки, white label</p>
+      </article>
+
+      <article class="about-feature__card">
+        <img src="src/about/about-box-image.webp" alt="Розница и оптовые поставки"   class="about-feature__img" loading="lazy">
+        <h3 class="about-feature__title">Розница и опт</h3>
+        <p class="about-feature__desc">Частные покупатели, клиники, дистрибьюторы, магазины</p>
+      </article>
+    </div>
+  </div>
+  <div class="about-features__images">
+      <img src="src/about/laboratory-image1.webp" alt="Лаборатория Peptide Labs — синтез пептидов" class="features__image features__image--1" loading="lazy" />
+      <img src="src/about/laboratory-image-2.webp" alt="Процесс очистки пептидов в лаборатории"   class="features__image features__image--2" loading="lazy" />
+      <img src="src/about/laboratory-image3.webp" alt="Контроль качества и фасовка пептидов" class="features__image features__image--3" loading="lazy" />
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta__inner">
+    <div class="cta__left">
+      <h2 class="cta__title">Хотите попробовать?</h2>
+      <p class="cta__desc">Каталог, пробный набор<br>или бесплатная консультация -<br>выбирайте, с чего начать.</p>
+      <a class="btn btn--white" href="catalog.html">Каталог</a>
+      <a class="btn btn--primary" href="business.html">Бесплатный набор</a>
+    </div>
+    <div class="cta__right">
+      <h2 class="cta__title">Бизнес запрос?</h2>
+      <p class="cta__desc">Оптовые поставки, white label, кастомный синтез.<br>Менеджер ответит<br>в течении 2 часов.</p>
+      <a class="btn btn--white" href="business.html">Оптовикам</a>
+      <a class="btn btn--primary" href="#">Telegram</a>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer" id="footer">
+  <div class="container footer__inner">
+    
+    <div class="footer__disclaimer">
+      <p>For Research Use Only - Not for Human Use · Только для научных исследований. Вся продукция предназначена исключительно для лабораторных и научно-исследовательских целей. Не является лекарственным средством, БАДом или пищевой продукцией. Приобретая продукцию, вы подтверждаете, что используете её в соответствии с законодательством.</p>
+    </div>
+
+    <div class="footer__grid">
+      
+      <div class="footer__col">
+        <h4 class="footer__title">PEPTIDE LABS</h4>
+        <p class="footer__text">Производитель исследовательских пептидов. Собственная лаборатория, COA на каждую партию. Доставка по РФ.</p>
+        <p class="footer__requisites">
+          ООО «АМС-Сервис»<br>
+          ИНН: 3444169438 · ОГРН: 1093444003179
+        </p>
+      </div>
+      
+      <div class="footer__col">
+        <h4 class="footer__title">Каталог</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Все товары</a></li>
+          <li><a href="catalog.html" class="footer__link">Снижение веса</a></li>
+          <li><a href="catalog.html" class="footer__link">Восстановление</a></li>
+          <li><a href="catalog.html" class="footer__link">Нейро и сон</a></li>
+          <li><a href="catalog.html" class="footer__link">Антиэйдж</a></li>
+          <li><a href="catalog.html" class="footer__link">Красота</a></li>
+          <li><a href="catalog.html" class="footer__link">Спреи</a></li>
+          <li><a href="catalog.html" class="footer__link">Бленды</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Информация</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Качество и COA</a></li>
+          <li><a href="#" class="footer__link">Доставка и оплата</a></li>
+          <li><a href="#" class="footer__link">Калькулятор</a></li>
+          <li><a href="business.html" class="footer__link">Оптовикам</a></li>
+          <li><a href="#" class="footer__link">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__list">
+          <li><a href="https://t.me/peptidelabs" target="_blank" rel="noopener noreferrer" class="footer__link">Telegram: @peptidelabs</a></li>
+          <li><a href="https://wa.me/79053921851" target="_blank" rel="noopener noreferrer" class="footer__link">WhatsApp</a></li>
+          <li><a href="tel:+79053921851" class="footer__link">+7 (905) 392-18-51</a></li>
+          <li><a href="mailto:radionov@mail.ru" class="footer__link">radionov@mail.ru</a></li>
+          <li class="footer__item-text">Волгоград, <br>ул. Краснознаменская, <br>9 (ТРЦ «Пирамида»)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Peptide Labs - For Research Use Only</p>
+      
+      <div class="footer__legal">
+        <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
+        <a href="#" class="footer__legal-link">Пользовательское соглашение</a>
+        <a href="#" class="footer__legal-link">Отказ от ответственности</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js.js" defer></script>
+<script>
+  const header = document.getElementById('header');
+
+  const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+  };
+
+  requestAnimationFrame(onScroll);
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
+
+<!-- Шторка корзины -->
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<!-- Панель корзины -->
+<aside class="cart-panel" id="cart-panel">
+  <div class="cart-panel__header">
+    <h2 class="cart-panel__title">Корзина</h2>
+    <button class="cart-panel__close" id="cart-close" type="button">×</button>
+  </div>
+  <div class="cart-panel__body" id="cart-body"></div>
+  <div class="cart-panel__footer">
+    <div class="cart-panel__total-row">
+      <span>Итого</span>
+      <span><span id="cart-total">0</span> ₽</span>
+    </div>
+    <a href="#" id="cart-checkout" class="btn btn--primary cart-panel__checkout">ОФОРМИТЬ</a>
+  </div>
+</aside>
+
+<!-- Поиск -->
+<div class="search-modal" id="search-modal">
+  <div class="search-modal__inner">
+    <div class="search-modal__bar">
+      <input type="text" class="search-modal__input" id="search-input" placeholder="Поиск по каталогу..." autocomplete="off">
+      <button class="search-modal__close" id="search-close" type="button">×</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+  </div>
+</div>
+
+<!-- Скрипты -->
+<script src="cart.js" defer></script>
+<script src="search.js" defer></script>
+
+</body>
+</html>

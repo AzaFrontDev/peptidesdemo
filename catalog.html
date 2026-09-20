@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO основное -->
+  <title>Каталог пептидов | Купить от производителя — Peptide Labs</title>
+  <meta name="description" content="Широкий выбор исследовательских пептидов: для восстановления, снижения веса, антиэйдж и нейро. Собственное производство, COA на каждую партию. Доставка по РФ.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://peptidelabs.ru/catalog.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://peptidelabs.ru/catalog.html">
+  <meta property="og:title"       content="Каталог пептидов | Купить от производителя — Peptide Labs">
+  <meta property="og:description" content="Более 40 молекул, спреи, бленды и лиофилизаты. Прямые поставки от российского производителя с лабораторным контролем качества.">
+  <meta property="og:image"       content="https://peptidelabs.ru/src/hero/quality-mobile-hero.webp">
+  <meta property="og:locale"      content="ru_RU">
+  <meta property="og:site_name"   content="Peptide Labs">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Каталог пептидов от производителя — Peptide Labs">
+  <meta name="twitter:description" content="Исследовательские пептиды, спреи и бленды с паспортами качества (COA).">
+  <meta name="twitter:image"       content="https://peptidelabs.ru/src/hero/quality-mobile-hero.webp">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD: Страница каталога -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Каталог исследовательских пептидов — Peptide Labs",
+    "description": "Полный ассортимент пептидов, спреев и блендов для исследований.",
+    "url": "https://peptidelabs.ru/catalog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Peptide Labs"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Peptide Labs — на главную">
+      <img src="src/hero/logo-image.webp" fetchpriority="high" alt="Peptide Labs Logo" class="logo__img" />
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="nav__link" href="about.html">О компании</a></li>
+        <li><a class="nav__link" href="quality.html">Качество</a></li>
+        <li><a class="nav__link" href="#delivery">Доставка</a></li>
+        <li><a class="nav__link" href="business.html">Оптовикам</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <button class="header__icon-btn" type="button" aria-label="Поиск по сайту">
+        <img class="header__icon" src="src/hero/search-image.webp" alt="" width="56" height="56" />
+      </button>
+      <button class="header__icon-btn header__cart-btn" type="button" aria-label="Корзина">
+        <img class="header__icon" src="src/hero/store-image.webp" alt="" width="56" height="56" />
+        <span class="header__cart-badge" id="cart-count">0</span>
+      </button>
+      <div class="header__buttons">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню"
+        aria-expanded="false" aria-controls="mobile-menu">
+        <span class="burger__box" aria-hidden="true">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="container" aria-label="Мобильная навигация">
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="catalog.html">Каталог</a></li>
+        <li><a class="mobile-menu__link" href="about.html">О компании</a></li>
+        <li><a class="mobile-menu__link" href="quality.html">Качество</a></li>
+        <li><a class="mobile-menu__link" href="#delivery">Доставка</a></li>
+        <li><a class="mobile-menu__link" href="business.html">Оптовикам</a></li>
+      </ul>
+      <div class="mobile-menu__actions">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="disclaimer">
+  <p>ТОЛЬКО ДЛЯ ИССЛЕДОВАТЕЛЬСКИХ ЦЕЛЕЙ • NOT FOR HUMAN USE • НЕ ЯВЛЯЕТСЯ ЛЕКАРСТВЕННЫМ СРЕДСТВОМ</p>
+</div>
+
+<!-- ══ КАТАЛОГ (виден по умолчанию) ══════════════════ -->
+<section class="catalog-section" id="catalog-section">
+  <div class="catalog__content">
+  <div class="peptides__catalog-switch">
+    <ul class="peptides__catalog-tabs">
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn peptides__tab-btn--active">Все</button>
+      </li>
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn">Похудение</button>
+      </li>
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn">Восстановление</button>
+      </li>
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn">Нейро и сон</button>
+      </li>
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn">Антиэйдж</button>
+      </li>
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn">Красота</button>
+      </li>
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn">Спреи</button>
+      </li>
+      <li class="peptides__catalog-item">
+        <button type="button" class="peptides__tab-btn">Бленды</button>
+      </li>
+    </ul>
+  </div>
+  <div class="peptides__catalog-grid">
+
+  </div>
+  </div>
+  <div class="peptides__catalog-footer">
+    <a href="#" class="peptides__btn-more"></a>
+  </div>
+</section>
+
+<!-- ══ ДЕТАЛЬНАЯ СТРАНИЦА (скрыта по умолчанию) ══════ -->
+<section id="product-section" style="display:none;">
+  <section class="catalog__hero">
+    <div class="catalog-hero__inner" id="product-root"></div>
+  </section>
+
+  <nav class="product-tabs">
+    <button class="product-tab" data-tab="description">Описание</button>
+    <button class="product-tab" data-tab="research">Исследования</button>
+    <button class="product-tab" data-tab="protocol">Протокол</button>
+    <button class="product-tab" data-tab="storage">Хранение</button>
+  </nav>
+
+  <div class="tab-panels">
+    <div id="tab-description" class="tab-panel"></div>
+    <div id="tab-research"    class="tab-panel"></div>
+    <div id="tab-protocol"    class="tab-panel"></div>
+    <div id="tab-storage"     class="tab-panel"></div>
+    <div id="tab-reviews"     class="tab-panel"></div>
+  </div>
+
+  <section id="frequently-bought" class="frequently-bought"></section>
+</section>
+
+<section class="cta">
+  <div class="container cta__inner">
+    <div class="cta__content">
+      <h2 class="cta__title">Не уверены в выборе?</h2>
+      <p class="cta__desc">Бесплатная консультация — подберём пептид,
+дозировку и формат под вашу задачу.</p>
+    </div>
+    <div class="cta__btns">
+      <a class="btn btn--white" href="catalog.html">WHATSAPP</a>
+      <a class="btn btn--primary" href="#quality">ПЕРЕЙТИ В TELEGRAM</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="container footer__inner">
+    
+    <div class="footer__disclaimer">
+      <p>For Research Use Only - Not for Human Use · Только для научных исследований. Вся продукция предназначена исключительно для лабораторных и научно-исследовательских целей. Не является лекарственным средством, БАДом или пищевой продукцией. Приобретая продукцию, вы подтверждаете, что используете её в соответствии с законодательством.</p>
+    </div>
+
+    <div class="footer__grid">
+      
+      <div class="footer__col">
+        <h4 class="footer__title">PEPTIDE LABS</h4>
+        <p class="footer__text">Производитель исследовательских пептидов. Собственная лаборатория, COA на каждую партию. Доставка по РФ.</p>
+        <p class="footer__requisites">
+          ООО «АМС-Сервис»<br>
+          ИНН: 3444169438 · ОГРН: 1093444003179
+        </p>
+      </div>
+      
+      <div class="footer__col">
+        <h4 class="footer__title">Каталог</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Все товары</a></li>
+          <li><a href="catalog.html" class="footer__link">Снижение веса</a></li>
+          <li><a href="catalog.html" class="footer__link">Восстановление</a></li>
+          <li><a href="catalog.html" class="footer__link">Нейро и сон</a></li>
+          <li><a href="catalog.html" class="footer__link">Антиэйдж</a></li>
+          <li><a href="catalog.html" class="footer__link">Красота</a></li>
+          <li><a href="catalog.html" class="footer__link">Спреи</a></li>
+          <li><a href="catalog.html" class="footer__link">Бленды</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Информация</h4>
+        <ul class="footer__list footer__list--inline">
+          <li><a href="catalog.html" class="footer__link">Качество и COA</a></li>
+          <li><a href="#" class="footer__link">Доставка и оплата</a></li>
+          <li><a href="#" class="footer__link">Калькулятор</a></li>
+          <li><a href="business.html" class="footer__link">Оптовикам</a></li>
+          <li><a href="#" class="footer__link">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__list">
+          <li><a href="https://t.me/peptidelabs" target="_blank" rel="noopener noreferrer" class="footer__link">Telegram: @peptidelabs</a></li>
+          <li><a href="https://wa.me/79053921851" target="_blank" rel="noopener noreferrer" class="footer__link">WhatsApp</a></li>
+          <li><a href="tel:+79053921851" class="footer__link">+7 (905) 392-18-51</a></li>
+          <li><a href="mailto:radionov@mail.ru" class="footer__link">radionov@mail.ru</a></li>
+          <li class="footer__item-text">Волгоград, <br>ул. Краснознаменская, <br>9 (ТРЦ «Пирамида»)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Peptide Labs - For Research Use Only</p>
+      
+      <div class="footer__legal">
+        <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
+        <a href="#" class="footer__legal-link">Пользовательское соглашение</a>
+        <a href="#" class="footer__legal-link">Отказ от ответственности</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+  requestAnimationFrame(onScroll);
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
+<script src="catalog.js" defer></script>
+<script src="js.js" defer></script>
+<script src="catalog-render.js" defer></script>
+
+
+<!-- Шторка корзины -->
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<!-- Панель корзины -->
+<aside class="cart-panel" id="cart-panel">
+  <div class="cart-panel__header">
+    <h2 class="cart-panel__title">Корзина</h2>
+    <button class="cart-panel__close" id="cart-close" type="button">×</button>
+  </div>
+  <div class="cart-panel__body" id="cart-body"></div>
+  <div class="cart-panel__footer">
+    <div class="cart-panel__total-row">
+      <span>Итого</span>
+      <span><span id="cart-total">0</span> ₽</span>
+    </div>
+    <a href="#" id="cart-checkout" class="btn btn--primary cart-panel__checkout">ОФОРМИТЬ</a>
+  </div>
+</aside>
+
+<!-- Поиск -->
+<div class="search-modal" id="search-modal">
+  <div class="search-modal__inner">
+    <div class="search-modal__bar">
+      <input type="text" class="search-modal__input" id="search-input" placeholder="Поиск по каталогу..." autocomplete="off">
+      <button class="search-modal__close" id="search-close" type="button">×</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+  </div>
+</div>
+
+<!-- Скрипты -->
+<script src="cart.js" defer></script>
+<script src="search.js" defer></script>
+
+</body>
+</html>

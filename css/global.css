@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap');
+
+:root {
+    --color-primary: rgba(112, 86, 183, 1);
+    --bg-white:#ffffff;
+    --bg-black:rgba(27, 27, 27) ;
+    --font-main: 'Hanken Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--bg-black);
+  background-color: var(--bg-white);
+}
+
+.tab-panel { 
+  display: none; 
+}
+.tab-panel--active { 
+  display: block; 
+}
+
+span {
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: 72px;
+  line-height: 1.23;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bg-black);
+}
+
+/* /////// Р‘Р°Р·РѕРІС‹Рµ СЃС‚РёР»Рё Рё СЃР±СЂРѕСЃ ///////// */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  white-space: nowrap; /* запрещает ломать текст на две строки */
+  flex-shrink: 0;      /* если родитель flex — запрещает сжимать пункт до 25px */
+  width: auto;         /* убирает жесткую фиксированную ширину, если она задана */
+}
+
+/* /////// Container ///////// */
+/* Minimal utility вЂ“ sections use their own max-width centering.
+   Breakpoints add horizontal padding here to prevent overflow-x. */
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* /////// РЁР°РїРєР° СЃР°Р№С‚Р° Рё РЅР°РІРёРіР°С†РёСЏ ///////// */
+
+.btn,
+.header__icon-btn,
+.task-card__btn,
+.product-card__btn,
+.peptides__btn-more,
+.start__pack-btn,
+.reviews__btn,
+.quiz__btn,
+.calc__btn,
+.faq__btn,
+.social-promo__btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover,
+.header__icon-btn:hover,
+.task-card__btn:hover,
+.product-card__btn:hover,
+.peptides__btn-more:hover,
+.start__pack-btn:hover,
+.reviews__btn:hover,
+.quiz__btn:hover,
+.calc__btn:hover,
+.faq__btn:hover,
+.social-promo__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(27, 27, 27, 0.14);
+}
+
+.header__icon-btn:hover {
+  color: var(--color-primary);
+  box-shadow: none;
+}
+
+.header__icon {
+  transition: transform 0.2s ease;
+}
+
+.header__icon-btn:hover .header__icon {
+  transform: scale(1.08);
+}
+
+.logo__img,
+.feature-item__icon,
+.task-card__bg,
+.product-card__img,
+.start__pack-img,
+.about__img,
+.review-card,
+.quiz__img,
+.calc__image {
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.logo:hover .logo__img,
+.feature-item:hover .feature-item__icon,
+.task-card:hover .task-card__bg,
+.product-card:hover .product-card__img,
+.start__pack-media:hover .start__pack-img,
+.about__card:hover .about__img,
+.review-card:hover,
+.quiz__media:hover .quiz__img,
+.calc__media:hover .calc__image {
+  transform: scale(1.04);
+}
+

@@ -1,0 +1,233 @@
+﻿.cta__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 200px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(86, 31, 240, 0.8) 100%);
+  color: var(--bg-white);
+  font-size: 24px;
+}
+
+.cta__btns, 
+.business-cta__btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.cta__btns .btn--white {
+  width: 211px;
+}
+
+.cta__btns .btn--primary {
+  width: 366px;
+}
+
+.cta__title {
+  color: var(--bg-white);
+  font-size: 40px;
+  margin-bottom: 7px;
+}
+
+.cta__desc {
+  margin-bottom: 19px;
+  font-size: 37px;
+}
+
+.btn--white {
+  background-color: #ffffff;
+  text-transform: none;
+  color: var(--bg-black);
+  margin-right: 24px;
+}
+
+.business-cta__btns .btn--white,
+.business-cta__btns .btn--primary {
+  font-size: 18px;
+  padding: 25px 36px;
+  min-width: 250px;
+  white-space: nowrap;
+}
+
+
+
+.disclaimer {
+  margin: 0 auto;
+  padding: 15px 0;
+  height: 40px;
+  background: linear-gradient(90deg, #212123 0%, #6C53B3 100%);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--bg-white);
+  font-weight: 400;
+  line-height: 81%;
+  text-transform: uppercase;
+  letter-spacing: 4%;
+}
+
+/* ── Таб-навигация (product-tabs) ───────────────────── */
+
+.product-tabs {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 250px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.product-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.product-tab {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 8px 0 14px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.product-tab:hover {
+  color: var(--color-primary);
+}
+
+.product-tab--active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.product-tab--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* ── Панели (обязательно) ────────────────────────────── */
+
+.tab-panel          { display: none; }
+.tab-panel--active  { display: block; }
+
+.tab-panel__title,
+.tab-panel__text {
+  margin: 35px 0 0 250px;
+  max-width: 1440px;
+}
+
+/* ── Сетка двух карточек ─────────────────────────────── */
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 32px 0 0 250px;
+  max-width: 1440px;
+}
+
+/* ── Карточка ────────────────────────────────────────── */
+.specs-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+.specs-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 16px 0;
+}
+
+/* ── Список характеристик — текст в две колонки ──────── */
+.specs-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: start;
+}
+
+.specs-row dt {
+  font-size: 14px;
+  color: #888;
+  font-weight: 400;
+}
+
+.specs-row dd {
+  font-size: 14px;
+  color: #111;
+  font-weight: 500;
+  margin: 0;
+  word-break: break-word;
+}
+
+.specs-row__sequence {
+  font-size: 12px;
+  font-family: monospace;
+  color: #444;
+  word-break: break-all;
+}
+
+/* ── Список областей исследований ────────────────────── */
+.research-areas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.research-areas li {
+  font-size: 14px;
+  color: #111;
+  padding-left: 16px;
+  position: relative;
+}
+
+.research-areas li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+  .business-cta__btns .btn--white,
+  .business-cta__btns .btn--primary {
+    font-size: 12px;
+    min-width: 60px;
+  }
+}
+
+
+
+
