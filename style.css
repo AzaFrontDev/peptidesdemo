@@ -696,7 +696,7 @@ html, body {
 }
 
 .footer__list--inline li:not(:last-child)::after {
-  content: "�";
+  content: "\00B7";
   margin-left: 6px;
   color: #444;
 }
@@ -3279,7 +3279,7 @@ span.reviews {
 }
 
 .research-areas li::before {
-  content: "�";
+  content: "\00B7";
   position: absolute;
   left: 0;
   color: var(--color-primary);
@@ -5774,7 +5774,7 @@ span.reviews {
   }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1919px) {
   .about-features__inner {
     margin: 38px 0 0 80px;
     max-width: calc(100% - 80px);
@@ -6763,7 +6763,7 @@ span.reviews {
   }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1919px) {
   .quality-cta {
     display: flex;
     gap: 15px;
@@ -8219,7 +8219,7 @@ span.reviews {
   .product-order__title   { font-size: 30px; }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1919px) {
    .frequently-bought__title,
 .research-areas-list,
 .key-study-card,
