@@ -7349,7 +7349,8 @@ span.reviews {
 @media (min-width: 1024px) and (max-width: 1440px) {
 
   /* ---- Hero ---- */
-  .business-hero__inner {
+  .business-hero__inner,
+  .protocol-section {
     max-width: calc(50% - 40px);
     margin-left: 40px;
     margin-top: 48px;
@@ -7982,12 +7983,13 @@ span.reviews {
 
 .frequently-bought__title,
 .research-areas-list,
-.key-study-card {
+.key-study-card,
+.storage-list {
   margin: 35px 0 0 50px;
 }
 
 .comparison-card {
-  margin: 0 0 0 0;
+  margin: 0 0 0 40px;
 }
 
   .peptides__catalog-tabs,
@@ -8128,12 +8130,14 @@ span.reviews {
   .frequently-bought__title,
 .research-areas-list,
 .key-study-card,
-.peptides__catalog-switch {
+.peptides__catalog-switch,
+.storage-list {
   margin: 35px 0 0 50px;
 }
 
-.comparison-card {
-  margin: 0 0 0 0;
+.comparison-card,
+.protocol-section {
+  margin: 0 0 0 50px;
 }
 
   .peptides__catalog-tabs,
@@ -8223,12 +8227,14 @@ span.reviews {
    .frequently-bought__title,
 .research-areas-list,
 .key-study-card,
-.peptides__catalog-switch {
+.peptides__catalog-switch,
+.protocol-section,
+.storage-list {
   margin: 35px 0 0 50px;
 }
 
 .comparison-card {
-  margin: 0 0 0 0;
+  margin: 0 0 0 50px;
 }
 
   .peptides__catalog-tabs,
