@@ -802,7 +802,7 @@ html, body {
 .hero__inner {
   width: 100%;
   max-width: 1440px;
-  margin: 40px 0 0 100px;
+  margin: -120px 0 0 100px;
 }
 
 .quality-hero__inner {
@@ -1393,7 +1393,7 @@ span.reviews {
   max-width: calc(50% - 101px);
   width: 100%;
   margin-left: 101px;
-  margin-top: 80px;
+  margin-top: 30px;
   box-sizing: border-box;
 }
    
@@ -3416,7 +3416,7 @@ span.reviews {
   .product-card--blend .product-card__title { font-size: 32px; }
   .product-card--blend .product-card__desc { font-size: 22px; }
   .product-card--blend .product-card__price { font-size: 26px; }
-  .product-card__badge--blend { font-size: 20px; padding: 10px 20px; }
+  .product-card__badge--blend { font-size: 20px; padding: 10px 20px; right: 1000px;}
 
   /* ---- About ---- */
   .about__title { max-width: 940px; }
@@ -3523,7 +3523,7 @@ span.reviews {
   /* ---- Product grids ---- */
   .product-card__img,
   .product-card--spray .product-card__img { height: 310px; }
-  .product-card__badge { font-size: 20px; height: 38px; right: 14px;}
+  .product-card__badge { font-size: 14px; height: 22px; right: 14px;}
   .product-card__title,
   .product-card--spray .product-card__title { font-size: 22px; }
   .product-card__desc, .product-card__spec,
@@ -3550,7 +3550,7 @@ span.reviews {
   .product-card--blend .product-card__title { font-size: 28px; }
   .product-card--blend .product-card__desc { font-size: 18px; }
   .product-card--blend .product-card__price { font-size: 22px; }
-  .product-card__badge--blend { font-size: 17px; padding: 9px 18px; top: 18px; right: 48px;}
+  .product-card__badge--blend { font-size: 17px; padding: 9px 18px; top: 18px; right: 70px;}
 
   /* ---- About ---- */
   .about__inner {margin-left: 40px; }
@@ -3609,7 +3609,7 @@ span.reviews {
   .container { padding-left: 24px; padding-right: 24px; }
   .hero__inner, .catalog__tasks-inner, .peptides__catalog-inner,
   .start__pack-inner, .blends__inner, .spray__inner, .about__inner, .reviews__inner,
-  .quiz__inner, .calc__inner, .faq__inner, .social-promo__inner, .footer__inner { margin: 32px 0 0 0; max-width: calc(100% - 24px); }
+  .quiz__inner, .calc__inner, .faq__inner, .social-promo__inner, .footer__inner, .business-hero__inner { margin: 32px 0 0 0; max-width: calc(100% - 24px); }
 
   /* ---- Header ---- */
   .header { padding: 14px 24px 14px 0; box-sizing: border-box; }
@@ -3742,7 +3742,7 @@ span.reviews {
   .product-card--blend .product-card__title { font-size: 20px; }
   .product-card--blend .product-card__desc { font-size: 14px; }
   .product-card--blend .product-card__price { font-size: 17px; }
-  .product-card__badge--blend { font-size: 12px; padding: 7px 12px; top: 26px; right: 89px; }
+  .product-card__badge--blend { font-size: 10px; padding: 7px 12px; top: 26px; right: 89px; }
 
   /* ---- About ---- */
   .about { padding: 52px 0; }
@@ -5775,7 +5775,9 @@ span.reviews {
 }
 
 @media (min-width: 1441px) and (max-width: 1919px) {
-  .about-features__inner {
+  .about-features__inner,
+  .peptides__catalog-grid,
+  .spray__grid {
     margin: 38px 0 0 80px;
     max-width: calc(100% - 80px);
   }
@@ -6106,7 +6108,7 @@ span.reviews {
   .product-card--blend .product-card__title { font-size: 32px; }
   .product-card--blend .product-card__desc { font-size: 22px; }
   .product-card--blend .product-card__price { font-size: 26px; }
-  .product-card__badge--blend { font-size: 20px; padding: 10px 20px; }
+  .product-card__badge--blend { font-size: 12px; padding: 7px 14px; }
 
   /* ---- About ---- */
   .about__title { max-width: 940px; }
@@ -7353,7 +7355,7 @@ span.reviews {
   .protocol-section {
     max-width: calc(50% - 40px);
     margin-left: 40px;
-    margin-top: 48px;
+    margin-top: 80px;
   }
 
   .business-hero__badge {
@@ -7383,13 +7385,13 @@ span.reviews {
   .card__form {
     max-width: 480px;
     height: auto;
-    min-height: 680px;
+    min-height: 710px;
     padding: 0 20px;
   }
 
   .form__title {
     font-size: 28px;
-    margin-top: 44px;
+    margin-top: 60px;
   }
 
   .form__subtitle {
@@ -7399,7 +7401,7 @@ span.reviews {
   .input {
     height: 54px;
     font-size: 16px;
-    margin-top: 16px;
+    margin-top: 24px;
     max-width: 100%;
   }
 
@@ -7480,7 +7482,7 @@ span.reviews {
   .business-hero__inner {
     max-width: calc(50% - 80px);
     margin-left: 50px;
-    margin-top: 64px;
+    margin-top: 10px;
   }
 
   .business-hero__badge {
@@ -7499,7 +7501,7 @@ span.reviews {
     width: 50px;
     height: 50px;
     font-size: 22px;
-    padding-top: 11px;
+    padding-top: 12px;
   }
 
   /* ---- Форма ---- */
@@ -7510,7 +7512,7 @@ span.reviews {
 
   .form__title {
     font-size: 36px;
-    margin-top: 62px;
+    margin-top: 26px;
   }
 
   .form__subtitle {
@@ -8229,7 +8231,8 @@ span.reviews {
 .key-study-card,
 .peptides__catalog-switch,
 .protocol-section,
-.storage-list {
+.storage-list,
+.peptides__catalog-grid {
   margin: 35px 0 0 50px;
 }
 
