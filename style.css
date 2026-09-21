@@ -134,9 +134,8 @@ li {
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
-
 .header {
   position: sticky;
   top: 0;
