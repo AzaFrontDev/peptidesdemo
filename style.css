@@ -3523,7 +3523,7 @@ span.reviews {
   /* ---- Product grids ---- */
   .product-card__img,
   .product-card--spray .product-card__img { height: 310px; }
-  .product-card__badge { font-size: 14px; height: 22px; right: 14px;}
+  .product-card__badge { font-size: 14px; height: 22px; right: 23px;}
   .product-card__title,
   .product-card--spray .product-card__title { font-size: 22px; }
   .product-card__desc, .product-card__spec,
@@ -8231,11 +8231,13 @@ span.reviews {
 .key-study-card,
 .peptides__catalog-switch,
 .protocol-section,
-.storage-list,
-.peptides__catalog-grid {
+.storage-list {
   margin: 35px 0 0 50px;
 }
 
+.peptides__catalog-grid {
+  margin: 35px 20px 0 40px;
+}
 .comparison-card {
   margin: 0 0 0 50px;
 }
@@ -8262,6 +8264,10 @@ span.reviews {
   max-width: 1440px;
 }
 
+.product-card__badge {
+  font-size: 12px;
+  height: 30px;
+}
 .product-tabs {
   display: flex;
   align-items: center;
