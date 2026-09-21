@@ -3504,6 +3504,10 @@ span.reviews {
   .catalog__tasks-subtitles, .peptides__catalog-subtitles, .about__desc,
   .blends__desc, .spray__inner p, .quiz__desc, .calc__desc { font-size: 18px; }
 
+  .catalog__tasks-subtitles {
+    margin-top: 0;
+  }
+
   /* ---- Inner containers ---- */
   .catalog__tasks-inner, .peptides__catalog-inner, .spray__inner,
   .about__inner, .reviews__inner, .faq__inner, .social-promo__inner,
@@ -3655,6 +3659,7 @@ span.reviews {
   .footer__inner, .start__pack-inner, .blends__inner { max-width: 100%; }
 
   /* ---- Task cards ---- */
+  .catalog__tasks-grid { margin-top: 10px;}
   .catalog__tasks-subtitles { margin-bottom: 32px; }
   .task-card { height: 200px; border-radius: 18px; }
   .task-card__content { padding: 18px; }
