@@ -3462,12 +3462,13 @@ span.reviews {
 }
 
 @media (min-width: 1441px) and (max-width: 1919px) {
+
   .peptides__catalog-inner {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1712px;
-  margin: 0 auto;
+  margin: 0 20px 0 0;
 }
 
 .peptides__catalog-header {
@@ -3479,7 +3480,7 @@ span.reviews {
 }
 
 .peptides__catalog-title {
-  font-size: 72px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.15;
   text-transform: uppercase;
@@ -3506,6 +3507,12 @@ span.reviews {
 
 .peptides__catalog-switch {
   margin-top: -20px;
+}
+
+.peptides__catalog-header,
+.peptides__catalog-subtitles,
+.peptides__catalog-switch {
+  margin: 0 50px 0 50px;
 }
 
 .peptides__catalog-tabs {
@@ -3563,18 +3570,16 @@ span.reviews {
 
 .peptides__catalog-grid {
   display: grid;
-  grid-template-columns: repeat(4, 411px);
+  grid-template-columns: repeat(4, 300px);
   justify-content: space-between;
-  row-gap: 40px;
-  margin-top: 20px;
-  margin-bottom: 48px;
+  row-gap: 10px;
   width: 100%;
 }
 
 .product-card {
   position: relative;
-  width: 411px;
-  min-height: 580px;
+  width: 300px;
+  min-height: 400px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -3588,8 +3593,8 @@ span.reviews {
 
 .product-card__badge {
   position: absolute;
-  top: 24px;
-  right: 16px;
+  top: 60px;
+  right: 2px;
   min-width: 86px;
   height: 40px;
   padding: 0 16px;
@@ -3606,7 +3611,7 @@ span.reviews {
 }
 
 .product-card__img {
-  width: 380px;
+  width: 300px;
   height: 400px;
   object-fit: contain;
   display: block;
@@ -3676,6 +3681,19 @@ span.reviews {
 
 .peptides__btn-more:hover {
   opacity: 0.9;
+}
+
+.start__pack-inner {
+    width: 100%;
+    max-width: 1800px;
+    box-sizing: border-box;
+    margin: 0 0 0 50px;
+    margin-top: 59px;
+}
+
+.spray__grid {
+  margin: 10px 0 0 50px !important;
+  max-width: calc(100% - 80px);
 }
 }
 /* ==========================================================================
@@ -8458,7 +8476,7 @@ span.reviews {
 }
 
 .peptides__catalog-grid {
-  margin: 35px 20px 0 40px;
+  margin: 0 20px 0 40px;
 }
 .comparison-card {
   margin: 0 0 0 50px;
