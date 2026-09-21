@@ -3461,7 +3461,223 @@ span.reviews {
   .footer__bottom { padding: 28px 0 0 100px; max-width: 100%; }
 }
 
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .peptides__catalog-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1712px;
+  margin: 0 auto;
+}
 
+.peptides__catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.peptides__catalog-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--bg-black);
+  margin-top: 48px;
+}
+
+.peptides__catalog-title span {
+  color: var(--color-primary);
+}
+
+.peptides__catalog-desc {
+  font-size: 32px;
+  line-height: 1.23;
+  color: rgba(112, 86, 183, 0.58);
+}
+
+.peptides__catalog-subtitles {
+  font-size: 24px;
+  line-height: 1.36;
+  color: var(--bg-black);
+  margin-bottom: 10px;
+}
+
+.peptides__catalog-switch {
+  margin-top: -20px;
+}
+
+.peptides__catalog-tabs {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.peptides__catalog-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.peptides__catalog-item {
+  display: flex;
+}
+
+.peptides__tab-btn {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 4px 0 14px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.peptides__tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.peptides__tab-btn--active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.peptides__tab-btn--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.peptides__catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 411px);
+  justify-content: space-between;
+  row-gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.product-card {
+  position: relative;
+  width: 411px;
+  min-height: 580px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-white);
+  overflow: hidden;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+  min-width: 86px;
+  height: 40px;
+  padding: 0 16px;
+  background-color: var(--color-primary);
+  color: var(--bg-white);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 16px 0 0 16px;
+  z-index: 2;
+}
+
+.product-card__img {
+  width: 380px;
+  height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.product-card__title {
+  font-size: 31px;
+  font-weight: 700;
+  color: var(--bg-black);
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.product-card__desc,
+.product-card__spec {
+  font-size: 20px;
+  color: var(--bg-black);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.product-card__price {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--bg-black);
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.product-card__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 42px;
+  background-color: var(--color-primary);
+  color: var(--bg-white);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.peptides__catalog-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.peptides__btn-more {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 140px;
+  background-color: var(--color-primary);
+  color: var(--bg-white);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.peptides__btn-more:hover {
+  opacity: 0.9;
+}
+}
 /* ==========================================================================
    1440px вЂ” 1367px to 1440px
    Targets: common 1440Г—900 / 1440Г—1080 monitors
@@ -8236,7 +8452,6 @@ span.reviews {
    .frequently-bought__title,
 .research-areas-list,
 .key-study-card,
-.peptides__catalog-switch,
 .protocol-section,
 .storage-list {
   margin: 35px 0 0 50px;
