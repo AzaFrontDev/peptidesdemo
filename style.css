@@ -3579,7 +3579,7 @@ span.reviews {
 .product-card {
   position: relative;
   width: 300px;
-  min-height: 400px;
+  min-height: 500px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -3612,7 +3612,7 @@ span.reviews {
 
 .product-card__img {
   width: 300px;
-  height: 400px;
+  height: 350px;
   object-fit: contain;
   display: block;
 }
@@ -3621,7 +3621,7 @@ span.reviews {
   font-size: 31px;
   font-weight: 700;
   color: var(--bg-black);
-  margin-top: 12px;
+  margin-top: 0;
   margin-bottom: 4px;
 }
 
@@ -3637,8 +3637,8 @@ span.reviews {
   font-size: 25px;
   font-weight: 700;
   color: var(--bg-black);
-  margin-top: 6px;
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .product-card__btn {
