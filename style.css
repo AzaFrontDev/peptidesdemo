@@ -3695,6 +3695,19 @@ span.reviews {
   margin: 10px 0 0 50px !important;
   max-width: calc(100% - 80px);
 }
+
+.task-card {
+  height: 250px;
+}
+
+.catalog__tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  width: 100%;
+}
+
 }
 /* ==========================================================================
    1440px вЂ” 1367px to 1440px
