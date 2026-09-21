@@ -1896,7 +1896,7 @@ span.reviews {
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 8px;
 }
 
 .peptides__catalog-title {
@@ -1905,7 +1905,7 @@ span.reviews {
   line-height: 1.15;
   text-transform: uppercase;
   color: var(--bg-black);
-  margin-top: 58px;
+  margin-top: 48px;
 }
 
 .peptides__catalog-title span {
@@ -1922,7 +1922,7 @@ span.reviews {
   font-size: 24px;
   line-height: 1.36;
   color: var(--bg-black);
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .peptides__catalog-switch {
@@ -1954,7 +1954,7 @@ span.reviews {
   position: relative;
   background: none;
   border: none;
-  padding: 8px 0 14px 0;
+  padding: 4px 0 14px 0;
   font-size: 16px;
   font-weight: 400;
   color: #111;
@@ -1988,7 +1988,7 @@ span.reviews {
   grid-template-columns: repeat(4, 411px);
   justify-content: space-between;
   row-gap: 40px;
-  margin-top: 48px;
+  margin-top: 20px;
   margin-bottom: 48px;
   width: 100%;
 }
@@ -1996,7 +1996,7 @@ span.reviews {
 .product-card {
   position: relative;
   width: 411px;
-  min-height: 614px;
+  min-height: 580px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -2011,13 +2011,13 @@ span.reviews {
 .product-card__badge {
   position: absolute;
   top: 24px;
-  right: 0;
+  right: 16px;
   min-width: 86px;
-  height: 51px;
+  height: 40px;
   padding: 0 16px;
   background-color: var(--color-primary);
   color: var(--bg-white);
-  font-size: 31px;
+  font-size: 14px;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -2028,8 +2028,8 @@ span.reviews {
 }
 
 .product-card__img {
-  width: 411px;
-  height: 428px;
+  width: 380px;
+  height: 400px;
   object-fit: contain;
   display: block;
 }
@@ -2571,8 +2571,8 @@ span.reviews {
 }
 
 .product-card--spray .product-card__img {
-  width: 411px;
-  height: 428px;
+  width: 380px;
+  height: 390px;
   object-fit: contain;
 }
 
@@ -2846,14 +2846,14 @@ span.reviews {
   line-height: 1.15;
   text-transform: uppercase;
   color: var(--bg-black);
-  margin-bottom: 10px;
+  margin-bottom: -50px;
 }
 
 .catalog__tasks-subtitles {
   font-size: 24px;
   line-height: 1.36;
   color: var(--bg-black);
-  margin-bottom: 64px;
+  margin-bottom: 20px;
   margin-top: 22px;
   white-space: pre-line;
 }
@@ -2864,11 +2864,12 @@ span.reviews {
   grid-template-rows: repeat(2, auto);
   gap: 24px;
   width: 100%;
+
 }
 
 .task-card {
   position: relative;
-  height: 342px;
+  height: 300px;
   border-radius: 24px;
   overflow: hidden;
   display: flex;
