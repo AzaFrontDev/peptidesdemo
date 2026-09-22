@@ -4839,7 +4839,7 @@ span.reviews {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
   .catalog__tasks-title {
     font-size: 26px;
@@ -4850,8 +4850,8 @@ span.reviews {
   }
   .catalog__tasks-subtitles {
     font-size: 14px;
-    margin-top: 12px;
-    margin-bottom: 24px;
+    margin-top: 2px;
+    margin-bottom: 10px;
   }
   .catalog__tasks-grid {
   display: flex;
@@ -7516,8 +7516,8 @@ span.reviews {
 
   .business-services__grid {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 24px;
+    gap: 8px;
+    margin-top: 10px;
     max-width: 100%;
   }
 
@@ -7552,7 +7552,7 @@ span.reviews {
 
   .business-card__title {
     font-size: 18px;
-    margin-bottom: 6px;
+    margin-bottom: 0;
   }
 
   .business-card__desc {
@@ -7983,7 +7983,7 @@ span.reviews {
 .key-study-card,
 .protocol-section,
 .storage-list {
-  margin: 35px 20px 0 20px;
+  margin: 10px 20px 0 20px;
 }
 
 .storage-list {
@@ -7991,11 +7991,14 @@ span.reviews {
 
 }
 
+.peptides__catalog-switch {
+  padding: 10px 20px 0 20px;
+}
+
 .comparison-card {
   margin: 0 0 0 20px;
 }
 
-  .peptides__catalog-tabs,
 .frequently-bought__grid {
   margin: 35px 0 0 0;
 }
