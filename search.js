@@ -64,7 +64,6 @@ function renderResults(results, query) {
 
 function openSearch() {
   document.getElementById('search-modal')?.classList.add('is-open');
-  document.getElementById('search-input')?.focus();
   document.body.style.overflow = 'hidden';
   loadSearchData();
   setTimeout(() => document.getElementById('search-input')?.focus(), 50);
@@ -80,7 +79,17 @@ function closeSearch() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  /* Иконка поиска в хедере */
   document.querySelector('[aria-label="Поиск по сайту"]')?.addEventListener('click', openSearch);
+
+  /* Кнопка «Поиск по пептидам» (десктоп + мобайл) */
+  document.querySelectorAll('[href="#search-peptides"]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      openSearch();
+    });
+  });
+
   document.getElementById('search-close')?.addEventListener('click', closeSearch);
 
   document.getElementById('search-modal')?.addEventListener('click', e => {

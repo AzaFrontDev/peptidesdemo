@@ -441,11 +441,57 @@
   </div>
 </div>
 
+<!-- ══ МОДАЛКА ОФОРМЛЕНИЯ ЗАКАЗА ════════════════════════ -->
+<div class="order-modal" id="order-modal">
+  <div class="order-modal__backdrop" id="order-modal-backdrop"></div>
+  <div class="order-modal__inner">
+
+    <div class="order-modal__header">
+      <h2 class="order-modal__title">Оформление заказа</h2>
+      <button class="order-modal__close" id="order-modal-close" type="button">×</button>
+    </div>
+
+    <form class="order-form" id="order-form" novalidate>
+
+      <div class="order-form__fields">
+        <div class="order-form__field">
+          <input class="input" type="text" id="order-name"
+            name="order-name" placeholder="Имя" required>
+        </div>
+        <div class="order-form__field">
+          <input class="input" type="tel" id="order-phone"
+            name="order-phone" placeholder="Номер телефона" required>
+        </div>
+        <div class="order-form__field">
+          <input class="input" type="text" id="order-tg"
+            name="order-tg" placeholder="@telegram (необязательно)">
+        </div>
+      </div>
+
+      <!-- Состав из корзины — заполняется JS -->
+      <div class="order-form__summary">
+        <p class="order-form__summary-label">Состав заказа</p>
+        <div class="order-form__items" id="order-items"></div>
+        <div class="order-form__total-row">
+          <span>Итого</span>
+          <strong id="order-total-display">0 ₽</strong>
+        </div>
+      </div>
+
+      <button class="btn btn--primary order-form__submit" type="submit">Отправить заказ</button>
+
+      <p class="order-form__status" id="order-form-status"
+        role="status" aria-live="polite"></p>
+
+    </form>
+  </div>
+</div>
+
 <!-- Скрипты -->
 <script src="cart.js" defer></script>
 <script src="search.js" defer></script>
-
 <script src="form.js" defer></script>
+<script src="order.js" defer></script>
 
 </body>
 </html>

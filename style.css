@@ -8638,3 +8638,119 @@ span.reviews {
   .frequently-bought__grid .product-card { width: 380px; }
   .frequently-bought__grid .product-card__img { height: 380px; }
 }
+
+/* ══ МОДАЛКА ОФОРМЛЕНИЯ ЗАКАЗА ══════════════════════════ */
+.order-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.order-modal.is-open { opacity: 1; visibility: visible; }
+
+.order-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.order-modal__inner {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 32px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+}
+
+.order-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.order-modal__title { font-size: 22px; font-weight: 700; margin: 0; }
+.order-modal__close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 6px;
+  transition: color 0.2s;
+}
+.order-modal__close:hover { color: #111; }
+
+/* Поля формы */
+.order-form__fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.order-form__field  { width: 100%; }
+
+/* Состав корзины (read-only) */
+.order-form__summary {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.order-form__summary-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+}
+
+.order-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+.order-item:last-child { border-bottom: none; }
+.order-item__name  { font-weight: 600; flex: 1; }
+.order-item__meta  { color: #888; white-space: nowrap; }
+.order-item__price { font-weight: 700; white-space: nowrap; }
+
+.order-form__total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Кнопка и статус */
+.order-form__submit {
+  width: 100%;
+  height: 56px;
+  white-space: nowrap;
+}
+
+.order-form__status { display: block; margin-top: 12px; font-size: 14px; text-align: center; min-height: 20px; }
+.order-form__status--success { color: #22c55e; }
+.order-form__status--error   { color: #ef4444; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .order-modal__inner {
+    max-width: 100%;
+    margin: 0 16px;
+    padding: 24px 20px;
+    border-radius: 16px;
+    max-height: 95vh;
+  }
+}
