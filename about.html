@@ -96,7 +96,7 @@
 
       <div class="header__buttons">
         <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
-        <a class="btn btn--primary" href="business.html">Связаться</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
       </div>
 
       <button
@@ -308,6 +308,8 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 </script>
 
+<script src="js/main.js" defer></script>
+<script src="js/catalog-render.js" defer></script>
 
 <!-- Шторка корзины -->
 <div class="cart-overlay" id="cart-overlay"></div>
@@ -324,7 +326,7 @@
       <span>Итого</span>
       <span><span id="cart-total">0</span> ₽</span>
     </div>
-    <a href="#" id="cart-checkout" class="btn btn--primary cart-panel__checkout">ОФОРМИТЬ</a>
+    <a href="business.html" id="cart-checkout" class="btn btn--primary cart-panel__checkout">ОФОРМИТЬ</a>
   </div>
 </aside>
 
@@ -389,5 +391,6 @@
 <script src="js/cart.js" defer></script>
 <script src="js/search.js" defer></script>
 <script src="js/order.js" defer></script>
+
 </body>
 </html>
