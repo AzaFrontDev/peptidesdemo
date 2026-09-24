@@ -7,7 +7,7 @@ async function loadProduct(productId) {
   try {
     const id = productId ?? new URLSearchParams(window.location.search).get('id');
 
-    const res  = await fetch('./catalog.json');
+    const res  = await fetch('js/catalog.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 

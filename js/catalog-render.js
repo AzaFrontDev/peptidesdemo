@@ -93,7 +93,7 @@
       });
     }
 
-    fetch('catalog.json')
+    fetch('js/catalog.json')
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(data => { products = data; render(); })
       .catch(err => console.error('[Catalog] Не удалось загрузить catalog.json:', err));
