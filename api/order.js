@@ -3,18 +3,21 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, phone, telegram, cart, total } = req.body;
+  const { name, phone, telegram, cart = [], total = 0 } = req.body;
 
-  if (!name?.trim() || !phone?.trim() || !Array.isArray(cart) || !cart.length) {
+  // Только имя и телефон обязательны
+  if (!name?.trim() || !phone?.trim()) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  const itemsText = cart
-    .map(i => `  • ${escHtml(i.name)}, ${escHtml(i.dosage)} × ${i.qty} шт. — ${(i.price * i.qty).toLocaleString('ru-RU')} ₽`)
-    .join('\n');
+  const itemsText = cart.length
+    ? cart.map(i =>
+        `  • ${escHtml(i.name)}, ${escHtml(i.dosage)} × ${i.qty} шт. — ${(i.price * i.qty).toLocaleString('ru-RU')} ₽`
+      ).join('\n')
+    : '  Корзина пуста — обращение без заказа';
 
   const text = [
-    '🛒 <b>Новый заказ — Peptide Labs</b>',
+    '📩 <b>Новое обращение — Peptide Labs</b>',
     '',
     `👤 <b>Имя:</b> ${escHtml(name)}`,
     `📱 <b>Телефон:</b> ${escHtml(phone)}`,
@@ -23,14 +26,14 @@ export default async function handler(req, res) {
     '<b>📦 Состав заказа:</b>',
     itemsText,
     '',
-    `💰 <b>Итого:</b> ${Number(total).toLocaleString('ru-RU')} ₽`,
+    cart.length ? `💰 <b>Итого:</b> ${Number(total).toLocaleString('ru-RU')} ₽` : null,
     '',
     `⏱ ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })} МСК`,
   ].filter(Boolean).join('\n');
 
   try {
     const tgRes = await fetch(
-      `https://api.telegram.org/bot${process.env.TG_BOT_TOKEN}/sendMessage`,
+      `https://api.telegram.org/bot${process.env.TG_TOKEN}/sendMessage`,
       {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
