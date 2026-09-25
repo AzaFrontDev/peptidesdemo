@@ -5,7 +5,7 @@ let searchData = [];
 async function loadSearchData() {
   if (searchData.length) return;
   try {
-    const res  = await fetch('./catalog.json');
+    const res  = await fetch('/js/catalog.json');
     searchData = await res.json();
   } catch (e) {
     console.error('[Search]', e);

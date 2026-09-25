@@ -387,10 +387,99 @@
   </div>
 </div>
 
+<!-- ══ КАЛЬКУЛЯТОР ДОЗИРОВОК ════════════════════════════ -->
+<div class="calc-modal" id="calc-modal">
+  <div class="calc-modal__backdrop" id="calc-modal-backdrop"></div>
+  <div class="calc-modal__inner">
+
+    <div class="calc-modal__header">
+      <h2 class="calc-modal__title">Калькулятор дозировок</h2>
+      <button class="calc-modal__close" id="calc-modal-close" type="button">×</button>
+    </div>
+
+    <div class="calc-modal__body">
+
+      <!-- Пептид (full width) -->
+      <div class="calc-field calc-field--full">
+        <label class="calc-label" for="calc-peptide">Пептид</label>
+        <select class="calc-select" id="calc-peptide">
+          <option value="">— Выберите пептид —</option>
+        </select>
+      </div>
+
+      <!-- Две колонки -->
+      <div class="calc-grid" id="calc-grid" hidden>
+
+        <!-- ─── Левая: Шприцы ─── -->
+        <div class="calc-col">
+          <p class="calc-step">1. Выберите объём шприца:</p>
+          <div class="calc-syringes">
+            <button class="calc-syringe-card is-active" data-ml="0.3" type="button">
+              <img src="src/calc/syringe-03.webp" alt="" class="calc-syringe__img">
+              <span class="calc-syringe__label">0.3 мл</span>
+            </button>
+            <button class="calc-syringe-card" data-ml="0.5" type="button">
+              <img src="src/calc/syringe-05.webp" alt="" class="calc-syringe__img">
+              <span class="calc-syringe__label">0.5 мл</span>
+            </button>
+            <button class="calc-syringe-card" data-ml="1" type="button">
+              <img src="src/calc/syringe-1.webp" alt="" class="calc-syringe__img">
+              <span class="calc-syringe__label">1 мл</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── Правая: Дозировка + вода + доза ─── -->
+        <div class="calc-col">
+
+          <div class="calc-block">
+            <div class="calc-block__top">
+              <p class="calc-step">2. Выберите количество пептида</p>
+              <img src="src/calc/vial.webp" alt="" class="calc-block__img">
+            </div>
+            <div class="calc-chips" id="calc-dosage-chips"></div>
+          </div>
+
+          <div class="calc-block">
+            <div class="calc-block__top">
+              <p class="calc-step">3. Сколько бактериостатической воды вы добавляете?</p>
+              <img src="src/calc/water.webp" alt="" class="calc-block__img">
+            </div>
+            <div class="calc-chips" id="calc-water-chips"></div>
+          </div>
+
+          <div class="calc-block">
+            <p class="calc-step">4. Разовая доза (<span id="calc-dose-unit">мкг</span>)</p>
+            <input class="input" type="number" id="calc-dose" min="0.01" step="0.01">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Результат -->
+      <div class="calc-results" id="calc-results" hidden>
+        <p class="calc-result__line" id="calc-result-volume"></p>
+        <p class="calc-result__line" id="calc-result-injections"></p>
+        <p class="calc-result__warn" id="calc-result-warn" hidden></p>
+        <div class="calc-result__actions">
+          <a href="#" class="btn btn--primary calc-result__buy" id="calc-result-buy">Купить →</a>
+          <a href="https://t.me/peptidelabs" target="_blank" rel="noopener noreferrer"
+             class="btn calc-result__consult">Бесплатная консультация →</a>
+        </div>
+        <p class="calc-disclaimer">
+          Калькулятор предназначен для информационных целей. Не является медицинской рекомендацией.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <!-- Скрипты -->
 <script src="js/cart.js" defer></script>
 <script src="js/search.js" defer></script>
 <script src="js/order.js" defer></script>
+ <script src="js/calc.js" defer></script>
 
 </body>
 </html>
