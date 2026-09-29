@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Закрываем серверлесс и служебный JSON
+Disallow: /api/
+Disallow: /js/catalog.json
+
+Sitemap: https://peptidelabs.ru/sitemap.xml
+Host: https://peptidelabs.ru

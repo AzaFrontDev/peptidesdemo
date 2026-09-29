@@ -82,6 +82,38 @@ document.addEventListener('DOMContentLoaded', () => {
     openOrderModal();
   });
 
+  /* Кнопка «ЗАКАЗАТЬ ПРОБНИК» */
+  document.getElementById('starter-pack-btn')?.addEventListener('click', e => {
+    e.preventDefault();
+
+    // 1. Формируем объект стартового набора
+    const starterPackItem = {
+      id: 'starter-pack',
+      name: 'Стартовый набор',
+      dosage: '3 флакона',
+      price: 2499,
+      qty: 1
+    };
+
+    // 2. Если у тебя есть функция addToCart — используй её, 
+    // либо закинь напрямую в корзину:
+    const cart = typeof getCart === 'function' ? getCart() : [];
+    const exists = cart.find(i => i.id === starterPackItem.id);
+
+    if (exists) {
+      exists.qty += 1;
+    } else {
+      cart.push(starterPackItem);
+    }
+
+    if (typeof saveCart === 'function') {
+      saveCart(cart);
+    }
+
+    // 3. Сразу открываем модалку оформления заказа
+    openOrderModal();
+  });
+
   /* Кнопка «Связаться» в хедере (десктоп + мобайл) */
   document.querySelectorAll('[href="#contacts"]').forEach(btn => {
     btn.addEventListener('click', e => {
