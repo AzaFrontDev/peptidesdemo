@@ -1,0 +1,62 @@
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" alt="Peptide Labs — на главную">
+      <img src="src/hero/logo-image.webp" fetchpriority="high" alt="Peptide Labs Logo" class="logo__img" />
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="nav__link" href="about.html">О компании</a></li>
+        <li><a class="nav__link" href="quality.html">Качество</a></li>
+        <li><a class="nav__link" href="business.html">Оптовикам</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="header__icon-btn" type="button" aria-label="Поиск по сайту">
+        <img class="header__icon" src="src/hero/search-image.webp" alt="" width="56" height="56" />
+      </button>
+
+      <button class="header__icon-btn header__cart-btn" type="button" aria-label="Корзина">
+        <img class="header__icon" src="src/hero/store-image.webp" alt="" width="56" height="56" />
+        <span class="header__cart-badge" id="cart-count">0</span>
+      </button>
+
+      <div class="header__buttons">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Открыть меню" 
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="burger__box" aria-hidden="true">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="container" aria-label="Мобильная навигация">
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="catalog.html">Каталог</a></li>
+        <li><a class="mobile-menu__link" href="about.html">О компании</a></li>
+        <li><a class="mobile-menu__link" href="quality.html">Качество</a></li>
+        <li><a class="mobile-menu__link" href="business.html">Оптовикам</a></li>
+      </ul>
+      <div class="mobile-menu__actions">
+        <a class="btn btn--primary" href="#search-peptides">Поиск<br>по пептидам</a>
+        <a class="btn btn--primary" href="#contacts">Связаться</a>
+      </div>
+    </nav>
+  </div>
+</header>
