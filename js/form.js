@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    const consent = window.PLConsent?.validate(form);
+    if (!consent) {
+      setStatus('error', '⚠ Отметьте все обязательные подтверждения');
+      return;
+    }
+
     const btn = form.querySelector('[type="submit"]');
     btn.disabled    = true;
     btn.textContent = 'Отправка...';
@@ -30,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           company: form.elements.company.value.trim(),
           contact,
           details: form.elements.details.value.trim(),
+          consent,
         }),
       });
 

@@ -4,11 +4,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, company, contact, details } = req.body;
+  const { name, company, contact, details, consent } = req.body;
 
   // Валидация на сервере
   if (!name?.trim() || !contact?.trim()) {
     return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  // Обязательные согласия: 21+, RUO, оферта и обработка ПД
+  if (!consent?.age21 || !consent?.ruo || !consent?.offer) {
+    return res.status(400).json({ error: 'Consent required' });
   }
 
   const text = buildMessage({
@@ -61,6 +66,8 @@ function buildMessage({ name, company, contact, details }) {
     company ? `🏢 <b>Компания:</b> ${escHtml(company)}` : null,
     `📱 <b>Контакт:</b> ${escHtml(contact)}`,
     details ? `📝 <b>Детали:</b>\n${escHtml(details)}` : null,
+    '',
+    '✅ <b>Согласия:</b> 21+, RUO, оферта и ПДн',
     '',
     `⏱ ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })} МСК`,
   ].filter(Boolean).join('\n');

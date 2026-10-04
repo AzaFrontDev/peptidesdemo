@@ -3,11 +3,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, phone, telegram, cart = [], total = 0 } = req.body;
+  const { name, phone, telegram, cart = [], total = 0, consent } = req.body;
 
   // Только имя и телефон обязательны
   if (!name?.trim() || !phone?.trim()) {
     return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  // Обязательные согласия: 21+, RUO, оферта и обработка ПД
+  if (!consent?.age21 || !consent?.ruo || !consent?.offer) {
+    return res.status(400).json({ error: 'Consent required' });
   }
 
   const itemsText = cart.length
@@ -27,6 +32,8 @@ export default async function handler(req, res) {
     itemsText,
     '',
     cart.length ? `💰 <b>Итого:</b> ${Number(total).toLocaleString('ru-RU')} ₽` : null,
+    '',
+    '✅ <b>Согласия:</b> 21+, RUO, оферта и ПДн',
     '',
     `⏱ ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })} МСК`,
   ].filter(Boolean).join('\n');

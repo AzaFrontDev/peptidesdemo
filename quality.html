@@ -26,6 +26,8 @@
   <meta name="twitter:image"       content="https://peptidelabs.ru/src/about/coa-image.webp">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/legal.css">
+  <script src="js/legal.js"></script>
 
   <!-- JSON-LD: Организация -->
   <script type="application/ld+json">
@@ -38,7 +40,7 @@
     "url": "https://peptidelabs.ru",
     "logo": "https://peptidelabs.ru/src/hero/logo-image.webp",
     "telephone": "+7-905-392-18-51",
-    "email": "radionov@mail.ru",
+    "email": "gma.result@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Волгоград",
@@ -287,7 +289,7 @@
           <li><a href="https://t.me/peptidlabs" target="_blank" rel="noopener noreferrer" class="footer__link">Telegram: @peptidlabs</a></li>
           <li><a href="https://wa.me/79053921851" target="_blank" rel="noopener noreferrer" class="footer__link">WhatsApp</a></li>
           <li><a href="tel:+79053921851" class="footer__link">+7 (905) 392-18-51</a></li>
-          <li><a href="mailto:radionov@mail.ru" class="footer__link">radionov@mail.ru</a></li>
+          <li><a href="mailto:gma.result@gmail.com" class="footer__link">gma.result@gmail.com</a></li>
           <li class="footer__item-text">Волгоград, <br>ул. Краснознаменская, <br>9 (ТРЦ «Пирамида»)</li>
         </ul>
       </div>
@@ -298,9 +300,9 @@
       <p class="footer__copyright">© 2026 Peptide Labs - For Research Use Only</p>
       
       <div class="footer__legal">
-        <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
-        <a href="#" class="footer__legal-link">Пользовательское соглашение</a>
-        <a href="#" class="footer__legal-link">Отказ от ответственности</a>
+        <a href="#privacy" class="footer__legal-link" data-legal="privacy">Политика конфиденциальности</a>
+        <a href="#offer" class="footer__legal-link" data-legal="offer">Публичная оферта</a>
+        <a href="#disclaimer" class="footer__legal-link" data-legal="disclaimer">Отказ от ответственности</a>
       </div>
     </div>
 
@@ -387,6 +389,22 @@
           <strong id="order-total-display">0 ₽</strong>
         </div>
       </div>
+
+      <fieldset class="consent" id="order-consent">
+        <legend class="consent__legend">Обязательные подтверждения</legend>
+        <label class="consent__item">
+          <input class="consent__input" type="checkbox" id="order-consent-age" name="order-consent-age" required>
+          <span class="consent__text">Я подтверждаю, что мне исполнился 21 год</span>
+        </label>
+        <label class="consent__item">
+          <input class="consent__input" type="checkbox" id="order-consent-ruo" name="order-consent-ruo" required>
+          <span class="consent__text">Я ознакомлен(а) с тем, что продукция предназначена исключительно для исследовательских целей и не является лекарственным средством</span>
+        </label>
+        <label class="consent__item">
+          <input class="consent__input" type="checkbox" id="order-consent-offer" name="order-consent-offer" required>
+          <span class="consent__text">Я принимаю условия <a href="#offer" data-legal="offer">публичной оферты</a> и <a href="#privacy" data-legal="privacy">политики обработки данных</a></span>
+        </label>
+      </fieldset>
 
       <button class="btn btn--primary order-form__submit" type="submit">Отправить заказ</button>
 

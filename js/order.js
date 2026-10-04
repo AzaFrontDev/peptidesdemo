@@ -142,6 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    const consent = window.PLConsent?.validate(e.target);
+    if (!consent) {
+      setOrderStatus('error', '⚠ Отметьте все обязательные подтверждения');
+      return;
+    }
+
     const btn = e.target.querySelector('[type="submit"]');
     btn.disabled    = true;
     btn.textContent = 'Отправка...';
@@ -151,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const res = await fetch('/api/order', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, phone, telegram, cart, total }),
+        body: JSON.stringify({ name, phone, telegram, cart, total, consent }),
       });
 
       if (!res.ok) throw new Error(`HTTP ${res.status}`);

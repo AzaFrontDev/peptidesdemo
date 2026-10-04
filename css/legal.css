@@ -1,0 +1,714 @@
+/* ═══════════════════════════════════════════════════════════
+   LEGAL LAYER — RUO / 152-ФЗ
+   Age Gate · юридические модалки · плашка RUO · чекбоксы согласий
+   Подключается ПОСЛЕ style.css. Тема: --color-primary (#7056b7),
+   шрифт Hanken Grotesk, скругления 14–20px.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --legal-primary: var(--color-primary, #7056b7);
+  --legal-primary-dark: #604b9c;
+  --legal-ink: #1b1b1b;
+  --legal-muted: #5c5c66;
+  --legal-tint: #f4f0fc;
+  --legal-danger: #ef4444;
+  --legal-font: var(--font-main, 'Hanken Grotesk', 'Inter', sans-serif);
+}
+
+/* Блокировка прокрутки, пока открыт любой <dialog> юридического слоя */
+html.age-lock,
+body:has(dialog.age-gate[open]),
+body:has(dialog.legal-dialog[open]) {
+  overflow: hidden;
+}
+
+/* Завеса до инициализации диалога — нет «вспышки» контента без проверки возраста */
+html.age-lock::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  background: linear-gradient(160deg, #1d1a2b 0%, #2f2b3d 45%, #604b9c 100%);
+}
+
+/* ───────────────────────── AGE GATE ───────────────────────── */
+dialog.age-gate {
+  /* глобальный reset (* { margin:0 }) ломает центрирование <dialog> */
+  position: fixed;
+  inset: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  padding: 20px;
+  border: 0;
+  background: transparent;
+  color: var(--legal-ink);
+  font-family: var(--legal-font);
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+dialog.age-gate[open] {
+  display: grid;
+  place-items: center;
+}
+
+dialog.age-gate::backdrop {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(112, 86, 183, 0.55), transparent 55%),
+    radial-gradient(circle at 85% 90%, rgba(96, 75, 156, 0.5), transparent 50%),
+    rgba(20, 17, 33, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.age-gate__card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 44px 40px 32px;
+  background: #fff;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 40px 120px rgba(10, 6, 30, 0.55);
+  overflow: hidden;
+  outline: none;
+}
+
+.age-gate__card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--legal-primary), #a78bfa, var(--legal-primary-dark));
+}
+
+.age-gate__card[hidden] {
+  display: none;
+}
+
+dialog.age-gate[open] .age-gate__card {
+  animation: legal-pop 0.45s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+}
+
+.age-gate__logo {
+  display: block;
+  height: 34px;
+  width: auto;
+  margin: 0 auto 22px;
+  object-fit: contain;
+}
+
+.age-gate__badge {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--legal-primary), var(--legal-primary-dark));
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  box-shadow: 0 14px 34px rgba(112, 86, 183, 0.42);
+}
+
+.age-gate__badge::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(112, 86, 183, 0.28);
+  animation: legal-ring 2.6s ease-out infinite;
+}
+
+.age-gate__badge--denied {
+  background: linear-gradient(145deg, #ef4444, #b91c1c);
+  box-shadow: 0 14px 34px rgba(239, 68, 68, 0.38);
+}
+
+.age-gate__badge--denied::after {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.age-gate__title {
+  /* перебиваем глобальный h2 (72px, uppercase) */
+  margin: 0 0 12px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: none;
+  color: var(--legal-ink);
+}
+
+.age-gate__text {
+  margin: 0 auto 28px;
+  max-width: 400px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--legal-muted);
+}
+
+.age-gate__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.age-gate__btn {
+  flex: 1 1 0;
+  min-height: 58px;
+  padding: 0 20px;
+  border-radius: 14px;
+  border: 1.5px solid transparent;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.1;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease;
+}
+
+.age-gate__btn--yes {
+  flex-grow: 2;
+  background: linear-gradient(135deg, var(--legal-primary), var(--legal-primary-dark));
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(112, 86, 183, 0.38);
+}
+
+.age-gate__btn--yes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(112, 86, 183, 0.5);
+}
+
+.age-gate__btn--no {
+  background: #fff;
+  color: var(--legal-muted);
+  border-color: #d9d6e3;
+}
+
+.age-gate__btn--no:hover {
+  border-color: var(--legal-danger);
+  color: var(--legal-danger);
+  background: #fff5f5;
+}
+
+.age-gate__btn:active {
+  transform: scale(0.98);
+}
+
+.age-gate__btn:focus-visible {
+  outline: 3px solid rgba(112, 86, 183, 0.45);
+  outline-offset: 3px;
+}
+
+.age-gate__note {
+  margin: 22px 0 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #8b8a96;
+}
+
+.age-gate__note a {
+  color: var(--legal-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* ─────────────────── ЮРИДИЧЕСКИЕ МОДАЛКИ ─────────────────── */
+dialog.legal-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 0;
+  width: min(780px, calc(100vw - 32px));
+  max-width: none;
+  max-height: min(88dvh, 860px);
+  border: 0;
+  border-radius: 22px;
+  background: #fff;
+  color: var(--legal-ink);
+  font-family: var(--legal-font);
+  box-shadow: 0 30px 100px rgba(15, 10, 40, 0.35);
+  overflow: hidden;
+}
+
+dialog.legal-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  animation: legal-pop 0.3s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+}
+
+dialog.legal-dialog::backdrop {
+  background: rgba(22, 17, 40, 0.62);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.legal-dialog__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 26px 28px 18px 32px;
+  border-bottom: 1px solid #ece8f6;
+  background: linear-gradient(180deg, #faf8ff 0%, #fff 100%);
+}
+
+.legal-dialog__eyebrow {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--legal-primary);
+}
+
+.legal-dialog__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-transform: none;
+  color: var(--legal-ink);
+}
+
+.legal-dialog__close {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 12px;
+  background: #f1eef9;
+  color: #6b6783;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.legal-dialog__close:hover {
+  background: var(--legal-primary);
+  color: #fff;
+}
+
+.legal-dialog__close:active {
+  transform: scale(0.94);
+}
+
+.legal-dialog__close:focus-visible,
+.legal-dialog__btn:focus-visible {
+  outline: 3px solid rgba(112, 86, 183, 0.45);
+  outline-offset: 2px;
+}
+
+.legal-dialog__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 8px 32px 26px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #c9bfe6 transparent;
+}
+
+.legal-dialog__body > :first-child {
+  margin-top: 20px;
+}
+
+.legal-dialog__body h3 {
+  margin: 26px 0 8px;
+  font-size: 16.5px;
+  line-height: 1.35;
+  font-weight: 700;
+  text-transform: none;
+  color: var(--legal-ink);
+}
+
+.legal-dialog__body p,
+.legal-dialog__body li {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #3b3b45;
+  /* перебиваем глобальный li { white-space: nowrap; flex-shrink: 0 } */
+  white-space: normal;
+}
+
+.legal-dialog__body p {
+  margin: 0 0 10px;
+}
+
+.legal-dialog__body ul {
+  margin: 0 0 10px;
+  padding-left: 22px;
+}
+
+.legal-dialog__body li {
+  margin-bottom: 4px;
+}
+
+.legal-dialog__body li::marker {
+  color: var(--legal-primary);
+}
+
+.legal-dialog__body strong {
+  color: var(--legal-ink);
+}
+
+.legal-dialog__body a {
+  color: var(--legal-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.legal-dialog__callout {
+  margin: 0 0 6px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border-left: 4px solid var(--legal-primary);
+  background: var(--legal-tint);
+}
+
+.legal-dialog__callout p {
+  margin: 0;
+  font-size: 14.5px;
+  color: #2c2540;
+}
+
+.legal-dialog__meta {
+  margin-top: 22px;
+  font-size: 13px;
+  color: #8b8a96;
+}
+
+.legal-dialog__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 32px 22px;
+  border-top: 1px solid #ece8f6;
+  background: #fff;
+}
+
+.legal-dialog__btn {
+  min-width: 160px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--legal-primary);
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.legal-dialog__btn:hover {
+  background: #5e45a0;
+}
+
+.legal-dialog__btn:active {
+  transform: scale(0.98);
+}
+
+/* Футер: кликабельные юридические ссылки */
+.footer__legal-link[data-legal] {
+  cursor: pointer;
+}
+
+.footer__legal-link[data-legal]:hover,
+.footer__legal-link[data-legal]:focus-visible {
+  color: var(--legal-primary);
+}
+
+/* ───────────────────── ЧЕКБОКСЫ СОГЛАСИЙ ───────────────────── */
+.consent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  text-align: left;
+}
+
+.consent__legend {
+  padding: 0;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.consent__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #3b3b45;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.consent__item:hover {
+  background: var(--legal-tint);
+}
+
+.consent__input {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: 0 0 22px;
+  display: grid;
+  place-content: center;
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  border: 1.5px solid #b9b1d6;
+  border-radius: 7px;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.consent__input::after {
+  content: '';
+  width: 11px;
+  height: 6px;
+  margin-top: -2px;
+  border: 2.5px solid #fff;
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg) scale(0);
+  transition: transform 0.16s ease;
+}
+
+.consent__input:checked {
+  border-color: var(--legal-primary);
+  background: var(--legal-primary);
+}
+
+.consent__input:checked::after {
+  transform: rotate(-45deg) scale(1);
+}
+
+.consent__input:focus-visible {
+  outline: 3px solid rgba(112, 86, 183, 0.38);
+  outline-offset: 2px;
+}
+
+/* глобальное правило span { color: primary } не должно красить текст согласий */
+.consent__text {
+  color: inherit;
+}
+
+.consent__text a {
+  color: var(--legal-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.consent__item.is-invalid {
+  border-color: var(--legal-danger);
+  background: #fff5f5;
+  animation: legal-shake 0.38s ease;
+}
+
+.consent__item.is-invalid .consent__input {
+  border-color: var(--legal-danger);
+}
+
+/* Вариант для тёмной формы «Получить предложение» (business.html) */
+.consent--on-dark {
+  width: 100%;
+  max-width: 602px;
+  margin: 27px auto 0;
+}
+
+.consent--on-dark .consent__legend {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.consent--on-dark .consent__item {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.consent--on-dark .consent__item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.consent--on-dark .consent__input {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.consent--on-dark .consent__input::after {
+  border-color: var(--legal-primary-dark);
+}
+
+.consent--on-dark .consent__input:checked {
+  border-color: #fff;
+  background: #fff;
+}
+
+.consent--on-dark .consent__input:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.7);
+}
+
+.consent--on-dark .consent__text a {
+  color: #fff;
+}
+
+.consent--on-dark .consent__item.is-invalid {
+  border-color: #fca5a5;
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Форма «Получить предложение»: фиксированная высота заменена на авто,
+   чтобы чекбоксы не выходили за пределы фона на всех брейкпоинтах */
+.card__form {
+  height: auto !important;
+  padding-bottom: 56px;
+}
+
+.card__form .consent--on-dark + .btn--white {
+  margin-top: 20px;
+}
+
+/* ───────────────────────── АНИМАЦИИ ───────────────────────── */
+@keyframes legal-pop {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes legal-ring {
+  0%   { transform: scale(0.92); opacity: 0.9; }
+  100% { transform: scale(1.28); opacity: 0; }
+}
+
+@keyframes legal-shake {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-5px); }
+  75%      { transform: translateX(5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  dialog.age-gate[open] .age-gate__card,
+  dialog.legal-dialog[open],
+  .age-gate__badge::after,
+  .consent__item.is-invalid {
+    animation: none;
+  }
+
+  .age-gate__btn,
+  .consent__input,
+  .consent__input::after {
+    transition: none;
+  }
+}
+
+/* ───────────────────────── АДАПТИВ ───────────────────────── */
+@media (max-width: 768px) {
+  .age-gate__card {
+    padding: 36px 24px 26px;
+    border-radius: 24px;
+  }
+
+  .age-gate__title {
+    font-size: 25px;
+  }
+
+  .age-gate__text {
+    font-size: 15.5px;
+  }
+
+  dialog.legal-dialog {
+    width: calc(100vw - 20px);
+    max-height: 92dvh;
+    border-radius: 18px;
+  }
+
+  .legal-dialog__header {
+    padding: 20px 16px 14px 20px;
+  }
+
+  .legal-dialog__title {
+    font-size: 19px;
+  }
+
+  .legal-dialog__body {
+    padding: 4px 20px 20px;
+  }
+
+  .legal-dialog__body h3 {
+    font-size: 15.5px;
+  }
+
+  .legal-dialog__body p,
+  .legal-dialog__body li {
+    font-size: 14px;
+  }
+
+  .legal-dialog__footer {
+    padding: 12px 20px 18px;
+  }
+
+  .legal-dialog__btn {
+    width: 100%;
+  }
+
+  .consent__item {
+    padding: 9px 8px;
+    font-size: 12.5px;
+  }
+
+  .consent--on-dark .consent__item {
+    font-size: 13px;
+  }
+
+  .card__form {
+    padding-bottom: 36px;
+  }
+
+  /* футер: ссылки переносятся, а не вылезают за экран */
+  .footer__legal {
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .age-gate__actions {
+    flex-direction: column-reverse;
+  }
+
+  .age-gate__btn {
+    flex-grow: 0;
+    width: 100%;
+  }
+
+  .age-gate__badge {
+    width: 78px;
+    height: 78px;
+    font-size: 29px;
+  }
+}
