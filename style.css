@@ -2245,24 +2245,30 @@ span.reviews {
 .calc-result__buy {
   flex: 1;
   min-width: 140px;
-  height: 46px;
+  min-height: 46px;
+  flex-shrink: 0;
+  padding: 10px;
   border-radius: 10px;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   text-decoration: none;
 }
 
 .calc-result__consult {
   flex: 1;
   min-width: 140px;
-  height: 46px;
+  min-height: 46px;
+  flex-shrink: 0;
+  padding: 10px;
   border-radius: 10px;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border: 1.5px solid #e0e0e0;
   text-decoration: none;
   color: #111;
