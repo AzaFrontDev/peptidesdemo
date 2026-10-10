@@ -13,7 +13,13 @@ async function loadProduct(productId) {
 
     allProducts = data;
 
-    const item = id ? data.find(p => p.id === id) : null;
+    const item = id ? data.find(p =>
+      p.id === id ||
+      (id === 'bpc-tb' && p.id === 'bpc-tb-blend') ||
+      (id === 'bpc-tb-blend' && p.id === 'bpc-tb') ||
+      (id === 'cjc-1295' && p.id === 'cjc-1295-ipa-blend') ||
+      (id === 'cjc-1295-ipa' && p.id === 'cjc-1295-ipa-blend')
+    ) : null;
 
     if (!item) {
       const root = document.getElementById('product-root');
@@ -56,8 +62,14 @@ function renderHero(item) {
   const root = document.getElementById('product-root');
   if (!root) return;
 
-  const firstPrice  = item.dosages[0]?.price ?? null;
-  const validThumbs = item.images.thumbs.filter(t => t.src);
+  // Выбираем по умолчанию первую доступную в наличии дозировку
+  const defaultIdx = item.dosages.findIndex(d => d.inStock) !== -1
+    ? item.dosages.findIndex(d => d.inStock)
+    : 0;
+  const initialDosage = item.dosages[defaultIdx] || item.dosages[0];
+  const firstPrice    = initialDosage?.price ?? null;
+  const validThumbs   = item.images.thumbs.filter(t => t.src);
+  const isOverallOut  = !item.inStock;
 
   root.innerHTML = `
     <!-- Левая колонка: Галерея -->
@@ -100,6 +112,7 @@ function renderHero(item) {
       <a href="index.html" class="product-order__breadcrumb">Каталог</a>
 
       <div class="product-order__badges">
+        ${isOverallOut ? '<span class="badge badge--out-of-stock">Ожидается поставка</span>' : ''}
         ${item.badges.map(b => `<span class="badge badge--${b}">${b}</span>`).join('')}
       </div>
 
@@ -130,12 +143,17 @@ function renderHero(item) {
       <div class="product-order__group">
         <span class="product-order__label">Дозировка</span>
         <div class="dosage-selector">
-          ${item.dosages.map((d, idx) => `
-            <label class="dosage-chip">
-              <input type="radio" name="dosage" value="${d.value}" data-price="${d.price ?? ''}" ${idx === 0 ? 'checked' : ''}>
-              <span class="dosage-chip__box">${d.value}</span>
+          ${item.dosages.map((d, idx) => {
+            const isOutOfStock = d.inStock === false;
+            return `
+            <label class="dosage-chip ${isOutOfStock ? 'dosage-chip--out-of-stock' : ''}">
+              <input type="radio" name="dosage" value="${d.value}" data-price="${d.price ?? ''}" data-instock="${!isOutOfStock}" ${idx === defaultIdx ? 'checked' : ''}>
+              <span class="dosage-chip__box">
+                <span class="dosage-chip__val">${d.value}</span>
+                ${isOutOfStock ? '<span class="dosage-chip__tag">ожидается</span>' : ''}
+              </span>
             </label>
-          `).join('')}
+          `;}).join('')}
         </div>
       </div>
 
@@ -213,15 +231,46 @@ function initInteractions(item, validThumbs) {
   if (!minus || !plus || !input || !priceEl) return;
 
   function updatePricing() {
-    const radio    = document.querySelector('input[name="dosage"]:checked');
-    const rawPrice = parseInt(radio?.dataset.price, 10);
-    if (!radio || isNaN(rawPrice)) { priceEl.textContent = '—'; return; }
+    const radio       = document.querySelector('input[name="dosage"]:checked');
+    const submitBtn   = document.querySelector('.btn--submit');
+    const priceWrap   = document.querySelector('.product-price');
+    const rawPrice    = parseInt(radio?.dataset.price, 10);
+    const inStock     = radio ? (radio.dataset.instock === 'true') : false;
 
-    const count    = parseInt(input.value, 10);
-    let finalPrice = rawPrice * count;
-    if (count >= 10)     finalPrice = Math.round(finalPrice * 0.85);
-    else if (count >= 5) finalPrice = Math.round(finalPrice * 0.90);
-    priceEl.textContent = finalPrice.toLocaleString('ru-RU');
+    // 1. Отображение цены
+    if (!radio || isNaN(rawPrice) || rawPrice <= 0) {
+      priceEl.textContent = '—';
+    } else {
+      const count    = parseInt(input.value, 10) || 1;
+      let finalPrice = rawPrice * count;
+      if (count >= 10)     finalPrice = Math.round(finalPrice * 0.85);
+      else if (count >= 5) finalPrice = Math.round(finalPrice * 0.90);
+      priceEl.textContent = finalPrice.toLocaleString('ru-RU');
+    }
+
+    // При отсутствии выбранной дозировки шрифт цены делается менее контрастным
+    if (priceWrap) {
+      if (inStock) {
+        priceWrap.classList.remove('product-price--out-of-stock');
+      } else {
+        priceWrap.classList.add('product-price--out-of-stock');
+      }
+    }
+
+    // 2. Поведение кнопки действия
+    if (submitBtn) {
+      if (inStock) {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('disabled');
+        submitBtn.textContent = 'ДОБАВИТЬ В КОРЗИНУ';
+        submitBtn.classList.remove('btn--disabled');
+      } else {
+        submitBtn.disabled = true;
+        submitBtn.setAttribute('disabled', 'disabled');
+        submitBtn.textContent = 'ОЖИДАЕТСЯ ПОСТАВКА';
+        submitBtn.classList.add('btn--disabled');
+      }
+    }
   }
 
   plus.addEventListener('click', () => { input.value = parseInt(input.value, 10) + 1; updatePricing(); });
@@ -229,6 +278,9 @@ function initInteractions(item, validThumbs) {
     if (parseInt(input.value, 10) > 1) { input.value = parseInt(input.value, 10) - 1; updatePricing(); }
   });
   document.querySelectorAll('input[name="dosage"]').forEach(r => r.addEventListener('change', updatePricing));
+
+  // Первичная инициализация состояния кнопки и цены
+  updatePricing();
 }
 
 /* ── Точка входа для табов ───────────────────────────── */
@@ -349,16 +401,30 @@ function renderFrequentlyBought(item) {
 
   if (!related.length) { container.style.display = 'none'; return; }
 
+  // Сортировка: в наличии первыми
+  related.sort((a, b) => {
+    const aStock = a.inStock ? 1 : 0;
+    const bStock = b.inStock ? 1 : 0;
+    if (aStock !== bStock) return bStock - aStock;
+    return 0;
+  });
+
   container.innerHTML = `
     <h2 class="frequently-bought__title">Часто покупают вместе</h2>
     <div class="frequently-bought__grid">
       ${related.map(p => {
         const badge  = p.badges?.[0] ?? null;
-        const price  = p.dosages.find(d => d.price !== null)?.price ?? 0;
+        const hit    = p.dosages.find(d => d.inStock && d.price !== null) || p.dosages.find(d => d.price !== null);
+        const price  = hit ? hit.price.toLocaleString('ru-RU') : 0;
         const spec   = p.dosages[0]?.value ?? '';
         const fLabel = p.forms?.[0]?.label ?? '';
+        const isOut  = !p.inStock;
         return `
-          <article class="product-card">
+          <article class="product-card ${isOut ? 'product-card--out-of-stock' : ''}">
+            ${isOut
+              ? `<span class="product-card__badge product-card__badge--out-of-stock">Ожидается поставка</span>`
+              : (badge ? `<span class="product-card__badge">${badge.toUpperCase()}</span>` : '')
+            }
             <img src="${p.images.main}" alt="${p.name}" class="product-card__img" onerror="this.style.visibility='hidden'">
             <h4 class="product-card__title">${p.name}</h4>
             <p class="product-card__desc">${p.categoryLabel}</p>

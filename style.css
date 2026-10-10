@@ -1198,6 +1198,42 @@ span.reviews {
   box-shadow: 0 10px 25px rgba(107, 82, 182, 0.18), 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
+.dosage-chip--out-of-stock {
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+
+.dosage-chip--out-of-stock:hover {
+  opacity: 0.8;
+}
+
+.dosage-chip--out-of-stock .dosage-chip__box {
+  background: #f3f4f6;
+  color: #9ca3af;
+  flex-direction: column;
+  padding: 8px 18px;
+}
+
+.dosage-chip--out-of-stock .dosage-chip__val {
+  text-decoration: line-through;
+}
+
+.dosage-chip__tag {
+  font-size: 10px;
+  font-weight: 500;
+  color: #9ca3af;
+  text-decoration: none;
+  display: block;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.dosage-chip--out-of-stock input:checked + .dosage-chip__box {
+  border: 1px dashed #9ca3af;
+  color: #4b5563;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
 /* ---- ���� ������� ---- */
 .product-order__purchase-row {
   display: grid;
@@ -1312,6 +1348,33 @@ span.reviews {
 
 .btn--submit:active {
   transform: scale(0.99);
+}
+
+.btn--submit:disabled,
+.btn--submit[disabled],
+.btn--submit.btn--disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background-color: #9ca3af !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  pointer-events: auto !important;
+}
+
+.product-price--out-of-stock {
+  color: #9ca3af !important;
+  opacity: 0.6 !important;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.badge--out-of-stock {
+  background-color: #64748b !important;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
 }
 
 .product-order__actions {
@@ -1879,6 +1942,13 @@ span.reviews {
   text-align: center;
 }
 
+.product-card--blend .product-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .product-card__img--blend {
   width: 100%;
   height: 100%;
@@ -1898,6 +1968,11 @@ span.reviews {
   z-index: 2;
 }
 
+.product-card__badge--blend.product-card__badge--out-of-stock {
+  background-color: #64748b !important;
+  color: #f8fafc !important;
+}
+
 .product-card--blend .product-card__title {
   font-size: 40px;
   font-weight: 700;
@@ -1914,6 +1989,21 @@ span.reviews {
   font-size: 32px;
   font-weight: 400;
   color: var(--bg-black, #111);
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.product-card--blend .product-card__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 42px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 /* /////// РЎРїСЂРµРё ///////// */
@@ -2454,6 +2544,11 @@ span.reviews {
   box-sizing: border-box;
 }
 
+.product-card--out-of-stock {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
 .product-card__badge {
   position: absolute;
   top: 24px;
@@ -2471,6 +2566,36 @@ span.reviews {
   white-space: nowrap;
   border-radius: 16px 0 0 16px;
   z-index: 2;
+}
+
+.product-card__badge--out-of-stock {
+  background-color: #64748b !important;
+  color: #f8fafc !important;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: unset;
+  padding: 0 14px;
+  height: 34px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-result--out-of-stock {
+  opacity: 0.75;
+}
+
+.search-result__tag {
+  display: inline-block;
+  font-size: 11px;
+  background: #e2e8f0;
+  color: #64748b;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  font-weight: 500;
+  vertical-align: middle;
 }
 
 .product-card__img {
@@ -7785,6 +7910,22 @@ span.reviews {
     border-radius: 10px 0 0 10px;
   }
 
+  .product-card__badge--out-of-stock {
+    font-size: 9px !important;
+    height: 22px !important;
+    line-height: 22px !important;
+    padding: 0 7px !important;
+    top: 8px !important;
+    right: 0 !important;
+    min-width: unset !important;
+    border-radius: 6px 0 0 6px !important;
+    letter-spacing: 0 !important;
+    text-transform: uppercase !important;
+    max-width: 85% !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
   .product-card__title {
     font-size: 14px;
     margin-top: 8px;
@@ -7957,6 +8098,17 @@ span.reviews {
   .product-card--blend {
     width: 100%;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card--blend .product-card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
   }
 
   .product-card--blend .product-card__title {
@@ -7970,7 +8122,25 @@ span.reviews {
   }
 
   .product-card--blend .product-card__price {
-    font-size: 12px;
+    font-size: 13px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+
+  .product-card--blend .product-card__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 130px;
+    height: 28px;
+    font-size: 9px;
+    border-radius: 6px;
+    margin-top: 0;
+    margin-bottom: 8px;
   }
 
   .product-card__badge--blend {
@@ -7980,6 +8150,19 @@ span.reviews {
     right: 6px;
     border-radius: 8px 0 0 8px;
     line-height: 1.2;
+  }
+
+  .product-card__badge--blend.product-card__badge--out-of-stock {
+    font-size: 8px !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    padding: 0 5px !important;
+    top: 6px !important;
+    right: 6px !important;
+    border-radius: 5px !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+    max-width: 85% !important;
   }
 
   .product-card__thumb--blend {
@@ -12296,5 +12479,105 @@ span.reviews {
     padding: 24px 20px;
     border-radius: 16px;
     max-height: 95vh;
+  }
+
+  /* Плашка «Ожидается поставка» на мобильных */
+  .product-card__badge--out-of-stock {
+    font-size: 9px !important;
+    height: 22px !important;
+    line-height: 22px !important;
+    padding: 0 7px !important;
+    top: 8px !important;
+    right: 0 !important;
+    min-width: unset !important;
+    border-radius: 6px 0 0 6px !important;
+    letter-spacing: 0 !important;
+    text-transform: uppercase !important;
+    max-width: 85% !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  .product-card__badge--blend.product-card__badge--out-of-stock {
+    font-size: 8px !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    padding: 0 5px !important;
+    top: 6px !important;
+    right: 6px !important;
+    border-radius: 5px !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+    max-width: 85% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Структура блендов на смартфонах: кнопка строго под ценой */
+  .product-card--blend {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .product-card--blend .product-card__info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .product-card--blend .product-card__price {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    margin-top: 4px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .product-card--blend .product-card__btn {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 130px !important;
+    height: 28px !important;
+    font-size: 9px !important;
+    border-radius: 6px !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card__badge--out-of-stock {
+    font-size: 8px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    padding: 0 5px !important;
+    top: 6px !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  .product-card__badge--blend.product-card__badge--out-of-stock {
+    font-size: 7.5px !important;
+    height: 17px !important;
+    line-height: 17px !important;
+    padding: 0 4px !important;
+    top: 5px !important;
+    right: 5px !important;
+    border-radius: 4px !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  .product-card--blend .product-card__price {
+    font-size: 12px !important;
+  }
+
+  .product-card--blend .product-card__btn {
+    max-width: 115px !important;
+    height: 26px !important;
+    font-size: 8.5px !important;
   }
 }

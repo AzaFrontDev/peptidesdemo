@@ -1,4 +1,4 @@
-﻿.peptides__catalog-inner {
+.peptides__catalog-inner {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -123,6 +123,11 @@
   box-sizing: border-box;
 }
 
+.product-card--out-of-stock {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
 .product-card__badge {
   position: absolute;
   top: 24px;
@@ -140,6 +145,20 @@
   white-space: nowrap;
   border-radius: 16px 0 0 16px;
   z-index: 2;
+}
+
+.product-card__badge--out-of-stock {
+  background-color: #64748b !important;
+  color: #f8fafc !important;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: unset;
+  padding: 0 14px;
+  height: 34px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .product-card__img {

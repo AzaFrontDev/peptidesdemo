@@ -12,7 +12,11 @@ function saveCart(cart) {
   updateCartBadge();
 }
 
-function addToCart({ id, name, img, dosage, price, qty = 1 }) {
+function addToCart({ id, name, img, dosage, price, qty = 1, inStock = true }) {
+  if (inStock === false) {
+    console.warn('[Cart] Позиция не в наличии, добавление заблокировано:', id, dosage);
+    return;
+  }
   const cart     = getCart();
   const existing = cart.find(i => i.id === id && i.dosage === dosage);
   if (existing) {
@@ -117,10 +121,24 @@ document.addEventListener('click', e => {
   const btn = e.target.closest('.btn--submit');
   if (!btn) return;
 
+  if (btn.disabled || btn.hasAttribute('disabled') || btn.classList.contains('btn--disabled')) {
+    e.preventDefault();
+    return;
+  }
+
   const dosageInput = document.querySelector('input[name="dosage"]:checked');
-  const price       = parseInt(dosageInput?.dataset.price, 10);
-  const dosage      = dosageInput?.value;
-  const qty         = parseInt(document.getElementById('qtyInput')?.value, 10) || 1;
+  if (!dosageInput) return;
+
+  const inStock = dosageInput.dataset.instock !== 'false';
+  if (!inStock) {
+    e.preventDefault();
+    console.warn('[Cart] Попытка добавить отсутствующую дозировку');
+    return;
+  }
+
+  const price  = parseInt(dosageInput.dataset.price, 10);
+  const dosage = dosageInput.value;
+  const qty    = parseInt(document.getElementById('qtyInput')?.value, 10) || 1;
 
   if (!dosage || isNaN(price) || price <= 0) return;
 
@@ -131,6 +149,7 @@ document.addEventListener('click', e => {
     dosage,
     price,
     qty,
+    inStock: true,
   });
 });
 

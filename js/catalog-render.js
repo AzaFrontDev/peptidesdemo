@@ -33,17 +33,22 @@
     }
 
     function getPrice(p) {
-      const hit = p.dosages.find(d => d.price !== null);
-      return hit ? hit.price : 0;
+      const hit = p.dosages.find(d => d.inStock && d.price !== null) || p.dosages.find(d => d.price !== null);
+      return hit ? hit.price.toLocaleString('ru-RU') : 0;
     }
 
     function cardHTML(p) {
       const badge     = p.badges?.[0] ?? null;
       const formLabel = p.forms?.[0]?.label ?? '';
       const price     = getPrice(p);
+      const isOutOfStock = !p.inStock;
+
       return `
-        <article class="product-card">
-          ${badge ? `<span class="product-card__badge">${badge.toUpperCase()}</span>` : ''}
+        <article class="product-card ${isOutOfStock ? 'product-card--out-of-stock' : ''}">
+          ${isOutOfStock
+            ? `<span class="product-card__badge product-card__badge--out-of-stock">Ожидается поставка</span>`
+            : (badge ? `<span class="product-card__badge">${badge.toUpperCase()}</span>` : '')
+          }
           <img src="${p.images.main}" alt="${p.name}" class="product-card__img" onerror="this.style.visibility='hidden'"/>
           <h4 class="product-card__title">${p.name}</h4>
           <p class="product-card__desc">${p.categoryLabel}</p>
@@ -59,14 +64,22 @@
       if (!grid) return;
 
       const filtered = applyFilter(activeFilter);
-      const visible  = expanded ? filtered : filtered.slice(0, LIMIT);
+      // Сортировка по умолчанию: товары в наличии (inStock: true) первыми, отсутствующие — в конец
+      const sorted = [...filtered].sort((a, b) => {
+        const aStock = a.inStock ? 1 : 0;
+        const bStock = b.inStock ? 1 : 0;
+        if (aStock !== bStock) return bStock - aStock;
+        return 0;
+      });
+
+      const visible  = expanded ? sorted : sorted.slice(0, LIMIT);
       grid.innerHTML = visible.map(cardHTML).join('');
 
       if (btnMore) {
-        const hidden = filtered.length - visible.length;
+        const hidden = sorted.length - visible.length;
         if (hidden > 0) {
           btnMore.style.display = '';
-          btnMore.textContent   = `ВСЕ ТОВАРЫ (${filtered.length}+)`;
+          btnMore.textContent   = `ВСЕ ТОВАРЫ (${sorted.length}+)`;
         } else {
           btnMore.style.display = 'none';
         }
@@ -95,7 +108,13 @@
 
     fetch('js/catalog.json')
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(data => { products = data; render(); })
+      .then(data => {
+        products = data.map(p => ({
+          ...p,
+          inStock: Boolean(p.inStock ?? p.dosages?.some(d => d.inStock))
+        }));
+        render();
+      })
       .catch(err => console.error('[Catalog] Не удалось загрузить catalog.json:', err));
   });
 

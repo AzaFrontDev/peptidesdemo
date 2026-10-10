@@ -15,12 +15,18 @@ async function loadSearchData() {
 function filterProducts(query) {
   const q = query.toLowerCase().trim();
   if (!q) return [];
-  return searchData.filter(p =>
+  const matches = searchData.filter(p =>
     p.name.toLowerCase().includes(q)         ||
     p.nameRu?.toLowerCase().includes(q)      ||
     p.id.toLowerCase().includes(q)           ||
     p.categoryLabel?.toLowerCase().includes(q)
-  ).slice(0, 8);
+  );
+  return matches.sort((a, b) => {
+    const aStock = a.inStock ? 1 : 0;
+    const bStock = b.inStock ? 1 : 0;
+    if (aStock !== bStock) return bStock - aStock;
+    return 0;
+  }).slice(0, 8);
 }
 
 function renderResults(results, query) {
@@ -35,7 +41,7 @@ function renderResults(results, query) {
   }
 
   list.innerHTML = results.map(p => `
-    <li class="search-result">
+    <li class="search-result ${!p.inStock ? 'search-result--out-of-stock' : ''}">
       <a class="search-result__link" href="catalog.html?id=${p.id}" data-id="${p.id}">
         <img
           src="${p.images.main}"
@@ -44,7 +50,10 @@ function renderResults(results, query) {
           onerror="this.style.visibility='hidden'"
         >
         <div class="search-result__info">
-          <p class="search-result__name">${p.name}</p>
+          <p class="search-result__name">
+            ${p.name}
+            ${!p.inStock ? '<span class="search-result__tag">Ожидается</span>' : ''}
+          </p>
           <p class="search-result__cat">${p.categoryLabel}</p>
         </div>
       </a>
