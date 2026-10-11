@@ -2,7 +2,7 @@
 
 /* ── Открытие / Закрытие ─────────────────────────────── */
 function openOrderModal() {
-  const cart    = getCart();
+  const cart = getCart();
   const itemsEl = document.getElementById('order-items');
   const totalEl = document.getElementById('order-total-display');
 
@@ -69,7 +69,7 @@ function setOrderStatus(type, msg) {
   const el = document.getElementById('order-form-status');
   if (!el) return;
   el.textContent = msg;
-  el.className   = 'order-form__status' + (type ? ` order-form__status--${type}` : '');
+  el.className = 'order-form__status' + (type ? ` order-form__status--${type}` : '');
 }
 
 /* ── Инициализация ───────────────────────────────────── */
@@ -131,11 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('order-form')?.addEventListener('submit', async e => {
     e.preventDefault();
 
-    const name     = document.getElementById('order-name').value.trim();
-    const phone    = document.getElementById('order-phone').value.trim();
+    const name = document.getElementById('order-name').value.trim();
+    const phone = document.getElementById('order-phone').value.trim();
     const telegram = document.getElementById('order-tg').value.trim();
-    const cart     = getCart();
-    const total    = getTotal();
+    const cart = getCart();
+    const total = getTotal();
 
     if (!name || !phone) {
       setOrderStatus('error', '⚠ Заполните Имя и Номер телефона');
@@ -149,13 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const btn = e.target.querySelector('[type="submit"]');
-    btn.disabled    = true;
+    btn.disabled = true;
     btn.textContent = 'Отправка...';
     setOrderStatus('', '');
 
     try {
       const res = await fetch('/api/order', {
-        method:  'POST',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, phone, telegram, cart, total, consent }),
       });
@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
       setOrderStatus('error', '✗ Ошибка отправки. Напишите в Telegram: @peptidelabs');
 
     } finally {
-      btn.disabled    = false;
-      btn.textContent = 'Отправить заказ';
+      btn.disabled = false;
+      btn.textContent = 'Отправить';
     }
   });
 });
