@@ -315,8 +315,14 @@ dialog.legal-dialog::backdrop {
   padding: 8px 32px 26px;
   overflow-y: auto;
   overscroll-behavior: contain;
-  scrollbar-width: thin;
-  scrollbar-color: #c9bfe6 transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.legal-dialog__body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .legal-dialog__body > :first-child {

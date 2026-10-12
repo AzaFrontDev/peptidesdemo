@@ -11,6 +11,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
   -webkit-text-size-adjust: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body {
@@ -20,6 +22,17 @@ body {
   line-height: 1.5;
   color: var(--bg-black);
   background-color: var(--bg-white);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Скрытие полосы прокрутки для всех экранов и браузеров */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .tab-panel { 
@@ -48,6 +61,8 @@ h2 {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 li {
