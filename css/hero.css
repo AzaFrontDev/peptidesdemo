@@ -1,4 +1,4 @@
-﻿.hero {
+.hero {
   position: relative;
   width: 100%;
   min-height: 1000px;
@@ -48,13 +48,13 @@
       rgba(255, 255, 255, 0) 85%
     ),
     url('/src/hero/quality-hero-image.webp');
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .hero__inner {
   width: 100%;
   max-width: 1440px;
-  margin: 40px 0 0 100px;
+  margin: 40px 0 0 20px;
 }
 
 .quality-hero__inner {

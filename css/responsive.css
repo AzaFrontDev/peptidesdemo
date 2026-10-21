@@ -48,7 +48,7 @@
 
   /* ---- Hero ---- */
   .hero { min-height: 880px; }
-  .hero__inner { margin: -100px 0 0 80px; max-width: calc(100% - 80px); }
+  .hero__inner { margin: -100px 0 0 20px; max-width: calc(100% - 20px); }
   .hero__content { max-width: 780px; }
   .hero__subtitle { font-size: 22px; }
   .hero__actions { margin-top: 36px; gap: 14px; }
@@ -157,8 +157,8 @@
   .social-promo__btn { width: 300px; height: 62px; font-size: 17px; }
 
   /* ---- Footer ---- */
-  .footer__grid { margin: 0 0 64px 100px; gap: 32px; }
-  .footer__bottom { padding: 28px 0 0 100px; max-width: 100%; }
+  .footer__grid { margin: 0 0 64px 60px; gap: 32px; }
+  .footer__bottom { padding: 28px 0 0 60px; max-width: 100%; }
 }
 
 
@@ -213,8 +213,8 @@
   }
 
   /* ---- Task cards ---- */
-  .peptides__catalog-inner { margin-left: 40px;}
-  .catalog__tasks-inner { margin-left: 40px;}
+  .peptides__catalog-inner { margin-left: 20px;}
+  .catalog__tasks-inner { margin-left: 20px;}
   .task-card { height: 265px; }
   .task-card__title { font-size: 21px; }
   .task-card__desc { font-size: 16px; }
@@ -244,8 +244,8 @@
   .start__pack-note { font-size: 15px; }
 
   /* ---- Blends ---- */
-  .spray__inner { margin-left: 40px;}
-  .blends__inner { margin-left: 40px; }
+  .spray__inner { margin-left: 20px;}
+  .blends__inner { margin-left: 20px; }
   .product-card--blend { width: 390px; }
   .product-card--blend .product-card__title { font-size: 28px; }
   .product-card--blend .product-card__desc { font-size: 18px; }
@@ -253,7 +253,7 @@
   .product-card__badge--blend { font-size: 17px; padding: 9px 18px; top: 18px; right: 48px;}
 
   /* ---- About ---- */
-  .about__inner {margin-left: 40px; }
+  .about__inner {margin-left: 20px; }
   .about__title { font-size: 54px; }
   .about__img { height: 260px; }
   .about__caption { font-size: 23px; }
